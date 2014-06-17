@@ -1,0 +1,47 @@
+---
+coreos:
+  units:
+    - name: partition-disk.service
+      command: start
+      content: |
+        [Unit]
+        Description=Partitions the primary hd
+        [Service]
+        Type=oneshot
+        ExecStart=/bin/bash -c 'echo -e "o\nn\np\n1\n\n\nw" | fdisk /dev/sda'
+    - name: format-disk.service
+      command: start
+      content: |
+        [Unit]
+        Description=Formats the primary drive
+        Requires=partition-disk.service
+        [Service]
+        Type=oneshot
+        RemainAfterExit=yes
+        ExecStart=/usr/sbin/wipefs -f /dev/sda1
+        ExecStart=/usr/sbin/mkfs.btrfs -f /dev/sda1
+    - name: var-lib-docker.mount
+      command: start
+      content: |
+        [Unit]
+        Description=Mount primary hd to /var/lib/docker
+        Requires=format-disk.service
+        Before=docker.service
+        [Mount]
+        What=/dev/sda1
+        Where=/var/lib/docker
+        Type=btrfs
+
+write_files:
+  - path : /tmp/cpu_test_01.sh
+    permissions: 0755
+    content: |
+      #!/bin/bash
+      # This image was uploaded to our private repository 
+      # server for ease of testing.
+      # It can be built from the Docker files at 
+      # https://github.com/DockerDemos/vm-docker-bench
+      export REPO=<PRIVATE REPOSITORY>
+      docker pull $REPO/sysbench
+      for i in {1..100} ; do docker run -i -t $REPO/sysbench \
+      --test=cpu --cpu-max-prime=20000 run |grep total\ time\: |awk '{print $3}' ; done
