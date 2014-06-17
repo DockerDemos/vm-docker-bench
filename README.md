@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Virtual Machine Hypervisor + Docker Performance Benchmark
 =========================================================
 
@@ -67,3 +68,9 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
                                            
+=======
+vm-docker-bench
+===============
+
+Virtual Machine Hypervisor + Docker Performance Benchmark
+>>>>>>> 3bd5297e259d564933e3d763d28f95c4469cab6b
