@@ -31,11 +31,13 @@ Virtual Machine Hypervisor + Docker Performance Benchmark
 In order to cover as many bases as possible, the tests were run as follows:
 
 **For Single Guest Tests**
+
 1. On the Cisco USC blade with CoreOS installed
 2. On the Cisco UCS blade with a hypervisor and a single VM with CoreOS installed
 3. On a separate physical machine with the same hypervisor and a single VM with Coreos installed.
 
 **For Multiple Guest Tests** 
+
 1. On the Cisco USC blade with CoreOS installed, running multiple Docker containers
 2. On the Cisco USC blade with a hypervisor, and a single VM with CoreOS installed, running multiple Docker containers
 3. On the Cisco USC blade with a hypervisor, and multiple VMs with CoreOS installed, running a single Docker container per VM
