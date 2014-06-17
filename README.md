@@ -3,13 +3,13 @@ Virtual Machine Hypervisor + Docker Performance Benchmark
 
 1. [Forward](#forward)
 2. [Method](#method)
-  i. [System Specs](#specs)
-  ii. [Host Benchmarks](#host_bench)
+  2.1  [System Specs](#specs)
+  2.2  [Host Benchmarks](#host_bench)
     * Serial VM Boot
     * Compute node steady-state VM Packing\*
     * VM reboot
     * VM snapshot\*
-  iii. [Guest Benchmarks](#guest_bench)
+  2.3  [Guest Benchmarks](#guest_bench)
     * CPU Performance
     * MySQL Performance\*
     * MySQL\*
@@ -18,8 +18,8 @@ Virtual Machine Hypervisor + Docker Performance Benchmark
     * Network Performance
     * Application type performance\*
 3. [Virtual Machine Hypervisor + Docker Performance Benchmark](#vmhdp)
-  i. [Host Benchmark Results](*host_results)
-  ii. [Guest Benchmark Results](*guest_results)
+  3.1  [Host Benchmark Results](*host_results)
+  3.2  [Guest Benchmark Results](*guest_results)
 
 
 \* Included in the inital *KVM and Docker LXC Benchmarking with OpenStack* presentation.  Are these valid for our purposes?
