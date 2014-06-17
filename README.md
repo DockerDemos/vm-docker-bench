@@ -45,13 +45,23 @@ In order to cover as many bases as possible, the tests were run as follows:
 
 ###<a name='specs'>System Specs</a>###
 
-| test | table | columns |
-| ---- | ----- | ------- |
-| and  | rows  | here    |
+|          | Test System                  | Comparison System |
+| ----     | -----------                  | ----------------- |
+| Hardware | Cisco UCS Blade CCSB-B200-M3 |                   |
+| Version  | B200M3.2.1.3a.0.082320131800 |                   |
+| CPU      | Intel E5-2665 @ 2.4GHz       | here              |
+| Memory   | 256GB 1600                   |                   |
+| HDD      |                              |                   |
 
-**OS: CoreOS**
+**OS: CoreOS** 
+
+Version:  Beta 324.5.0
 
 [CoreOS](https://coreos.com) was chosen as the host OS for each of these tests.  The OS was PXE booted and configured with the CoreOS Cloud Config YAML file included in this repo.  The operating system was installed into RAM, and /var/lib/docker mounted to the first local hard disk.
+
+**Docker**
+
+Version: 0.11.1, build fb99f99
 
 ###<a name='host_bench'>Host Benchmarks</a>###
 
