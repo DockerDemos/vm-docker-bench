@@ -44,4 +44,5 @@ write_files:
       export REPO=<PRIVATE REPOSITORY>
       docker pull $REPO/sysbench
       for i in {1..100} ; do docker run -i -t $REPO/sysbench \
-      --test=cpu --cpu-max-prime=20000 run |grep total\ time\: |awk '{print $3}' ; done
+      --test=cpu --cpu-max-prime=20000 run |grep total\ time\: \
+      | awk '{print $3}'| sed -i 's/s//g' ; done
