@@ -18,8 +18,8 @@ Virtual Machine Hypervisor + Docker Performance Benchmark
         * Network Performance
         * Application type performance\*
 3. [Virtual Machine Hypervisor + Docker Performance Benchmark](#vmhdp)
-    1. [Host Benchmark Results](*host_results)
-    2. [Guest Benchmark Results](*guest_results)
+    1. [Host Benchmark Results](#host_results)
+    2. [Guest Benchmark Results](#guest_results)
 
 
 \* Included in the inital *KVM and Docker LXC Benchmarking with OpenStack* presentation.  Are these valid for our purposes?
@@ -81,7 +81,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     # This image was uploaded to our private repository 
     # server for ease of testing.
     # It can be built from the Docker files at 
-    # https://github.com/DockerDemos/vm-docker-bench\sysbench
+    # https://github.com/DockerDemos/vm-docker-bench/sysbench
     #
     # Tests CPU calculations by running a prime number 
     # calculation benchmark test in 100 Docker 
@@ -114,7 +114,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     # This image was uploaded to our private repository 
     # server for ease of testing.
     # It can be built from the Docker files at 
-    # https://github.com/DockerDemos/vm-docker-bench\sysbench
+    # https://github.com/DockerDemos/vm-docker-bench/sysbench
     #
     # Tests CPU calculations by running a prime number 
     # calculation benchmark test in 100 Docker 
