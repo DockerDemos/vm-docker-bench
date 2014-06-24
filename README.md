@@ -69,6 +69,20 @@ Version: 0.11.1, build fb99f99
 
 ###<a name='host_bench'>Host Benchmarks</a>###
 
+__Serial VM Boot__
+
+Webbench x15
+Webbench x100
+
+Compute node steady-state VM Packing
+?
+
+VM reboot
+Reboot 5 VMs 5x each
+
+VM snapshot\*
+Not applicable?
+
 ###<a name='guest_bench'>Guest Benchmarks</a>###
 
 __CPU Performance__
@@ -93,7 +107,14 @@ The following bash script was placed on the host server via the CoreOS cloud-con
 
 __MySQL Performance__
 
+    sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=root --mysql-password=yourrootsqlpassword prepare
+    sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=root --mysql-password=yourrootsqlpassword --max-time=60 --oltp-read-only=on --max-requests=0 --num-threads=8 run
+
 __MySQL__
+
+"Indexed insertion benchmark"
+
+(iibench, 1M inserts print stats at 100K)
 
 __File I/O Operation__
 
@@ -132,9 +153,15 @@ Performed with memory limitations in place on the Docker containers (1GB) and th
 
 __Memory Performance__
 
+(mbw array size of 1000 MiB)
+
 __Network Performance__
 
+(netperf server on contol server, netperf in ipv4 on guest)
+
 __Application type performance__
+
+(Blogbench?)
 
 ##<a name='vmhdp'>Virtual Machine Hypervisor + Docker Performance Benchmark</a>##
 
