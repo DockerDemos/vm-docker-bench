@@ -33,7 +33,24 @@ coreos:
         Type=btrfs
 
 write_files:
-  - path : /tmp/cpu_test_01.sh
+  - path: /tmp/bench_cpu_calc.sh
+    permissions: 0755
+    content: |
+       #!/bin/bash
+       # This image was uploaded to our private repository 
+       # server for ease of testing.
+       # It can be built from the Docker files at 
+       # https://github.com/DockerDemos/vm-docker-bench\sysbench
+       #
+       # Tests CPU calculations by running a prime number 
+       # calculation benchmark test in 100 Docker 
+       # containers, serially.
+       docker pull $REPO/sysbench
+       for i in {1..100} ; do docker run -i -t $REPO/sysbench \
+       --test=cpu --cpu-max-prime=20000 run |grep total\ time\: \
+       | awk '{print $3}'| sed -i 's/s//g' ; done`
+
+  - path: /tmp/bench_concurrent_spinup.sh
     permissions: 0755
     content: |
       #!/bin/bash
@@ -41,8 +58,23 @@ write_files:
       # server for ease of testing.
       # It can be built from the Docker files at 
       # https://github.com/DockerDemos/vm-docker-bench
-      export REPO=<PRIVATE REPOSITORY>
-      docker pull $REPO/sysbench
-      for i in {1..100} ; do docker run -i -t $REPO/sysbench \
-      --test=cpu --cpu-max-prime=20000 run |grep total\ time\: \
-      | awk '{print $3}'| sed -i 's/s//g' ; done
+      #
+      # Test Load, Memory, and I/O impact by starting 100 
+      # Docker containers running an Apache server.
+      #
+      # This is also the base setup (100 waiting Apache servers)
+      # for an Apache Bench (ab) test from 100 client servers located
+      docker pull $REPO/webbench
+      for i in {1..100} ; do docker run -d $REPO/webbench ; done
+
+   - path: /tmp/bench_io_load.sh
+     permissions: 0755
+     content: |
+      #!/bin/bash
+      # This image was uploaded to our private repository 
+      # server for ease of testing.
+      # It can be built from the Docker files at 
+      # https://github.com/DockerDemos/vm-docker-bench
+      docker pull $REPO/iobench
+      for i in {1..100} ; do docker run -d $REPO/iobench ; done
+
