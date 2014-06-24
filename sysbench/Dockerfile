@@ -4,7 +4,7 @@
 FROM ubuntu:precise
 MAINTAINER Chris Collins <collins.christopher@gmail.com>
 
+ADD . /bench
 RUN apt-get install -y sysbench
 
-ENTRYPOINT ["sysbench"]
-CMD ["--help"]
+CMD ["/bin/echo", "Please specify a test script from /bench to run."]
