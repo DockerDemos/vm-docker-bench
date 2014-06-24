@@ -73,7 +73,7 @@ Version: 0.11.1, build fb99f99
 
 __CPU Performance__
 
-[Sysbench](http://sysbench.sourceforge.net/) was chosen to perform a number of benchmark tests, including this CPU computation benchmark.  The tests used a Docker image included in this repository ([https://github.com/DockerDemos/Sysbench](https://github.com/DockerDemos/Sysbench)) in which Sysbench is installed.   The container was started and ran `sysbench --test=cpu --cpu-max-prime=20000 run`.  This process is repeated one hundred (100) times, and the total time taken for the test execution was recorded for each.
+[Sysbench](http://sysbench.sourceforge.net/) was chosen to perform a number of benchmark tests, including this cpu computation benchmark.  The tests used the [Sysbench Docker image](https://github.com/dockerdemos/sysbench) included in this repository.  The resulting container was started, and ran `sysbench --test=cpu --cpu-max-prime=20000 run`.  This process was repeated one hundred (100) times, and the total time taken for the test execution was recorded for each.
 
 The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
 
