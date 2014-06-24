@@ -116,9 +116,9 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     # It can be built from the Docker files at 
     # https://github.com/DockerDemos/vm-docker-bench/sysbench
     #
-    # Tests CPU calculations by running a prime number 
-    # calculation benchmark test in 100 Docker 
-    # containers, serially.
+    # Tests disk IO with a combined
+    # *Random Read and Write* test
+    # in 100 Docker containers, serially.
     docker pull $REPO/sysbench
     for i in {1..100} ; do docker run -i -t $REPO/sysbench \
     /bench/io.sh 10G \ 
