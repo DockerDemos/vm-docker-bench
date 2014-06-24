@@ -149,6 +149,8 @@ Thanks to:
 
 Boden Russell [\(http://bodenr.blogspot.com\)](http://bodenr.blogspot.com) for the initial benchmarking test and methodology used in his [KVM and Docker LXC Benchmarking with OpenStack](http://bodenr.blogspot.com/2014/05/kvm-and-docker-lxc-benchmarking-with.html) article, much of which I've tweaked or repurposed here.
 
+Falko Timme [\(https://twitter.com/falko\)](https://twitter.com/falko) for basic guidance on benchmarking with Sysbench [\(http://www.howtoforge.com/how-to-benchmark-your-system-cpu-file-io-mysql-with-sysbench\)](http://www.howtoforge.com/how-to-benchmark-your-system-cpu-file-io-mysql-with-sysbench).
+
 ##Copyright Information##
 
 Copyright (C) 2014 Chris Collins
