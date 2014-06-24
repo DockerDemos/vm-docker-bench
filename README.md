@@ -43,6 +43,10 @@ In order to cover as many bases as possible, the tests were run as follows:
 3. On the Cisco USC blade with a hypervisor, and multiple VMs with CoreOS installed, running a single Docker container per VM
 4. On a separate physical machine with the same hypervisor, and a single VM with CoreOS installed, running multiple Docker containers
 
+**Data Gathering**
+
+Some test data was gathered via output to STDOUT from the containers themselves (most notibly the CPU performance testing times).
+
 ###<a name='specs'>System Specs</a>###
 
 |          | Test System                  | Comparison System |
@@ -66,6 +70,38 @@ Version: 0.11.1, build fb99f99
 ###<a name='host_bench'>Host Benchmarks</a>###
 
 ###<a name='guest_bench'>Guest Benchmarks</a>###
+
+__CPU Performance__
+
+[Sysbench](http://sysbench.sourceforge.net/) was chosen to perform a number of benchmark tests, including this CPU computation benchmark.  The tests used a Docker image included in this repository ([https://github.com/DockerDemos/Sysbench](https://github.com/DockerDemos/Sysbench)) in which Sysbench is installed.   The container was started and ran `sysbench --test=cpu --cpu-max-prime=20000 run`.  This process is repeated one hundred (100) times, and the total time taken for the test execution was recorded for each.
+
+The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
+
+`#!/bin/bash
+# This image was uploaded to our private repository 
+# server for ease of testing.
+# It can be built from the Docker files at 
+# https://github.com/DockerDemos/vm-docker-bench\sysbench
+#
+# Tests CPU calculations by running a prime number 
+# calculation benchmark test in 100 Docker 
+# containers, serially.
+docker pull $REPO/sysbench
+for i in {1..100} ; do docker run -i -t $REPO/sysbench \
+--test=cpu --cpu-max-prime=20000 run |grep total\ time\: \
+| awk '{print $3}'| sed -i 's/s//g' ; done`
+
+__MySQL Performance__
+
+__MySQL__
+
+__File I/O Operation__
+
+__Memory Performance__
+
+__Network Performance__
+
+__Application type performance__
 
 ##<a name='vmhdp'>Virtual Machine Hypervisor + Docker Performance Benchmark</a>##
 
