@@ -102,7 +102,8 @@ __File I/O Operation__
 File I/O benchmarking was done using the same [Sysbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench) used for the CPU tests above.  The container was started, and ran (via the [io.sh script](https://github.com/DockerDemos/vm-docker-bench/blob/master/sysbench/io.sh)):
 
     sysbench --test=fileio --file-total-size=10G prepare && \
-    sysbench --test=fileio --file-total-size=10G --file-test-mode=rndrw --init-rng=on --max-time=300 --max-requests=0 run && \
+    sysbench --test=fileio --file-total-size=10G --file-test-mode=rndrw \
+    --init-rng=on --max-time=300 --max-requests=0 run && \
     sysbench --test=fileio --file-total-size=10G cleanup
 
 This test was run one hundred (100) times, serially, and the Kb/sec value from the test output recorded.
