@@ -77,19 +77,19 @@ __CPU Performance__
 
 The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
 
-`#!/bin/bash
-# This image was uploaded to our private repository 
-# server for ease of testing.
-# It can be built from the Docker files at 
-# https://github.com/DockerDemos/vm-docker-bench\sysbench
-#
-# Tests CPU calculations by running a prime number 
-# calculation benchmark test in 100 Docker 
-# containers, serially.
-docker pull $REPO/sysbench
-for i in {1..100} ; do docker run -i -t $REPO/sysbench \
---test=cpu --cpu-max-prime=20000 run |grep total\ time\: \
-| awk '{print $3}'| sed -i 's/s//g' ; done`
+    #!/bin/bash
+    # This image was uploaded to our private repository 
+    # server for ease of testing.
+    # It can be built from the Docker files at 
+    # https://github.com/DockerDemos/vm-docker-bench\sysbench
+    #
+    # Tests CPU calculations by running a prime number 
+    # calculation benchmark test in 100 Docker 
+    # containers, serially.
+    docker pull $REPO/sysbench
+    for i in {1..100} ; do docker run -i -t $REPO/sysbench \
+    --test=cpu --cpu-max-prime=20000 run |grep total\ time\: \
+    | awk '{print $3}'| sed -i 's/s//g' ; done
 
 __MySQL Performance__
 
