@@ -1,28 +1,27 @@
-Virtual Machine Hypervisor + Docker Performance Benchmark
+Hypervisor + Docker Performance Benchmark
 =========================================================
 
 1. [Forward](#forward)
 2. [Method](#method)
     1. [System Specs](#specs)
     2. [Host Benchmarks](#host_bench)
-        * Serial VM Boot
-        * Compute node steady-state VM Packing\*
-        * VM reboot
-        * VM snapshot\*
+        * Serial container Boot
+        * Container reboot
+        * Container commit (snapshot)
     3. [Guest Benchmarks](#guest_bench)
         * CPU Performance
-        * MySQL Performance\*
-        * MySQL\*
+        * MySQL Performance
+        * MySQL
         * File I/O Operation
+        * (Modified) File I/O Operation
         * Memory Performance
         * Network Performance
-        * Application type performance\*
-3. [Virtual Machine Hypervisor + Docker Performance Benchmark](#vmhdp)
+        * Application type performance (Blogbench)
+        * Application type performance (Apache Benchmark)
+3. [Hypervisor + Docker Performance Benchmark](#vmhdp)
     1. [Host Benchmark Results](#host_results)
     2. [Guest Benchmark Results](#guest_results)
 
-
-\* Included in the inital *KVM and Docker LXC Benchmarking with OpenStack* presentation.  Are these valid for our purposes?
 
 ##<a name='forward'>Forward</a>##
 
@@ -45,7 +44,24 @@ In order to cover as many bases as possible, the tests were run as follows:
 
 **Data Gathering**
 
-Some test data was gathered via output to STDOUT from the containers themselves (most notibly the CPU performance testing times).
+_Host Benchmark Data_:
+
+For each of the Host Benchmarks, multiple datapoints are collected using the [Resource Monitoring Scripts](https://github.com/DockerDemso/vm-docker-bench/tree/master/monitor-scripts) included in this repository.  These scripts were started prior to each test and collected data throughout.  Each monitors a specific aspect of the host's resources at set intervals and outputs to a log file.
+
+ * CPU Load average
+ * Memory Usage
+ * File I/O
+ * Network Performance (if applicable)
+
+The scripts were all placed on the host server via the CoreOS cloud-config.yml file.
+
+_Guest Benchmark Data_:
+
+Test data for guest benchmarks running from within the tested container was gathered via STDOUT from the containers themselves (for exampe the CPU performance testing times) and written to a log file.
+
+Test data for guest benchmarks being performed from remote hosts (for example, the Application Type Perfomance Apache Benchmark tests) were recorded via STDOUT from the process itself and written to a logfile.
+
+ _Note: Since the CoreOS files are all installed into memory, the logfiles will have some effect on both memory usage and file I/O, but it should be the same in all tests and small enough as to be neglegible.  A future version of this benchmark may ship results to a remote logging server and concequently swap the memory and I/O impact for networking impact._
 
 ###<a name='specs'>System Specs</a>###
 
@@ -69,10 +85,9 @@ Version:  Beta 324.5.0
 Version: 0.11.1, build fb99f99
 
 ###<a name='host_bench'>Host Benchmarks</a>###
+__Serial Container Boot__
 
-__Serial VM Boot__
-
-A [Docker image with Apache and PHP](https://github.com/DockerDemos/vm-docker-bench/tree/master/), and a basic "Hello World" PHP file was created to test performance during serial boot of fifteen (15) and one hundred (100) containers.  These two tests were performed two ways:
+The [Docker image with Apache and PHP](https://github.com/DockerDemos/vm-docker-bench/tree/master/) included in this repository was created to test performance during serial boot of fifteen and one hundred containers.  These two tests were performed two ways:
 
  * CoreOS starting 15 or 100 containers
  * Hypervisor with CoreOS starting 15 or 100 containers
@@ -92,16 +107,39 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     docker pull $REPO/webbench
     for i in {1..$COUNT} ; do docker run -i -t $REPO/webbench ; done
 
-Compute node steady-state VM Packing
-?
+__Compute node steady-state Container Packing__
 
-VM reboot
+Using the Docker image with Apache and PHP from above, this test measures resource usage of fifteen and one hundred containers for fifteen minutes, from startup to when they have reached their "active" state, and finally shutdown.  The tests were performed two ways:
+  * CoreOS starting 15 or 100 containers
+  * Hypervisor with CoreOS starting 15 or 100 containers
 
+The bash script from the above Serial Container Boot test was reused for this test. 
 
-Reboot 5 VMs 5x each
+__Container Reboot__
 
-VM snapshot\*
-Not applicable?
+Using the Docker image with Apache and PHP from above, this test measures resource usage over time as five containers are started, reach their stable "active" state fifteen minute wait), shutdown and deleted.  This process was repeated five times, and the results recorded.
+
+The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
+
+    #!/bin/bash
+    # This image was uploaded to our private repository
+    # server for ease of testing.
+    # It can be built from the Docker files at
+    # https://github.com/DockerDemos/vm-docker-bench/tree/master/webbench
+    #
+    # Starts 15 of Docker containers running
+    # Apache and a basic PHP "Hello World" file.
+    #
+    COUNT="15"
+    docker pull $REPO/webbench
+    for n in {1..5} ; do
+      for i in {1..$COUNT} ; do docker run -rm -i -t $REPO/webbench ; done
+      sleep 15m
+      docker ps | awk '{print $1}' |xargs docker stop
+      sleep 30s
+    done
+
+__Container Commit (snapshot)__
 
 ###<a name='guest_bench'>Guest Benchmarks</a>###
 
@@ -147,7 +185,7 @@ File I/O benchmarking was done using the same [Sysbench Docker image](https://gi
     --init-rng=on --max-time=300 --max-requests=0 run
     sysbench --test=fileio --file-total-size=10G cleanup
 
-This test was run one hundred (100) times, serially, and the Kb/sec value from the test output recorded.
+This test was run one hundred times, serially, and the Kb/sec value from the test output recorded.
 
 The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
 
@@ -196,7 +234,7 @@ __Network Performance__
 
 __Application type performance (Blogbench)__
 
-[Blogbench](http://www.pureftpd.org/project/blogbench) was used to simulate file I/O as it would exist on a webserver, with mostly-read, some-write traffic.  The tests used the [Blogbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/blogbench) included in this repository.  The resulting container was started and ran `blogbench -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv`.  This process was repeated one hundred (100) times and the results recorded.
+[Blogbench](http://www.pureftpd.org/project/blogbench) was used to simulate file I/O as it would exist on a webserver, with mostly-read, some-write traffic.  The tests used the [Blogbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/blogbench) included in this repository.  The resulting container was started and ran `blogbench -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv`.  This process was repeated one hundred times and the results recorded.
 
 The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
 
@@ -214,7 +252,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
 
 __Application type performance (Apache + PHP)__
 
-Very basic application performance testing was done using the same [Apache + PHP Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/webbench) used for the serial VM/Container boot host benchmark tests above.  In addition, a [Docker image with Apache Bench](https://github.com/DockerDemos/vm-docker-bench/tree/master/abbench) was created to be run from another location (Laptop, second server, etc) to test the performance of the Apache + PHP container.
+Very basic application performance testing was done using the same [Apache + PHP Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/webbench) used for the serial container boot host benchmark tests above.  In addition, a [Docker image with Apache Bench](https://github.com/DockerDemos/vm-docker-bench/tree/master/abbench) was created to be run from another location (Laptop, second server, etc) to test the performance of the Apache + PHP container.
 
 The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
 
@@ -230,7 +268,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     docker pull $REPO/webbench
     docker run -d -p 80:80 $REPO/webbench 
 
-Then, from the secondary host (in this case, my laptop), the following script was run to initiate the Apache Benchmark tests, grabbing the contents of the index.php "Hello World" file one million (1,000,000) times, with four (4) requests at a time:
+Then, from the secondary host (in this case, my laptop), the following script was run to initiate the Apache Benchmark tests, grabbing the contents of the index.php "Hello World" file one million (1,000,000) times, with four requests at a time:
 
     #!/bin/bash
     # This image was uploaded to our private repository
@@ -248,7 +286,7 @@ Then, from the secondary host (in this case, my laptop), the following script wa
     docker run -i -t $REPO/abbench -n 1000000 -c 4 http://$DOCKER_BENCHMARK_HOST/index.php
 
 
-##<a name='vmhdp'>Virtual Machine Hypervisor + Docker Performance Benchmark</a>##
+##<a name='vmhdp'>Hypervisor + Docker Performance Benchmark</a>##
 
 ###<a name='host_results'>Host Benchmark Results</a>###
 
