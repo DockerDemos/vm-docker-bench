@@ -183,10 +183,8 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     # Tests MySQL performance with read, write and transaction
     # tests in 100 Docker containers, serially.
     docker pull $REPO/sysbench-mysql
-    for i in {1..100} ; do docker run -i -t $REPO/sysbench-mysql \
-    /bench/io.sh 5G \ 
-    |grep total\ time\: \
-    | awk '{print $3}'| sed -i 's/s//g' ; done
+    for i in {1..100} ; do docker run -i -t $REPO/sysbench-mysql 
+    done
 
 __MySQL__
 
