@@ -158,8 +158,30 @@ The following bash script was placed on the host server via the CoreOS cloud-con
 
 __MySQL Performance__
 
-    sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=root --mysql-password=yourrootsqlpassword prepare
-    sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=root --mysql-password=yourrootsqlpassword --max-time=60 --oltp-read-only=on --max-requests=0 --num-threads=8 run
+Sysbench was also used to test MySQL performance (reads, writes, transactions, etc).  A Docker container based on the [tutum/mysql image](https://github.com/tutumcloud/tutum-docker-mysql) with MySQL + Sysbench installedwas created and is available in this repository.
+
+On startup, the container sets up the MySQL server and database, and then runs the following, recording results:
+
+    sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=admin --mysql-password=rootmysqlpassword prepare
+    sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=admin --mysql-password=rootmysqlpassword --max-time=60 --oltp-read-only=on --max-requests=0 --num-threads=8 run
+
+This test was run one hundred times, serially, and the output recorded.
+
+The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
+
+    #!/bin/bash
+    # This image was uploaded to our private repository 
+    # server for ease of testing.
+    # It can be built from the Docker files at 
+    # https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench-mysql
+    #
+    # Tests MySQL performance with read, write and transaction
+    # tests in 100 Docker containers, serially.
+    docker pull $REPO/sysbench
+    for i in {1..100} ; do docker run -i -t $REPO/sysbench \
+    /bench/io.sh 5G \ 
+    |grep total\ time\: \
+    | awk '{print $3}'| sed -i 's/s//g' ; done
 
 __MySQL__
 
