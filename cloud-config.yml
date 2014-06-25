@@ -33,48 +33,136 @@ coreos:
         Type=btrfs
 
 write_files:
-  - path: /tmp/bench_cpu_calc.sh
-    permissions: 0755
-    content: |
-       #!/bin/bash
-       # This image was uploaded to our private repository 
-       # server for ease of testing.
-       # It can be built from the Docker files at 
-       # https://github.com/DockerDemos/vm-docker-bench\sysbench
-       #
-       # Tests CPU calculations by running a prime number 
-       # calculation benchmark test in 100 Docker 
-       # containers, serially.
-       docker pull $REPO/sysbench
-       for i in {1..100} ; do docker run -i -t $REPO/sysbench \
-       --test=cpu --cpu-max-prime=20000 run |grep total\ time\: \
-       | awk '{print $3}'| sed -i 's/s//g' ; done`
-
-  - path: /tmp/bench_concurrent_spinup.sh
+  - path: /tmp/bench/boot_ssp.sh
     permissions: 0755
     content: |
       #!/bin/bash
-      # This image was uploaded to our private repository 
+      # This image was uploaded to our private repository
       # server for ease of testing.
-      # It can be built from the Docker files at 
-      # https://github.com/DockerDemos/vm-docker-bench
+      # It can be built from the Docker files at
+      # https://github.com/DockerDemos/vm-docker-bench/tree/master/webbench
       #
-      # Test Load, Memory, and I/O impact by starting 100 
-      # Docker containers running an Apache server.
+      # Starts N number of Docker containers running
+      # Apache and a basic PHP "Hello World" file.
       #
-      # This is also the base setup (100 waiting Apache servers)
-      # for an Apache Bench (ab) test from 100 client servers located
+      COUNT="$1"
       docker pull $REPO/webbench
-      for i in {1..100} ; do docker run -d $REPO/webbench ; done
+      for i in {1..$COUNT} ; do docker run -i -t $REPO/webbench ; done
+      
+  - path: /tmp/bench/reboot.sh
+    permissions: 0755
+    content: |
+      #!/bin/bash
+      # This image was uploaded to our private repository
+      # server for ease of testing.
+      # It can be built from the Docker files at
+      # https://github.com/DockerDemos/vm-docker-bench/tree/master/webbench
+      #
+      # Starts 15 of Docker containers running
+      # Apache and a basic PHP "Hello World" file.
+      #
+      COUNT="15"
+      docker pull $REPO/webbench
+      for n in {1..5} ; do
+        for i in {1..$COUNT} ; do docker run -rm -i -t $REPO/webbench ; done
+        sleep 15m
+        docker ps | awk '{print $1}' |xargs docker stop
+        sleep 30s
+      done 
 
-   - path: /tmp/bench_io_load.sh
-     permissions: 0755
-     content: |
+  - path: /tmp/bench_cpu.sh
+    permissions: 0755
+    content: |
       #!/bin/bash
       # This image was uploaded to our private repository 
       # server for ease of testing.
       # It can be built from the Docker files at 
-      # https://github.com/DockerDemos/vm-docker-bench
-      docker pull $REPO/iobench
-      for i in {1..100} ; do docker run -d $REPO/iobench ; done
+      # https://github.com/DockerDemos/vm-docker-bench\sysbench
+      #
+      # Tests CPU calculations by running a prime number 
+      # calculation benchmark test in 100 Docker 
+      # containers, serially.
+      docker pull $REPO/sysbench
+      for i in {1..100} ; do docker run -i -t $REPO/sysbench \
+      --test=cpu --cpu-max-prime=20000 run |grep total\ time\: \
+     | awk '{print $3}'| sed -i 's/s//g' ; done`
 
+  - path: /tmp/bench_mysql.sh
+    permissions: 0755
+    content: |
+      #!/bin/bash
+      # This image was uploaded to our private repository 
+      # server for ease of testing.
+      # It can be built from the Docker files at 
+      # https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench-mysql
+      #
+      # Tests MySQL performance with read, write and transaction
+      # tests in 100 Docker containers, serially.
+      docker pull $REPO/sysbench-mysql
+      for i in {1..100} ; do docker run -i -t $REPO/sysbench-mysql 
+      done
+
+  - path: /tmp/bench_io.sh
+    permissions: 0755
+    content: |
+      #!/bin/bash
+      # This image was uploaded to our private repository 
+      # server for ease of testing.
+      # It can be built from the Docker files at 
+      # https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench
+      #
+      # Tests disk IO with a combined *Random Read and Write*
+      # test in 100 Docker containers, serially.
+      docker pull $REPO/sysbench
+      for i in {1..100} ; do docker run -i -t $REPO/sysbench \
+      /bench/io.sh 5G \ 
+      |grep total\ time\: \
+      | awk '{print $3}'| sed -i 's/s//g' ; done
+
+  - path: /tmp/bench_io_mod.sh
+    permissions: 0755
+    content: |
+      #!/bin/bash
+      # This image was uploaded to our private repository 
+      # server for ease of testing.
+      # It can be built from the Docker files at 
+      # https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench
+      #
+      # Tests disk IO with a combined *Random Read and Write*
+      # test in 100 Docker containers, serially, with a 
+      # 512MB memory limit enforced on the containers.
+      docker pull $REPO/sysbench
+      for i in {1..100} ; do docker run -i -t -m=524288 $REPO/sysbench \
+      /bench/io.sh 5G \ 
+      |grep total\ time\: \
+      | awk '{print $3}'| sed -i 's/s//g' ; done
+
+  - path: /tmp/bench_app_blog.sh
+    permissions: 0755
+    content: |
+      #!/bin/bash
+      # This image was uploaded to our private repository
+      # server for ease of testing.
+      # It can be built from the Docker files at
+      # https://github.com/DockerDemos/vm-docker-bench/tree/master/blogbench
+      #
+      # Tests file I/O operations simulating a 
+      # real-world server.
+      docker pull $REPO/blogbench
+      for i in {1..100} ; do docker run -i -t $REPO/blogbench \
+      -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv ; done
+
+  - path: /tmp/bench_app_ab.sh
+    permissions: 0755
+    content: |
+      #!/bin/bash
+      # This image was uploaded to our private repository
+      # server for ease of testing.
+      # It can be built from the Docker files at
+      # https://github.com/DockerDemos/vm-docker-bench/tree/master/webbench
+      #
+      # Starts N number of Docker containers running
+      # Apache and a basic PHP "Hello World" file.
+      #
+      docker pull $REPO/webbench
+      docker run -d -p 80:80 $REPO/webbench 
