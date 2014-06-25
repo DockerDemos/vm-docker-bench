@@ -29,18 +29,9 @@ Hypervisor + Docker Performance Benchmark
 
 In order to cover as many bases as possible, the tests were run as follows:
 
-**For Single Guest Tests**
-
 1. On the Cisco USC blade with CoreOS installed
 2. On the Cisco UCS blade with a hypervisor and a single VM with CoreOS installed
 3. On a separate physical machine with the same hypervisor and a single VM with Coreos installed.
-
-**For Multiple Guest Tests** 
-
-1. On the Cisco USC blade with CoreOS installed, running multiple Docker containers
-2. On the Cisco USC blade with a hypervisor, and a single VM with CoreOS installed, running multiple Docker containers
-3. On the Cisco USC blade with a hypervisor, and multiple VMs with CoreOS installed, running a single Docker container per VM
-4. On a separate physical machine with the same hypervisor, and a single VM with CoreOS installed, running multiple Docker containers
 
 **Data Gathering**
 
@@ -64,6 +55,8 @@ Test data for guest benchmarks being performed from remote hosts (for example, t
  _Note: Since the CoreOS files are all installed into memory, the logfiles will have some effect on both memory usage and file I/O, but it should be the same in all tests and small enough as to be neglegible.  A future version of this benchmark may ship results to a remote logging server and concequently swap the memory and I/O impact for networking impact._
 
 ###<a name='specs'>System Specs</a>###
+
+**Hardware**
 
 |            | Test System                  | Comparison System |
 | ----       | -----------                  | ----------------- |
