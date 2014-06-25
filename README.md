@@ -318,6 +318,8 @@ Boden Russell [\(http://bodenr.blogspot.com\)](http://bodenr.blogspot.com) for t
 
 Falko Timme [\(https://twitter.com/falko\)](https://twitter.com/falko) for his [HowtoForge article with basic guidance on benchmarking with Sysbench](http://www.howtoforge.com/how-to-benchmark-your-system-cpu-file-io-mysql-with-sysbench).
 
+Tutum [\(https://github.com/tutumcloud/tutum-docker-mysql\)](https://github.com/tutumcloud/tutum-docker-mysql) for the tutum-docker-mysql image, which saved me a ton of time getting MySQL ready for testing inside a container.
+
 ##Copyright Information##
 
 Copyright (C) 2014 Chris Collins
