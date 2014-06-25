@@ -49,13 +49,14 @@ Some test data was gathered via output to STDOUT from the containers themselves 
 
 ###<a name='specs'>System Specs</a>###
 
-|          | Test System                  | Comparison System |
-| ----     | -----------                  | ----------------- |
-| Hardware | Cisco UCS Blade CCSB-B200-M3 |                   |
-| Version  | B200M3.2.1.3a.0.082320131800 |                   |
-| CPU      | Intel E5-2665 @ 2.4GHz       | here              |
-| Memory   | 256GB 1600                   |                   |
-| HDD      |                              |                   |
+|            | Test System                  | Comparison System |
+| ----       | -----------                  | ----------------- |
+| Hardware   | Cisco UCS Blade CCSB-B200-M3 |                   |
+| Version    | B200M3.2.1.3a.0.082320131800 |                   |
+| CPU        | Intel E5-2665 @ 2.4GHz       | here              |
+| Memory     | 256GB 1600                   |                   |
+| HDD        |                              |                   |
+| Hypervisor |                              |                   |
 
 **OS: CoreOS** 
 
@@ -71,13 +72,32 @@ Version: 0.11.1, build fb99f99
 
 __Serial VM Boot__
 
-Webbench x15
-Webbench x100
+A [Docker image with Apache and PHP](https://github.com/DockerDemos/vm-docker-bench/tree/master/), and a basic "Hello World" PHP file was created to test performance during serial boot of fifteen (15) and one hundred (100) containers.  These two tests were performed two ways:
+
+ * CoreOS starting 15 or 100 containers
+ * Hypervisor with CoreOS starting 15 or 100 containers
+
+The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
+
+    #!/bin/bash
+    # This image was uploaded to our private repository
+    # server for ease of testing.
+    # It can be built from the Docker files at
+    # https://github.com/DockerDemos/vm-docker-bench/tree/master/webbench
+    #
+    # Starts N number of Docker containers running
+    # Apache and a basic PHP "Hello World" file.
+    #
+    COUNT="$1"
+    docker pull $REPO/webbench
+    for i in {1..$COUNT} ; do docker run -i -t $REPO/webbench ; done
 
 Compute node steady-state VM Packing
 ?
 
 VM reboot
+
+
 Reboot 5 VMs 5x each
 
 VM snapshot\*
@@ -95,7 +115,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     # This image was uploaded to our private repository 
     # server for ease of testing.
     # It can be built from the Docker files at 
-    # https://github.com/DockerDemos/vm-docker-bench/sysbench
+    # https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench
     #
     # Tests CPU calculations by running a prime number 
     # calculation benchmark test in 100 Docker 
@@ -135,7 +155,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     # This image was uploaded to our private repository 
     # server for ease of testing.
     # It can be built from the Docker files at 
-    # https://github.com/DockerDemos/vm-docker-bench/sysbench
+    # https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench
     #
     # Tests disk IO with a combined *Random Read and Write*
     # test in 100 Docker containers, serially.
@@ -159,9 +179,59 @@ __Network Performance__
 
 (netperf server on contol server, netperf in ipv4 on guest)
 
-__Application type performance__
+__Application type performance (Blogbench)__
 
-(Blogbench?)
+[Blogbench](http://www.pureftpd.org/project/blogbench) was used to simulate file I/O as it would exist on a webserver, with mostly-read, some-write traffic.  The tests used the [Blogbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/blogbench) included in this repository.  The resulting container was started and ran `blogbench -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv`.  This process was repeated one hundred (100) times and the results recorded.
+
+The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
+
+    #!/bin/bash
+    # This image was uploaded to our private repository
+    # server for ease of testing.
+    # It can be built from the Docker files at
+    # https://github.com/DockerDemos/vm-docker-bench/tree/master/blogbench
+    #
+    # Tests file I/O operations simulating a 
+    # real-world server.
+    docker pull $REPO/blogbench
+    for i in {1..100} ; do docker run -i -t $REPO/blogbench \
+    -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv ; done
+
+__Application type performance (Apache + PHP)__
+
+Very basic application performance testing was done using the same [Apache + PHP Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/webbench) used for the serial VM/Container boot host benchmark tests above.  In addition, a [Docker image with Apache Bench](https://github.com/DockerDemos/vm-docker-bench/tree/master/abbench) was created to be run from another location (Laptop, second server, etc) to test the performance of the Apache + PHP container.
+
+The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
+
+    #!/bin/bash
+    # This image was uploaded to our private repository
+    # server for ease of testing.
+    # It can be built from the Docker files at
+    # https://github.com/DockerDemos/vm-docker-bench/tree/master/webbench
+    #
+    # Starts N number of Docker containers running
+    # Apache and a basic PHP "Hello World" file.
+    #
+    docker pull $REPO/webbench
+    docker run -d -p 80:80 $REPO/webbench 
+
+Then, from the secondary host (in this case, my laptop), the following script was run to initiate the Apache Benchmark tests, grabbing the contents of the index.php "Hello World" file one million (1,000,000) times, with four (4) requests at a time:
+
+    #!/bin/bash
+    # This image was uploaded to our private repository
+    # server for ease of testing.
+    # It can be built from the Docker files at
+    # https://github.com/DockerDemos/vm-docker-bench/tree/master/abbench
+    #
+    # $DOCKER_BENCHMARK_HOST should be the name or IP of the Docker 
+    # host server being tested.
+    #
+    # Starts the Apache Benchmark program with any flags specified
+    # by the command passed to Docker
+    #
+    docker pull $REPO/abbench
+    docker run -i -t $REPO/abbench -n 1000000 -c 4 http://$DOCKER_BENCHMARK_HOST/index.php
+
 
 ##<a name='vmhdp'>Virtual Machine Hypervisor + Docker Performance Benchmark</a>##
 
