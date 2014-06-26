@@ -18,13 +18,14 @@ if [[ ! -d $BASE ]] ; then
   sudo mkdir -p $BASE
 fi
 
+sudo touch $LOGFILE
 sudo chmod 666 $LOGFILE
 
-echo 'user,nice,system,idle,iowait,irq,softirq,steal' >> $LOGFILE
+echo 'x,user,nice,system,idle,iowait,irq,softirq,steal,guest,guest_nice' >> $LOGFILE
 
 
 while true ; do 
-  echo "$(cat /proc/stat |grep cpu\
+  echo "$(cat /proc/stat |head -n 1\
   |sed -e 's/^[ \t]*//' | sed -e 's/[ ][ ]*/,/g')" >> $LOGFILE
   sleep 1s
 done

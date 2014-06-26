@@ -28,6 +28,7 @@ if [[ ! -d $BASE ]] ; then
   sudo mkdir -p $BASE
 fi
 
+sudo touch $LOGFILE
 sudo chmod 666 $LOGFILE
 
 echo 'major number,minor number,device name,reads completed successfully,reads merged,sectors read,time spent reading (ms),writes completed,writes merged,sectors written,time spent writing (ms),I/Os currently in progress,time spent doing I/Os (ms),weighted time spent doing I/Os (ms)' >> $LOGFILE
