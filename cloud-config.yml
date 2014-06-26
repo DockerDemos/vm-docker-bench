@@ -10,8 +10,8 @@ coreos:
         [Service]
         Type=oneshot
         RemainAfterExit=yes
-        ExecStart=/usr/sbin/wipefs -f /dev/sda1
-        ExecStart=/usr/sbin/mkfs.btrfs -f /dev/sda1
+        ExecStart=/usr/sbin/wipefs -f /dev/sda
+        ExecStart=/usr/sbin/mkfs.btrfs -f /dev/sda
     - name: var-lib-docker.mount
       command: start
       content: |
@@ -20,7 +20,7 @@ coreos:
         Requires=format-disk.service
         Before=docker.service
         [Mount]
-        What=/dev/sda1
+        What=/dev/sda
         Where=/var/lib/docker
         Type=btrfs
 
