@@ -2,20 +2,11 @@
 
 coreos:
   units:
-    - name: partition-disk.service
-      command: start
-      content: |
-        [Unit]
-        Description=Partitions the primary hd
-        [Service]
-        Type=oneshot
-        ExecStart=/bin/bash -c 'echo -e "o\nn\np\n1\n\n\nw" | fdisk /dev/sda'
     - name: format-disk.service
       command: start
       content: |
         [Unit]
         Description=Formats the primary drive
-        Requires=partition-disk.service
         [Service]
         Type=oneshot
         RemainAfterExit=yes
