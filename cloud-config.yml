@@ -33,7 +33,7 @@ coreos:
         Type=btrfs
 
 write_files:
-  - path: /tmp/bench/boot_ssp.sh
+  - path: /bench/bench_boot_ssp.sh
     permissions: 0755
     content: |
       #!/bin/bash
@@ -49,7 +49,7 @@ write_files:
       docker pull $REPO/bench-webbench
       for i in {1..$COUNT} ; do docker run -i -t $REPO/bench-webbench ; done
       
-  - path: /tmp/bench/reboot.sh
+  - path: /bench/bench_reboot.sh
     permissions: 0755
     content: |
       #!/bin/bash
@@ -70,7 +70,7 @@ write_files:
         sleep 30s
       done 
 
-  - path: /tmp/bench_cpu.sh
+  - path: /bench/bench_cpu.sh
     permissions: 0755
     content: |
       #!/bin/bash
@@ -87,7 +87,7 @@ write_files:
       --test=cpu --cpu-max-prime=20000 run |grep total\ time\: \
       | awk '{print $3}'| sed -i 's/s//g' ; done`
 
-  - path: /tmp/bench_mysql.sh
+  - path: /bench/bench_mysql.sh
     permissions: 0755
     content: |
       #!/bin/bash
@@ -102,7 +102,7 @@ write_files:
       for i in {1..100} ; do docker run -i -t $REPO/bench-sysbench-mysql 
       done
 
-  - path: /tmp/bench_io.sh
+  - path: /bench/bench_io.sh
     permissions: 0755
     content: |
       #!/bin/bash
@@ -119,7 +119,7 @@ write_files:
       |grep total\ time\: \
       | awk '{print $3}'| sed -i 's/s//g' ; done
 
-  - path: /tmp/bench_io_mod.sh
+  - path: /bench/bench_io_mod.sh
     permissions: 0755
     content: |
       #!/bin/bash
@@ -137,7 +137,7 @@ write_files:
       |grep total\ time\: \
       | awk '{print $3}'| sed -i 's/s//g' ; done
 
-  - path: /tmp/bench_app_blog.sh
+  - path: /bench/bench_app_blog.sh
     permissions: 0755
     content: |
       #!/bin/bash
@@ -152,7 +152,7 @@ write_files:
       for i in {1..100} ; do docker run -i -t $REPO/bench-blogbench \
       -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv ; done
 
-  - path: /tmp/bench_app_ab.sh
+  - path: /bench/bench-app_ab.sh
     permissions: 0755
     content: |
       #!/bin/bash
@@ -166,3 +166,16 @@ write_files:
       #
       docker pull $REPO/bench-webbench
       docker run -d -p 80:80 $REPO/bench-webbench 
+
+  - path: /bench/bench_clear_cache.sh
+    permissions: 0755
+    content: |
+      #!/bin/bash
+      #
+      # Shamelessly stolen from https://github.com/bodenr
+      #
+      # https://github.com/bodenr/cloudy-docker-kvm-bench/blob/master/bin/clrc.sh
+
+      sync
+
+      echo 3 > /proc/sys/vm/drop_caches
