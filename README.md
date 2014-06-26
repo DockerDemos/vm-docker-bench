@@ -58,14 +58,19 @@ Test data for guest benchmarks being performed from remote hosts (for example, t
 
 **Hardware**
 
-|            | Test System                  | Secondary System                    |
-| ----       | -----------                  | -----------------                   |
-| Hardware   | Cisco UCS Blade CCSB-B200-M3 | Cisco UCS Blade CSSB-B200-M3        |
-| Version    | B200M3.2.1.3a.0.082320131800 |                                     |
-| CPU        | Intel E5-2665 @ 2.4GHz       | Intel E5-2697 v2 @ 2.70GHz (2 Cores)|
-| Memory     | 256GB 1600                   | 8GB                                 |
-| HDD        |                              | SAN-attached SATA                   |
-| Hypervisor |                              |                                     |
+|            | Primary System                | Secondary System                           |
+| ----       | --------------                | ----------------                           |
+| Hardware   | Cisco UCS Blade CCSB-B200-M3  | Cisco UCS Blade CSSB-B200-M3               |
+| Version    | B200M3.2.1.3a.0.082320131800  | B200M3.2.1.3a.0.082320131800               |
+| CPU        | Intel E5-2665 @ 2.4GHz 8 Core | Intel E5-2697 v2 @ 2.70GHz 12 Core         |
+| Memory     | 256GB 1600                    | 256GB 1866                                 |
+| HDD        | Toshiba 300GB SAS 15KRPM      | EMC VNX5700 Array, 2TB 7200RPM (50 disks)  |
+
+|            | Primary System w/Hypervisor      | Secondary System w/Hypervisor       |
+| ----       | ---------------------------      | ----------------------------        |
+| CPU        | Intel E5-2665 @ 2.4GHz (2 Cores) | Intel E5-2697 v2 @ 2.70GHz (2 Cores)|
+| Memory     | 8GB 1600                         | 8GB 1866                            |
+| HDD        | Virtual                          | Virtual                             |
 
 **OS: CoreOS** 
 
