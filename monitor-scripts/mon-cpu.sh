@@ -24,7 +24,7 @@ echo 'user,nice,system,idle,iowait,irq,softirq,steal' >> $LOGFILE
 
 
 while true ; do 
-  echo "$(cat /proc/stat \
+  echo "$(cat /proc/stat |grep cpu\
   |sed -e 's/^[ \t]*//' | sed -e 's/[ ][ ]*/,/g')" >> $LOGFILE
   sleep 1s
 done
