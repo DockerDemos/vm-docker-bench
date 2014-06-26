@@ -46,8 +46,8 @@ write_files:
       # Apache and a basic PHP "Hello World" file.
       #
       COUNT="$1"
-      docker pull $REPO/webbench
-      for i in {1..$COUNT} ; do docker run -i -t $REPO/webbench ; done
+      docker pull $REPO/bench-webbench
+      for i in {1..$COUNT} ; do docker run -i -t $REPO/bench-webbench ; done
       
   - path: /tmp/bench/reboot.sh
     permissions: 0755
@@ -62,9 +62,9 @@ write_files:
       # Apache and a basic PHP "Hello World" file.
       #
       COUNT="15"
-      docker pull $REPO/webbench
+      docker pull $REPO/bench-webbench
       for n in {1..5} ; do
-        for i in {1..$COUNT} ; do docker run -rm -i -t $REPO/webbench ; done
+        for i in {1..$COUNT} ; do docker run -rm -i -t $REPO/bench-webbench ; done
         sleep 15m
         docker ps | awk '{print $1}' |xargs docker stop
         sleep 30s
@@ -82,8 +82,8 @@ write_files:
       # Tests CPU calculations by running a prime number 
       # calculation benchmark test in 100 Docker 
       # containers, serially.
-      docker pull $REPO/sysbench
-      for i in {1..100} ; do docker run -i -t $REPO/sysbench \
+      docker pull $REPO/bench-sysbench
+      for i in {1..100} ; do docker run -i -t $REPO/bench-sysbench \
       --test=cpu --cpu-max-prime=20000 run |grep total\ time\: \
       | awk '{print $3}'| sed -i 's/s//g' ; done`
 
@@ -98,8 +98,8 @@ write_files:
       #
       # Tests MySQL performance with read, write and transaction
       # tests in 100 Docker containers, serially.
-      docker pull $REPO/sysbench-mysql
-      for i in {1..100} ; do docker run -i -t $REPO/sysbench-mysql 
+      docker pull $REPO/bench-sysbench-mysql
+      for i in {1..100} ; do docker run -i -t $REPO/bench-sysbench-mysql 
       done
 
   - path: /tmp/bench_io.sh
@@ -113,8 +113,8 @@ write_files:
       #
       # Tests disk IO with a combined *Random Read and Write*
       # test in 100 Docker containers, serially.
-      docker pull $REPO/sysbench
-      for i in {1..100} ; do docker run -i -t $REPO/sysbench \
+      docker pull $REPO/bench-sysbench
+      for i in {1..100} ; do docker run -i -t $REPO/bench-sysbench \
       /bench/io.sh 5G \ 
       |grep total\ time\: \
       | awk '{print $3}'| sed -i 's/s//g' ; done
@@ -131,8 +131,8 @@ write_files:
       # Tests disk IO with a combined *Random Read and Write*
       # test in 100 Docker containers, serially, with a 
       # 512MB memory limit enforced on the containers.
-      docker pull $REPO/sysbench
-      for i in {1..100} ; do docker run -i -t -m=524288 $REPO/sysbench \
+      docker pull $REPO/bench-sysbench
+      for i in {1..100} ; do docker run -i -t -m=524288 $REPO/bench-sysbench \
       /bench/io.sh 5G \ 
       |grep total\ time\: \
       | awk '{print $3}'| sed -i 's/s//g' ; done
@@ -148,8 +148,8 @@ write_files:
       #
       # Tests file I/O operations simulating a 
       # real-world server.
-      docker pull $REPO/blogbench
-      for i in {1..100} ; do docker run -i -t $REPO/blogbench \
+      docker pull $REPO/bench-blogbench
+      for i in {1..100} ; do docker run -i -t $REPO/bench-blogbench \
       -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv ; done
 
   - path: /tmp/bench_app_ab.sh
@@ -164,5 +164,5 @@ write_files:
       # Starts N number of Docker containers running
       # Apache and a basic PHP "Hello World" file.
       #
-      docker pull $REPO/webbench
-      docker run -d -p 80:80 $REPO/webbench 
+      docker pull $REPO/bench-webbench
+      docker run -d -p 80:80 $REPO/bench-webbench 
