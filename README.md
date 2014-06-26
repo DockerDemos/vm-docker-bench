@@ -58,14 +58,14 @@ Test data for guest benchmarks being performed from remote hosts (for example, t
 
 **Hardware**
 
-|            | Test System                  | Comparison System |
-| ----       | -----------                  | ----------------- |
-| Hardware   | Cisco UCS Blade CCSB-B200-M3 |                   |
-| Version    | B200M3.2.1.3a.0.082320131800 |                   |
-| CPU        | Intel E5-2665 @ 2.4GHz       | here              |
-| Memory     | 256GB 1600                   |                   |
-| HDD        |                              |                   |
-| Hypervisor |                              |                   |
+|            | Test System                  | Secondary System                    |
+| ----       | -----------                  | -----------------                   |
+| Hardware   | Cisco UCS Blade CCSB-B200-M3 | Cisco UCS Blade CSSB-B200-M3        |
+| Version    | B200M3.2.1.3a.0.082320131800 |                                     |
+| CPU        | Intel E5-2665 @ 2.4GHz       | Intel E5-2697 v2 @ 2.70GHz (2 Cores)|
+| Memory     | 256GB 1600                   | 8GB                                 |
+| HDD        |                              | SAN-attached SATA                   |
+| Hypervisor |                              |                                     |
 
 **OS: CoreOS** 
 
@@ -244,7 +244,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
 
 __Memory Performance__
 
-(mbw array size of 1000 MiB)
+(`mbw 10001 mbw array size of 1000 MiB)
 
 __Network Performance__
 
