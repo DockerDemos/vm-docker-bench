@@ -39,7 +39,7 @@ write_files:
       #
       COUNT="$1"
       docker pull $REPO/bench-webbench >> /dev/null
-      for i in {1..$COUNT} ; do docker run -i -t $REPO/bench-webbench ; done
+      for i in {1..$COUNT} ; do docker run -d $REPO/bench-webbench ; done
       
   - path: /bench/bench_reboot.sh
     permissions: 0755
@@ -56,7 +56,7 @@ write_files:
       COUNT="15"
       docker pull $REPO/bench-webbench >> /dev/null
       for n in {1..5} ; do
-        for i in {1..$COUNT} ; do docker run -rm -i -t $REPO/bench-webbench ; done
+        for i in {1..$COUNT} ; do docker run -rm -d $REPO/bench-webbench ; done
         sleep 15m
         docker ps | awk '{print $1}' |xargs docker stop
         sleep 30s
