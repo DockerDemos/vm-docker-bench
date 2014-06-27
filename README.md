@@ -37,7 +37,7 @@ In order to cover as many bases as possible, the tests were run as follows:
 
 _Host Benchmark Data_:
 
-For each of the Host Benchmarks, multiple datapoints are collected using the [Resource Monitoring Scripts](https://github.com/DockerDemos/vm-docker-bench/tree/master/monitor-scripts) included in this repository.  These scripts were started prior to each test and collected data throughout.  Each monitors a specific aspect of the host's resources at set intervals and outputs to a log file.
+For each of the Host Benchmarks, multiple datapoints are collected using the [Resource Monitoring Scripts](https://github.com/DockerDemos/vm-docker-bench/tree/master/monitor-scripts) included in this repository.  These scripts were started prior to each test and collected data throughout.  Each monitors a specific aspect of the host's resources at set intervals and outputs to a remote log file via and SSH tunnel.
 
  * CPU Load average
  * Memory Usage
@@ -48,11 +48,25 @@ The scripts were all placed on the host server via the CoreOS cloud-config.yml f
 
 _Guest Benchmark Data_:
 
-Test data for guest benchmarks running from within the tested container was gathered via STDOUT from the containers themselves (for exampe the CPU performance testing times) and written to a log file.
+Test data for guest benchmarks running from within the tested container was gathered via STDOUT from the containers themselves (for exampe the CPU performance testing times) and written to a remote log file via an SSH tunnel.
 
 Test data for guest benchmarks being performed from remote hosts (for example, the Application Type Perfomance Apache Benchmark tests) were recorded via STDOUT from the process itself and written to a logfile.
 
- _Note: Since the CoreOS files are all installed into memory, the logfiles will have some effect on both memory usage and file I/O, but it should be the same in all tests and small enough as to be neglegible.  A future version of this benchmark may ship results to a remote logging server and concequently swap the memory and I/O impact for networking impact._
+**Literal Method**
+
+This is here mostly just to help me keep the steps straight.
+
+| SSH Session 1                      | SSH Sesson 2                          |
+| -------------                      | ------------                          |
+| Reboot (PXE Install)               |                                       |
+| Wait 10m for host to become stable | Wait 10 Min                           |
+| Login                              | Login                                 |
+|                                    | Su to Root                            |
+|                                    | Export REPO=(private docker registry) |
+|                                    | Run clear cache script                |
+| Start monitor script; out via SSH  |                                       |
+|                                    | Run test script; out via SSH          |
+| Stop monitor script                |                                       |
 
 ###<a name='specs'>System Specs</a>###
 
