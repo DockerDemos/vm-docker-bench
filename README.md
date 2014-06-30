@@ -334,22 +334,26 @@ Then, from a remote host (in this case, my laptop), the following script was run
 
 __Serial Container Boot__
 
-![Graph of Primay System w/no Hypervisor, Serial Container Boot Test](/raw-results/primary_no_hypervisor-serial-container-boot.png?raw=true "Graph of Primay System w/no Hypervisor, Serial Container Boot Test")
+![Graph of Primary System w/no Hypervisor, Serial Container Boot Test](/raw-results/primary_no_hypervisor-serial-container-boot.png?raw=true "Graph of Primary System w/no Hypervisor, Serial Container Boot Test")
 
 
 ![Graph of Control System, Serial Container Boot Test](/raw-results/control-serial-container-boot.png?raw=true "Graph of Control System, Serial Container Boot Test")
 
 __Compute node steady-state Container Packing__
 
-![Graph of Primay System w/no Hypervisor, Steady-State Packing Test](/raw-results/primary_no_hypervisor-ssp-15.png?raw=true "Graph of Primay System w/no Hypervisor, Steady State Packing (15) Test")
+![Graph of Primary System w/no Hypervisor, Steady-State Packing Test](/raw-results/primary_no_hypervisor-ssp-15.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (15) Test")
 
-![Graph of Primay System w/no Hypervisor, Steady-State Packing Test: Boot Detail](/raw-results/primary_no_hypervisor-ssp-15-boot_detail.png?raw=true "Graph of Primay System w/no Hypervisor, Steady State Packing (15) Test: Boot Detail")
+![Graph of Primary System w/no Hypervisor, Steady-State Packing Test: Boot Detail](/raw-results/primary_no_hypervisor-ssp-15-boot_detail.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (15) Test: Boot Detail")
 
-![Graph of Primay System w/no Hypervisor, Steady-State Packing Test: Shutdown Detail](/raw-results/primary_no_hypervisor-ssp-15-shutdown_detail.png?raw=true "Graph of Primay System w/no Hypervisor, Steady State Packing (15): Shutdown Detail Test")
+![Graph of Primary System w/no Hypervisor, Steady-State Packing Test: Shutdown Detail](/raw-results/primary_no_hypervisor-ssp-15-shutdown_detail.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (15): Shutdown Detail Test")
 
 ![Graph of Control System, Steady-State Packing Test](/raw-results/control-ssp-15.png?raw=true "Graph of Control System, Steady State Packing (15) Test")
 
+![Graph of Control System, Steady-State Packing Test: Boot Detail](/raw-results/control-ssp-15-boot_detail.png?raw=true "Graph of Control System, Steady State Packing (15) Test: Boot Detail")
 
+![Graph of Control System, Steady-State Packing Test: Shutdown Detail](/raw-results/control-ssp-15-shutdown_detail.png?raw=true "Graph of Control System, Steady State Packing (15): Shutdown Detail Test")
+
+![Graph of Control System, Steady-State Packing Test](/raw-results/control-ssp-15.png?raw=true "Graph of Control System, Steady State Packing (15) Test")
 
 ###<a name='guest_results'>Guest Benchmark Results</a>###
 
