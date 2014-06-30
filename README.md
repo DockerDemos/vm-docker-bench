@@ -74,7 +74,7 @@ This is here mostly just to help me keep the steps straight.
 
 **Hardware**
 
-|            | Primary System                | Secondary (control) System                 |
+|            | Primary System                | Control (control) System                 |
 | ----       | --------------                | ----------------                           |
 | Hardware   | Cisco UCS Blade CCSB-B200-M3  | Cisco UCS Blade CSSB-B200-M3               |
 | Version    | B200M3.2.1.3a.0.082320131800  | B200M3.2.1.3a.0.082320131800               |
@@ -82,7 +82,7 @@ This is here mostly just to help me keep the steps straight.
 | Memory     | 256GB 1600                    | 256GB 1866                                 |
 | HDD        | Toshiba 300GB SAS 15KRPM      | EMC VNX5700 Array, 2TB 7200RPM (50 disks)  |
 
-|            | Primary System w/Hypervisor      | Secondary System w/Hypervisor       |
+|            | Primary System w/Hypervisor      | Control System w/Hypervisor       |
 | ----       | ---------------------------      | ----------------------------        |
 | CPU        | Intel E5-2665 @ 2.4GHz (2 Cores) | Intel E5-2697 v2 @ 2.70GHz (2 Cores)|
 | Memory     | 8GB 1600                         | 8GB 1866                            |
@@ -310,7 +310,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     docker pull $REPO/webbench
     docker run -d -p 80:80 $REPO/webbench 
 
-Then, from the secondary host (in this case, my laptop), the following script was run to initiate the Apache Benchmark tests, grabbing the contents of the index.php "Hello World" file one million (1,000,000) times, with four requests at a time:
+Then, from a remote host (in this case, my laptop), the following script was run to initiate the Apache Benchmark tests, grabbing the contents of the index.php "Hello World" file one million (1,000,000) times, with four requests at a time:
 
     #!/bin/bash
     # This image was uploaded to our private repository
@@ -337,7 +337,15 @@ __Serial Container Boot__
 ![Graph of Primay System w/no Hypervisor, Serial Container Boot Test](/raw-results/primary_no_hypervisor-serial-container-boot.png?raw=true "Graph of Primay System w/no Hypervisor, Serial Container Boot Test")
 
 
-![Graph of Control System, Serial Container Boot Test](/raw-results/secondary_serial-container-boot.png?raw=true "Graph of Secondary System, Serial Container Boot Test")
+![Graph of Control System, Serial Container Boot Test](/raw-results/control_serial-container-boot.png?raw=true "Graph of Control System, Serial Container Boot Test")
+
+__Compute node steady-state Container Packing__
+
+![Graph of Primay System w/no Hypervisor, Steady-State Packing Test](/raw-results/primary_no_hypervisor-ssp-15.png?raw=true "Graph of Primay System w/no Hypervisor, Steady State Packing (15) Test")
+
+![Graph of Control System, Steady-State Packing Test](/raw-results/control_ssp-15.png?raw=true "Graph of Control System, Steady State Packing (15) Test")
+
+
 
 ###<a name='guest_results'>Guest Benchmark Results</a>###
 
