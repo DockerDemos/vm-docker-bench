@@ -59,8 +59,8 @@ This is here mostly just to help me keep the steps straight.
 | SSH Session 1                      | SSH Sesson 2                          |
 | -------------                      | ------------                          |
 | Reboot (PXE Install)               |                                       |
-| Wait 10m for host to become stable | Wait 10 Min                           |
 | Login                              | Login                                 |
+| Wait 10m for host to become stable | Wait 10 Min                           |
 |                                    | Su to Root                            |
 |                                    | Export REPO=(private docker registry) |
 |                                    | Run clear cache script                |
@@ -72,7 +72,7 @@ This is here mostly just to help me keep the steps straight.
 
 **Hardware**
 
-|            | Primary System                | Secondary System                           |
+|            | Primary System                | Secondary (control) System                 |
 | ----       | --------------                | ----------------                           |
 | Hardware   | Cisco UCS Blade CCSB-B200-M3  | Cisco UCS Blade CSSB-B200-M3               |
 | Version    | B200M3.2.1.3a.0.082320131800  | B200M3.2.1.3a.0.082320131800               |
@@ -107,6 +107,9 @@ The [Docker image with Apache and PHP](https://github.com/DockerDemos/vm-docker-
 The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
 
     #!/bin/bash
+    #
+    # Version 1.0 (2014-06-30)
+    #
     # This image was uploaded to our private repository
     # server for ease of testing.
     # It can be built from the Docker files at
@@ -116,8 +119,8 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     # Apache and a basic PHP "Hello World" file.
     #
     COUNT="$1"
-    docker pull $REPO/webbench
-    for i in {1..$COUNT} ; do docker run -i -t $REPO/webbench ; done
+    docker pull $REPO/bench-webbench >> /dev/null
+    for i in $(seq 1 $COUNT) ; do docker run -d $REPO/bench-webbench ; done
 
 __Compute node steady-state Container Packing__
 
