@@ -37,7 +37,7 @@ In order to cover as many bases as possible, the tests were run as follows:
 
 _Host Benchmark Data_:
 
-For each of the Host Benchmarks, multiple datapoints are collected using the [Resource Monitoring Scripts](https://github.com/DockerDemos/vm-docker-bench/tree/master/monitor-scripts) included in this repository.  These scripts were started prior to each test and collected data throughout.  Each monitors a specific aspect of the host's resources at set intervals and outputs to a remote log file via and SSH tunnel.
+For each of the Host Benchmarks, multiple datapoints are collected using the [Resource Monitoring Scripts](https://github.com/DockerDemos/vm-docker-bench/tree/master/honitor-scripts) included in this repository.  These scripts were started prior to each test and collected data throughout.  Each monitors a specific aspect of the host's resources at set intervals and outputs to a remote log file via and SSH tunnel.
 
  * CPU Load average
  * Memory Usage
@@ -334,18 +334,33 @@ Then, from a remote host (in this case, my laptop), the following script was run
 
 __Serial Container Boot__
 
+This test measures the CPU and I/O usage on the host during the startup of 100 Docker containers.  The graphs below show the User, System and IOWait, in USER_Hz.  The polling period was once per second.  For all three values, lower is better.
+
 ![Graph of Primary System w/no Hypervisor, Serial Container Boot Test](/raw-results/primary_no_hypervisor-serial-container-boot.png?raw=true "Graph of Primary System w/no Hypervisor, Serial Container Boot Test")
 
+This goes toward confirming other's findings (especially Boden Russell's) that Disk I/O is the largest limiting factor for Docker containers.  The I/O Wait caused by starting one container after another with little gap in between was a bit too much for the single hard disk, even a SAS 15,000 RPM one.  The majority of the I/O was generated with the startup of the containers, but you can see a bit of a spike at the very beginning just pulling the image for the containers from the private repository.
+
+TO DO: Primary system w/Hypervisor
 
 ![Graph of Control System, Serial Container Boot Test](/raw-results/control-serial-container-boot.png?raw=true "Graph of Control System, Serial Container Boot Test")
 
+The control system mimics the performance of primary system, but with less I/O congestion thanks to the 50 disk EMC Array backing the hypervisor's virtual disks.  Any difference in User and System performance is largely neglegible.
+
 __Compute node steady-state Container Packing__
+
+This test measures the same metrics as the above: CPU and I/O usage on the host, but through a full startup, 15 minute wait, and full shutdown of 15 containers.  Again, lower is better.
 
 ![Graph of Primary System w/no Hypervisor, Steady-State Packing Test](/raw-results/primary_no_hypervisor-ssp-15.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (15) Test")
 
+This first graph is included for completeness, but the extended time between startup and shutdown makes it somewhat useless for humans to read.  Detail graphs of the startup and shutdown process for the containers are included below.
+
 ![Graph of Primary System w/no Hypervisor, Steady-State Packing Test: Boot Detail](/raw-results/primary_no_hypervisor-ssp-15-boot_detail.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (15) Test: Boot Detail")
 
+This graph show a detail view of the startup process for 15 containers on the primary system with no hypervisor.  The performance almost perfectly mimics that of the 100 container Serial Container Boot above.  This likely implies a max startup rate for each container on a host - starting more or less containers serially will not be likely to have any impact on performance.
+
 ![Graph of Primary System w/no Hypervisor, Steady-State Packing Test: Shutdown Detail](/raw-results/primary_no_hypervisor-ssp-15-shutdown_detail.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (15): Shutdown Detail Test")
+
+This graph shows a detail view of the shutdown process for 15 containers on the primary system with no hypervisor.  The shutdown process requires little to no disk I/O, and is considerably more efficient than the startup process. 
 
 ![Graph of Control System, Steady-State Packing Test](/raw-results/control-ssp-15.png?raw=true "Graph of Control System, Steady State Packing (15) Test")
 
