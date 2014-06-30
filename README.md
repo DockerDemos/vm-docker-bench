@@ -356,7 +356,7 @@ This first graph is included for completeness, but the extended time between sta
 
 ![Graph of Primary System w/no Hypervisor, Steady-State Packing Test: Boot Detail](/raw-results/primary_no_hypervisor-ssp-15-boot_detail.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (15) Test: Boot Detail")
 
-This graph show a detail view of the startup process for 15 containers on the primary system with no hypervisor.  The performance almost perfectly mimics that of the 100 container Serial Container Boot above.  This likely implies a max startup rate for each container on a host - starting more or less containers serially will not be likely to have any impact on performance.
+This graph shows a detail view of the startup process for 15 containers on the primary system with no hypervisor.  The performance almost perfectly mimics that of the 100 container Serial Container Boot above.  This likely implies a max startup rate for each container on a host - starting more or less containers serially will not be likely to have any impact on performance.
 
 ![Graph of Primary System w/no Hypervisor, Steady-State Packing Test: Shutdown Detail](/raw-results/primary_no_hypervisor-ssp-15-shutdown_detail.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (15): Shutdown Detail Test")
 
