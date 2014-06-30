@@ -74,7 +74,7 @@ This is here mostly just to help me keep the steps straight.
 
 **Hardware**
 
-|            | Primary System                | Control (control) System                 |
+|            | Primary System                | Secondary (control) System                 |
 | ----       | --------------                | ----------------                           |
 | Hardware   | Cisco UCS Blade CCSB-B200-M3  | Cisco UCS Blade CSSB-B200-M3               |
 | Version    | B200M3.2.1.3a.0.082320131800  | B200M3.2.1.3a.0.082320131800               |
