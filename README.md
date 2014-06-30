@@ -65,7 +65,9 @@ This is here mostly just to help me keep the steps straight.
 |                                    | Export REPO=(private docker registry) |
 |                                    | Run clear cache script                |
 | Start monitor script; out via SSH  |                                       |
+| Wait 1m for base stats             |                                       |
 |                                    | Run test script; out via SSH          |
+| Wait 5m for base stats             |                                       |
 | Stop monitor script                |                                       |
 
 ###<a name='specs'>System Specs</a>###
