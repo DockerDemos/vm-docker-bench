@@ -337,13 +337,13 @@ __Serial Container Boot__
 ![Graph of Primay System w/no Hypervisor, Serial Container Boot Test](/raw-results/primary_no_hypervisor-serial-container-boot.png?raw=true "Graph of Primay System w/no Hypervisor, Serial Container Boot Test")
 
 
-![Graph of Control System, Serial Container Boot Test](/raw-results/control_serial-container-boot.png?raw=true "Graph of Control System, Serial Container Boot Test")
+![Graph of Control System, Serial Container Boot Test](/raw-results/control-serial-container-boot.png?raw=true "Graph of Control System, Serial Container Boot Test")
 
 __Compute node steady-state Container Packing__
 
 ![Graph of Primay System w/no Hypervisor, Steady-State Packing Test](/raw-results/primary_no_hypervisor-ssp-15.png?raw=true "Graph of Primay System w/no Hypervisor, Steady State Packing (15) Test")
 
-![Graph of Control System, Steady-State Packing Test](/raw-results/control_ssp-15.png?raw=true "Graph of Control System, Steady State Packing (15) Test")
+![Graph of Control System, Steady-State Packing Test](/raw-results/control-ssp-15.png?raw=true "Graph of Control System, Steady State Packing (15) Test")
 
 
 
