@@ -337,6 +337,7 @@ __Serial Container Boot__
 ![Graph of Primay System w/no Hypervisor, Serial Container Boot Test](/raw-results/primary_no_hypervisor-serial-container-boot.png?raw=true "Graph of Primay System w/no Hypervisor, Serial Container Boot Test")
 
 
+![Graph of Control System, Serial Container Boot Test](/raw-results/secondary_serial-container-boot.png?raw=true "Graph of Secondary System, Serial Container Boot Test")
 
 ###<a name='guest_results'>Guest Benchmark Results</a>###
 
