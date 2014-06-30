@@ -332,6 +332,12 @@ Then, from the secondary host (in this case, my laptop), the following script wa
 
 ###<a name='host_results'>Host Benchmark Results</a>###
 
+__Serial Container Boot__
+
+![Graph of Primay System w/no Hypervisor, Serial Container Boot Test](/raw-results/primary_no_hypervisor-serial-container-boot.png?raw=true "Graph of Primay System w/no Hypervisor, Serial Container Boot Test")
+
+
+
 ###<a name='guest_results'>Guest Benchmark Results</a>###
 
 ##Acknowledgements##
