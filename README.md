@@ -150,7 +150,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     COUNT="15"
     docker pull $REPO/webbench
     for n in {1..5} ; do
-      for i in {1..$COUNT} ; do docker run -rm -i -t $REPO/webbench ; done
+      for i in $(seq 1 $COUNT) ; do docker run -rm -i -t $REPO/webbench ; done
       sleep 15m
       docker ps | awk '{print $1}' |xargs docker stop
       sleep 30s

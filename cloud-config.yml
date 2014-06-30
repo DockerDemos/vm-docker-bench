@@ -47,23 +47,26 @@ write_files:
   - path: /bench/bench_reboot.sh
     permissions: 0755
     content: |
-      #!/bin/bash
-      # This image was uploaded to our private repository
-      # server for ease of testing.
-      # It can be built from the Docker files at
-      # https://github.com/DockerDemos/vm-docker-bench/tree/master/webbench
-      #
-      # Starts 15 of Docker containers running
-      # Apache and a basic PHP "Hello World" file.
-      #
-      COUNT="15"
-      docker pull $REPO/bench-webbench >> /dev/null
-      for n in {1..5} ; do
-        for i in $(seq 1 $COUNT) ; do docker run -rm -d $REPO/bench-webbench ; done
-        sleep 15m
-        docker ps | awk '{print $1}' |xargs docker stop
-        sleep 30s
-      done 
+    #!/bin/bash
+    #
+    # Version 1.0 (2014-06-30)
+    #
+    # This image was uploaded to our private repository
+    # server for ease of testing.
+    # It can be built from the Docker files at
+    # https://github.com/DockerDemos/vm-docker-bench/tree/master/webbench
+    #
+    # Starts 15 of Docker containers running
+    # Apache and a basic PHP "Hello World" file.
+    #
+    COUNT="15"
+    docker pull $REPO/webbench
+    for n in {1..5} ; do
+      for i in $(seq 1 $COUNT) ; do docker run -rm -i -t $REPO/webbench ; done
+      sleep 5m
+      docker ps | awk '{print $1}' |xargs docker stop
+      sleep 5m
+    done
 
   - path: /bench/bench_cpu.sh
     permissions: 0755
