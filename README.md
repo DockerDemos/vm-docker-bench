@@ -384,6 +384,15 @@ This graph shows a detail view of the shutdown process for 15 containers on the 
 
 ###<a name='guest_results'>Guest Benchmark Results</a>###
 
+__CPU Performance__
+
+![Graph of Control System, Sysbench Max Prime tests (100): 200 Second CPU Usage sample](/raw-results/control-CPU_cpu.png?raw=true "Graph of Control System, Sysbench Max Prime tests (100): 200 Second CPU Usage sample")
+
+![Graph of Control System, Sysbench Max Prime tests (100): Memory Usage](/raw-results/control-CPU_mem.png?raw=true "Graph of Control System, Sysbench Max Prime tests (100): Memory Usage")
+
+![Graph of Control System, Sysbench Max Prime tests (100): Total Time for Test](/raw-results/control-CPU_cpu-time.png?raw=true "Graph of Control System, Sysbench Max Prime tests (100): Total Time for Test")
+
+
 ##Acknowledgements##
 
 Thanks to: 
