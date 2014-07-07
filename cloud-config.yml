@@ -25,7 +25,7 @@ coreos:
         Type=btrfs
 
 write_files:
-  - path: /bench/bench_boot_ssp.sh
+  - path: '/bench/bench_boot_ssp.sh'
     permissions: 0755
     content: |
       #!/bin/bash
@@ -44,34 +44,37 @@ write_files:
       docker pull $REPO/bench-webbench >> /dev/null
       for i in $(seq 1 $COUNT) ; do docker run -d $REPO/bench-webbench ; done
       
-  - path: /bench/bench_reboot.sh
-    permissions: 0755
-    content: |
-    #!/bin/bash
-    #
-    # Version 1.0 (2014-06-30)
-    #
-    # This image was uploaded to our private repository
-    # server for ease of testing.
-    # It can be built from the Docker files at
-    # https://github.com/DockerDemos/vm-docker-bench/tree/master/webbench
-    #
-    # Starts 15 of Docker containers running
-    # Apache and a basic PHP "Hello World" file.
-    #
-    COUNT="15"
-    docker pull $REPO/webbench
-    for n in {1..5} ; do
-      for i in $(seq 1 $COUNT) ; do docker run -rm -i -t $REPO/webbench ; done
-      sleep 5m
-      docker ps | awk '{print $1}' |xargs docker stop
-      sleep 5m
-    done
-
-  - path: /bench/bench_cpu.sh
+  - path: '/bench/bench_reboot.sh'
     permissions: 0755
     content: |
       #!/bin/bash
+      #
+      # Version 1.0 (2014-06-30)
+      #
+      # This image was uploaded to our private repository
+      # server for ease of testing.
+      # It can be built from the Docker files at
+      # https://github.com/DockerDemos/vm-docker-bench/tree/master/webbench
+      #
+      # Starts 15 of Docker containers running
+      # Apache and a basic PHP "Hello World" file.
+      #
+      COUNT="15"
+      docker pull $REPO/webbench
+      for n in {1..5} ; do
+        for i in $(seq 1 $COUNT) ; do docker run --rm -i -t $REPO/webbench ; done
+        sleep 5m
+        docker ps | awk '{print $1}' |xargs docker stop
+        sleep 5m
+      done
+
+  - path: '/bench/bench_cpu.sh'
+    permissions: 0755
+    content: |
+      #!/bin/bash
+      #
+      # Version 1.0 (2014-07-07)
+      #
       # This image was uploaded to our private repository 
       # server for ease of testing.
       # It can be built from the Docker files at 
@@ -81,11 +84,11 @@ write_files:
       # calculation benchmark test in 100 Docker 
       # containers, serially.
       docker pull $REPO/bench-sysbench >> /dev/null
-      for i in {1..100} ; do docker run -i -t $REPO/bench-sysbench \
+      for i in {1..100} ; do docker run --rm -i -t $REPO/bench-sysbench \
       sysbench --test=cpu --cpu-max-prime=20000 run |grep total\ time\: \
       | awk '{print $3}'| sed 's/s//g' ; done
 
-  - path: /bench/bench_mysql.sh
+  - path: '/bench/bench_mysql.sh'
     permissions: 0755
     content: |
       #!/bin/bash
@@ -97,45 +100,51 @@ write_files:
       # Tests MySQL performance with read, write and transaction
       # tests in 100 Docker containers, serially.
       docker pull $REPO/bench-sysbench-mysql >> /dev/null
-      for i in {1..100} ; do docker run -i -t $REPO/bench-sysbench-mysql 
+      for i in {1..100} ; do docker run --rm -i -t $REPO/bench-sysbench-mysql
       done
 
-  - path: /bench/bench_io.sh
+  - path: '/bench/bench_io.sh'
     permissions: 0755
     content: |
       #!/bin/bash
+      #
+      # Version 1.0 (2014-07-07)
+      #
       # This image was uploaded to our private repository 
       # server for ease of testing.
       # It can be built from the Docker files at 
       # https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench
       #
       # Tests disk IO with a combined *Random Read and Write*
-      # test in 100 Docker containers, serially.
+      # test in 25 Docker containers, serially.
+      # 
+      # Writes total transfer speed in Mb/s to stdout
       docker pull $REPO/bench-sysbench >> /dev/null
-      for i in {1..100} ; do docker run -i -t $REPO/bench-sysbench \
-      /bench/io.sh 5G \ 
-      |grep total\ time\: \
-      | awk '{print $3}'| sed -i 's/s//g' ; done
+      for i in {1..25} ; do docker run --rm -i -t $REPO/bench-sysbench \
+      /bench/io.sh 5G \
+      |awk '/transferred/ {print $8}'| sed 's/[\(\)(Mb/sec)]//g' ; done
 
-  - path: /bench/bench_io_mod.sh
+  - path: '/bench/bench_io_mod.sh'
     permissions: 0755
     content: |
       #!/bin/bash
+      #
+      # Version 1.0 (2014-07-07)
+      #
       # This image was uploaded to our private repository 
       # server for ease of testing.
       # It can be built from the Docker files at 
       # https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench
       #
       # Tests disk IO with a combined *Random Read and Write*
-      # test in 100 Docker containers, serially, with a 
+      # test in 25 Docker containers, serially, with a 
       # 512MB memory limit enforced on the containers.
       docker pull $REPO/bench-sysbench >> /dev/null
-      for i in {1..100} ; do docker run -i -t -m=524288 $REPO/bench-sysbench \
-      /bench/io.sh 5G \ 
-      |grep total\ time\: \
-      | awk '{print $3}'| sed -i 's/s//g' ; done
+      for i in {1..25} ; do docker run --rm -i -t -m=524288 $REPO/bench-sysbench \
+      /bench/io.sh 5G \
+      |awk '/transferred/ {print $8}'| sed 's/[\(\)(Mb/sec)]//g' ; done
 
-  - path: /bench/bench_app_blog.sh
+  - path: '/bench/bench_app_blog.sh'
     permissions: 0755
     content: |
       #!/bin/bash
@@ -147,10 +156,10 @@ write_files:
       # Tests file I/O operations simulating a 
       # real-world server.
       docker pull $REPO/bench-blogbench >> /dev/null
-      for i in {1..100} ; do docker run -i -t $REPO/bench-blogbench \
+      for i in {1..100} ; do docker run --rm -i -t $REPO/bench-blogbench \
       -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv ; done
 
-  - path: /bench/bench-app_ab.sh
+  - path: '/bench/bench-app_ab.sh'
     permissions: 0755
     content: |
       #!/bin/bash
@@ -163,9 +172,9 @@ write_files:
       # Apache and a basic PHP "Hello World" file.
       #
       docker pull $REPO/bench-webbench >> /dev/null
-      docker run -d -p 80:80 $REPO/bench-webbench 
+      docker run --rm -d -p 80:80 $REPO/bench-webbench
 
-  - path: /bench/bench_clear_cache.sh
+  - path: '/bench/bench_clear_cache.sh'
     permissions: 0755
     content: |
       #!/bin/bash
@@ -178,12 +187,12 @@ write_files:
 
       echo 3 > /proc/sys/vm/drop_caches
 
-  - path: /bench/mon-cpu.sh
+  - path: '/bench/mon-cpu.sh'
     permissions: 0775
     content: |
       #!/bin/sh
       #
-      # Version 1.0 (2014-06-30)
+      # Version 1.1 (2014-07-07)
       #
       # What:          /proc/stat
       # Description:
@@ -195,23 +204,24 @@ write_files:
       #   irq: servicing interrupts
       #   softirq: servicing softirqs
       #   steal: involuntary wait
+      POLLING="$1"
       HOSTNAME="$(hostname)"
       DATE="$(date '+%Y%m%d')"
-      
-      echo 'x,user,nice,system,idle,iowait,irq,softirq,steal,guest,guest_nice' 
-      
+
+      echo 'x,user,nice,system,idle,iowait,irq,softirq,steal,guest,guest_nice'
+
       while true ; do
         echo "$(cat /proc/stat |head -n 1\
         |sed -e 's/^[ \t]*//' | sed -e 's/[ ][ ]*/,/g')"
-        sleep 1s
+        sleep $POLLING 
       done
-  
-  - path: /bench/mon-mem.sh
+
+  - path: '/bench/mon-mem.sh'
     permissions: 0775
     content: |
       #!/bin/sh
       #
-      # Version 1.0 (2014-06-30)
+      # Version 1.1 (2014-07-07)
       #
       # What:       `free`
       # Description:
@@ -221,11 +231,11 @@ write_files:
       #    shared:  Memory used and available to multiple CPUs
       #    buffers: Memory dedicated to cache disk block devices
       #    cached:  Memory dedicated to caching pages from file reads
-      
+      POLLING="$1"
+
       echo 'total,used,free,shared,buffers,cached'
-      
+
       while true; do
         free -m |awk '/Mem/ { OFS = ","; print $2, $3, $4, $5, $6, $7}'
-        sleep 1s
+        sleep $POLLING 
       done
-
