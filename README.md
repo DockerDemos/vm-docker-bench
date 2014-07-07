@@ -364,23 +364,39 @@ This graph shows a detail view of the shutdown process for 15 containers on the 
 
 ![Graph of Control System, Steady-State Packing Test](/raw-results/control-ssp-15.png?raw=true "Graph of Control System, Steady State Packing (15) Test")
 
+As with the Steady-state container packing graph for the Primary system, above, this is included for completeness.
+
 ![Graph of Control System, Steady-State Packing Test: Boot Detail](/raw-results/control-ssp-15-boot_detail.png?raw=true "Graph of Control System, Steady State Packing (15) Test: Boot Detail")
+
+It's clear that the disk IO is again the limiting factor.  The control system has somewhat faster disks than the primary system without a hypervisor (it's backed by a 50 disk EMC array), so the IO peak itself isn't as high.
 
 ![Graph of Control System, Steady-State Packing Test: Shutdown Detail](/raw-results/control-ssp-15-shutdown_detail.png?raw=true "Graph of Control System, Steady State Packing (15): Shutdown Detail Test")
 
-![Graph of Control System, Steady-State Packing Test](/raw-results/control-ssp-15.png?raw=true "Graph of Control System, Steady State Packing (15) Test")
+The shutdown graph is pretty much the same across all the tests.
 
 ![Graph of Primary System w/no Hypervisor, Steady-State Packing Test](/raw-results/primary_no_hypervisor-ssp-100.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (100) Test")
 
+Again, included for completeness, this is the base graph of the primary system without a hypervisor starting up 100 webserver containers.
+
 ![Graph of Primary System w/no Hypervisor, Steady-State Packing Test: Boot Detail](/raw-results/primary_no_hypervisor-ssp-100-boot_detail.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (100) Test: Boot Detail")
+
+Zoomed in on the detail of the startup process, we see what was expected - the disk I/O is again the limiting factor, and stays peaked for a much longer time with the increased number of containers.  Once again, though, the system reaches a "terminal velocity" of I/O - generally between 325 and 375 USER_Hz, though it trails off more at the end.
 
 ![Graph of Primary System w/no Hypervisor, Steady-State Packing Test: Shutdown Detail](/raw-results/primary_no_hypervisor-ssp-100-shutdown_detail.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (100): Shutdown Detail Test")
 
+The shutdown process is generally the same as with 15 containers, but has a slightly higher amount of time used by the kernel ("system").
+
 ![Graph of Control System, Steady-State Packing Test](/raw-results/control-ssp-100.png?raw=true "Graph of Control System, Steady State Packing (100) Test")
+
+The full load graph here is similar to the others above seen.
 
 ![Graph of Control System, Steady-State Packing Test: Boot Detail](/raw-results/control-ssp-100-boot_detail.png?raw=true "Graph of Control System, Steady State Packing (100) Test: Boot Detail")
 
+The IO is again similar to the control system's 15 container test, but with a slightly higher peak.
+
 ![Graph of Control System, Steady-State Packing Test: Shutdown Detail](/raw-results/control-ssp-100-shutdown_detail.png?raw=true "Graph of Control System, Steady State Packing (100): Shutdown Detail Test")
+
+And as above, the larger peak here is the time used by the kernel to remove the Docker containers.
 
 ###<a name='guest_results'>Guest Benchmark Results</a>###
 
@@ -388,9 +404,15 @@ __CPU Performance__
 
 ![Graph of Control System, Sysbench Max Prime tests (100): 200 Second CPU Usage sample](/raw-results/control-CPU_cpu.png?raw=true "Graph of Control System, Sysbench Max Prime tests (100): 200 Second CPU Usage sample")
 
+This graph demonstrates a sampling of the CPU usage at the start of, and during, some of the Sysbench CPU usage tests.  There are a few peaks evident at the start while the Docker image is downloaded, but the results are very predictable after the actual tests start.  Each of the valleys you see in the _user_ load is the end of that max prime test.  The corresponding red _system_ spikes are where the kernel takes over as Docker destroys the container and starts a new one.  That pattern carried out over the full 100 runs with very little variation.
+
 ![Graph of Control System, Sysbench Max Prime tests (100): Memory Usage](/raw-results/control-CPU_mem.png?raw=true "Graph of Control System, Sysbench Max Prime tests (100): Memory Usage")
 
+This graph displays the memory used by the control system over the entirety of the 100 run max prime test (as opposed to the sample, above.)  There is a bit of an interesting result here with the memory usage graph for the 100 max prime test.  The amount of cached and used RAM grew, slowly, over the course of the run.
+
 ![Graph of Control System, Sysbench Max Prime tests (100): Total Time for Test](/raw-results/control-CPU_cpu-time.png?raw=true "Graph of Control System, Sysbench Max Prime tests (100): Total Time for Test")
+
+This graph shows the time required to run each of the max prime tests in the 100 containers on the control system.  Of note is the time scale (in seconds) on the vertical axis.  Despite the appearance of the graph, the time taken for each test is incredibly consistent - there's only about 1/10 of a second in variance.
 
 
 ##Acknowledgements##
