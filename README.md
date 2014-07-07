@@ -416,11 +416,11 @@ This graph displays the memory used by the control system over the entirety of t
 
 ![Graph of Primary System w/no Hypervisor, Sysbench Max Prime tests (100): Total Time for Test](/raw-results/primary_no_hypervisor-CPU_cpu-time.png?raw=true "Graph of Primary System w/no Hypervisor, Sysbench Max Prime tests (100): Total Time for Test")
 
-This graph shows the time required to run each of the max prime tests in the 100 containers on the primary system with no hypervisor.  Of note is the time scale (in seconds) on the vertical axis.  Despite the appearance of the graph, the time taken for each test is incredibly consistent - there's only about 1/10 of a second in variance.
+This graph shows the time required to run each of the max prime tests in the 100 containers on the primary system with no hypervisor.
 
 ![Graph of Control System, Sysbench Max Prime tests (100): Total Time for Test](/raw-results/control-CPU_cpu-time.png?raw=true "Graph of Control System, Sysbench Max Prime tests (100): Total Time for Test")
 
-The control system graph for the time taken for the max prime tests is similar to the primary, but the system is about 10 seconds faster per test.
+The control system graph for the time taken for the max prime tests is similar to the primary, but the system is about 10 seconds faster per test. Of note is the time scale (in seconds) on the vertical axis.  Despite the appearance of the graph, the time taken for each test is incredibly consistent - there's only about 1/10 of a second in variance.
 
 
 
