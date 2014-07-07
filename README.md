@@ -414,9 +414,14 @@ The control system sample of the 100 max prime tests is very similar to the prim
 
 This graph displays the memory used by the control system over the entirety of the 100 run max prime test (as opposed to the sample, above.)  There is a bit of an interesting result here with the memory usage graph for the 100 max prime test.  The amount of cached and used RAM grew, slowly, over the course of the run.
 
+![Graph of Primary System w/no Hypervisor, Sysbench Max Prime tests (100): Total Time for Test](/raw-results/primary_no_hypervisor-CPU_cpu-time.png?raw=true "Graph of Primary System w/no Hypervisor, Sysbench Max Prime tests (100): Total Time for Test")
+
+This graph shows the time required to run each of the max prime tests in the 100 containers on the primary system with no hypervisor.  Of note is the time scale (in seconds) on the vertical axis.  Despite the appearance of the graph, the time taken for each test is incredibly consistent - there's only about 1/10 of a second in variance.
+
 ![Graph of Control System, Sysbench Max Prime tests (100): Total Time for Test](/raw-results/control-CPU_cpu-time.png?raw=true "Graph of Control System, Sysbench Max Prime tests (100): Total Time for Test")
 
-This graph shows the time required to run each of the max prime tests in the 100 containers on the control system.  Of note is the time scale (in seconds) on the vertical axis.  Despite the appearance of the graph, the time taken for each test is incredibly consistent - there's only about 1/10 of a second in variance.
+The control system graph for the time taken for the max prime tests is similar to the primary, but the system is about 10 seconds faster per test.
+
 
 
 ##Acknowledgements##
