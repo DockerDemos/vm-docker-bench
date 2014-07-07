@@ -218,7 +218,7 @@ __MySQL__
 
 __File I/O Operation__
 
- _Note: This test may not be an accurate representation of actual results.  The available disk space on each host was not large enough to create a file big enough to prevent caching in memory.  See the "Modified File I/O Operation" test below for a second, but probably still not 100% accurate, test._
+ _Note: This test may not be an accurate representation of actual results.  The available disk space on the primary host without a hypervisor was not large enough to create a file big enough to prevent caching in memory.  See the "Modified File I/O Operation" test below for a better, but probably still not 100% accurate, attempt at this test._
 
 File I/O benchmarking was done using the same [Sysbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench) used for the CPU tests above.  The container was started, and ran (via the [io.sh script](https://github.com/DockerDemos/vm-docker-bench/blob/master/sysbench/io.sh)):
 
