@@ -402,9 +402,13 @@ And as above, the larger peak here is the time used by the kernel to remove the 
 
 __CPU Performance__
 
-![Graph of Control System, Sysbench Max Prime tests (100): 200 Second CPU Usage sample](/raw-results/control-CPU_cpu.png?raw=true "Graph of Control System, Sysbench Max Prime tests (100): 200 Second CPU Usage sample")
+![Graph of Primary System w/no Hypervisor, Sysbench Max Prime tests (100): 200 Second CPU Usage sample](/raw-results/primary_no_hypervisor-CPU_cpu.png?raw=true "Graph of Primary Systemw/no Hypervisor, Sysbench Max Prime tests (100): 200 Second CPU Usage sample")
 
 This graph demonstrates a sampling of the CPU usage at the start of, and during, some of the Sysbench CPU usage tests.  There are a few peaks evident at the start while the Docker image is downloaded, but the results are very predictable after the actual tests start.  Each of the valleys you see in the _user_ load is the end of that max prime test.  The corresponding red _system_ spikes are where the kernel takes over as Docker destroys the container and starts a new one.  That pattern carried out over the full 100 runs with very little variation.
+
+![Graph of Control System, Sysbench Max Prime tests (100): 200 Second CPU Usage sample](/raw-results/control-CPU_cpu.png?raw=true "Graph of Control System, Sysbench Max Prime tests (100): 200 Second CPU Usage sample")
+
+The control system sample of the 100 max prime tests is very similar to the primary system, but each of the tests was completed more quickly, so there are more tests represented in the 200 second sample.
 
 ![Graph of Control System, Sysbench Max Prime tests (100): Memory Usage](/raw-results/control-CPU_mem.png?raw=true "Graph of Control System, Sysbench Max Prime tests (100): Memory Usage")
 
