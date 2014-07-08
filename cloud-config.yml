@@ -140,7 +140,7 @@ write_files:
       # test in 25 Docker containers, serially, with a 
       # 512MB memory limit enforced on the containers.
       docker pull $REPO/bench-sysbench >> /dev/null
-      for i in {1..25} ; do docker run --rm -i -t -m=524288 $REPO/bench-sysbench \
+      for i in {1..25} ; do docker run --rm -i -t -m="524288k" $REPO/bench-sysbench \
       /bench/io.sh 5G \
       |awk '/transferred/ {print $8}'| sed 's/[\(\)(Mb/sec)]//g' ; done
 
