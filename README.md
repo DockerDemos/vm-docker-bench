@@ -235,7 +235,7 @@ File I/O benchmarking was done using the same [Sysbench Docker image](https://gi
     --init-rng=on --max-time=300 --max-requests=0 run
     sysbench --test=fileio --file-total-size=10G cleanup
 
-This test was run one hundred times, serially, and the Kb/sec value from the test output recorded.
+This test was run twenty five times, serially, and the Kb/sec value from the test output recorded.
 
 The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
 
