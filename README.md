@@ -437,6 +437,9 @@ This graph shows the time required to run each of the max prime tests in the 100
 
 The control system graph for the time taken for the max prime tests is similar to the primary, but the system is about 10 seconds faster per test. Of note is the time scale (in seconds) on the vertical axis.  Despite the appearance of the graph, the time taken for each test is incredibly consistent - there's only about 1/10 of a second in variance.
 
+__(Modified) File I/O Operation__
+
+![Graph of Primary System w/no Hypervisor, (Modified) Sysbench File I/O tests (25)](/raw-results/primary_no_hypervisor-bench_io_mod-cpu.png?raw=true "Graph of Primary Systemw/no Hypervisor, (Modified) Sysbench File I/O tests")
 
 
 ##Acknowledgements##
