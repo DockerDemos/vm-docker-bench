@@ -119,9 +119,9 @@ write_files:
       # https://github.com/DockerDemos/vm-docker-bench/tree/master/iibench-mysql
       #
       # Tests MySQL Indexed Insertion performance
-      # Test runs in 100 Docker containers, serially.
+      # Test runs in 25 Docker containers, serially.
       docker pull $REPO/bench-iibench-mysql
-      for i in {1..100} ; do docker run --rm -i -t $REPO/bench-iibench-mysql
+      for i in {1..25} ; do docker run --rm -i -t $REPO/bench-iibench-mysql
       done
 
   - path: '/bench/bench_io.sh'

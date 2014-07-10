@@ -228,7 +228,7 @@ On startup, the container sets up the MySQL server and database, and then runs t
                       --setup --rows_per_report=100000 \
                       --db_socket=/var/run/mysqld/mysqld.sock
 
-The test was run one hundred times, serially, and the output recorded.
+The test was run twenty five times, serially, and the output recorded.
 
 The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
 
@@ -239,9 +239,9 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     # https://github.com/DockerDemos/vm-docker-bench/tree/master/iibench-mysql
     #
     # Tests MySQL Indexed Insertion performance
-    # Test runs in 100 Docker containers, serially.
+    # Test runs in 25 Docker containers, serially.
     docker pull $REPO/bench-iibench-mysql
-    for i in {1..100} ; do docker run --rm -i -t $REPO/bench-iibench-mysql
+    for i in {1..25} ; do docker run --rm -i -t $REPO/bench-iibench-mysql
     done
 
 __File I/O Operation__
