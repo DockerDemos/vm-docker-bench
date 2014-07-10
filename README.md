@@ -214,15 +214,35 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     #
     # Tests MySQL performance with read, write and transaction
     # tests in 100 Docker containers, serially.
-    docker pull $REPO/sysbench-mysql
-    for i in {1..100} ; do docker run -i -t $REPO/sysbench-mysql 
+    docker pull $REPO/bench-sysbench-mysql
+    for i in {1..100} ; do docker run --rm -i -t $REPO/bench-sysbench-mysql 
     done
 
 __MySQL__
 
-"Indexed insertion benchmark"
+Iibench [\(https://bazaar.launchpad.net/~mdcallag/mysql-patch/mytools/download/head:/iibench.py-20090327210349-wgv0sum50kpukctz-1/iibench.py\)](https://bazaar.launchpad.net/~mdcallag/mysql-patch/mytools/download/head:/iibench.py-20090327210349-wgv0sum50kpukctz-1/iibench.py) was used to run indexed insertion benchmark tests for MySQL.  A Docker image based on the [tutum/mysql image](https://github.com/tutumcloud/tutum-docker-mysql) with MySQL + Iibench was created and is available in this repository [\(https://github.com/DockerDemos/vm-docker-bench/tree/master/iibench-mysql\)](https://github.com/DockerDemos/vm-docker-bench/tree/master/iibench-mysql).
 
-(iibench, 1M inserts print stats at 100K)
+On startup, the container sets up the MySQL server and database, and then runs the following, recording results:
+
+    python iibench.py --db_user=$USER --db_password=$PASS --max_rows=1000000 \
+                      --setup --rows_per_report=100000 \
+                      --db_socket=/var/run/mysqld/mysqld.sock
+
+The test was run one hundred times, serially, and the output recorded.
+
+The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
+
+    #!/bin/bash
+    # This image was uploaded to our private repository
+    # server for ease of testing.
+    # It can be built from the Docker files at
+    # https://github.com/DockerDemos/vm-docker-bench/tree/master/iibench-mysql
+    #
+    # Tests MySQL Indexed Insertion performance
+    # Test runs in 100 Docker containers, serially.
+    docker pull $REPO/bench-iibench-mysql
+    for i in {1..100} ; do docker run --rm -i -t $REPO/bench-iibench-mysql
+    done
 
 __File I/O Operation__
 
