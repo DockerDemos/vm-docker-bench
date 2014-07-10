@@ -54,24 +54,6 @@ Test data for guest benchmarks running from within the tested container was gath
 
 Test data for guest benchmarks being performed from remote hosts (for example, the Application Type Perfomance Apache Benchmark tests) were recorded via STDOUT from the process itself and written to a logfile.
 
-**Literal Method**
-
-This is here mostly just to help me keep the steps straight.
-
-| SSH Session 1                      | SSH Sesson 2                          |
-| -------------                      | ------------                          |
-| Reboot (PXE Install)               |                                       |
-| Login                              | Login                                 |
-| Wait 10m for host to become stable | Wait 10 Min                           |
-|                                    | Su to Root                            |
-|                                    | Export REPO=(private docker registry) |
-|                                    | Run clear cache script                |
-| Start monitor script; out via SSH  |                                       |
-| Wait 1m for base stats             |                                       |
-|                                    | Run test script; out via SSH          |
-| Wait 5m for base stats             |                                       |
-| Stop monitor script                |                                       |
-
 ###<a name='specs'>System Specs</a>###
 
 **Hardware**
