@@ -21,6 +21,8 @@ Hypervisor + Docker Performance Benchmark
 3. [Hypervisor + Docker Performance Benchmark](#vmhdp)
     1. [Host Benchmark Results](#host_results)
     2. [Guest Benchmark Results](#guest_results)
+4. [Acknowledgements](#ack)
+5. [Copyright Information](#copyright)
 
 
 ##<a name='forward'>Forward</a>##
@@ -488,7 +490,7 @@ __(Modified) File I/O Operation__
 
 ![Graph of (Modified) Sysbench File I/O tests (25), Transfer Speed Comparison](/raw-results/bench_io_mod-results.png?raw=true "Graph of (Modified) Sysbench File I/O tests (25), Transfer Speed Comparison")
 
-##Acknowledgements##
+##<a name='ack'>Acknowledgements</a>##
 
 Thanks to: 
 
@@ -500,7 +502,7 @@ Tutum [\(https://github.com/tutumcloud\)](https://github.com/tutumcloud) for the
 
 James Slocum [\(http://jamesslocum.com/\)](http://jamesslocum.com/) for the [script to run mbw on multiple-core systems](http://jamesslocum.com/post/64209577678), which made automating the testing a lot easier.
 
-##Copyright Information##
+##<a name='copyright'>Copyright Information</a>##
 
 Copyright (C) 2014 Chris Collins
 
