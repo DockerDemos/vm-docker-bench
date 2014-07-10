@@ -65,6 +65,7 @@ Test data for guest benchmarks being performed from remote hosts (for example, t
 | CPU        | Intel E5-2665 @ 2.4GHz 8 Core | Intel E5-2697 v2 @ 2.70GHz 12 Core         |
 | Memory     | 256GB 1600                    | 256GB 1866                                 |
 | HDD        | Toshiba 300GB SAS 15KRPM      | EMC VNX5700 Array, 2TB 7200RPM (50 disks)  |
+
 |            | Primary System w/Hypervisor      | Control System w/Hypervisor       |
 | ----       | ---------------------------      | ----------------------------        |
 | CPU        | Intel E5-2665 @ 2.4GHz (2 Cores) | Intel E5-2697 v2 @ 2.70GHz (2 Cores)|
