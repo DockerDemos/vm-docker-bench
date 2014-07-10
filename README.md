@@ -168,7 +168,7 @@ TODO
 
 __CPU Performance__
 
-[Sysbench](http://sysbench.sourceforge.net/) was chosen to perform a number of benchmark tests, including this cpu computation benchmark.  The tests used the [Sysbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench) included in this repository.  The resulting container was started, and ran `sysbench --test=cpu --cpu-max-prime=20000 run` (via the [cpu_prime.sh script](https://github.com/DockerDemos/vm-docker-bench/blob/master/sysbench/cpu_prime.sh)).  This process was repeated one hundred (100) times, and the total time taken for the test execution was recorded for each.
+[Sysbench](http://sysbench.sourceforge.net/) was chosen to perform a number of benchmark tests, including this cpu computation benchmark.  The tests used the [Sysbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench) included in this repository.  The resulting container was started, and ran `sysbench --test=cpu --cpu-max-prime=20000 run` (via the [cpu_prime.sh script](https://github.com/DockerDemos/vm-docker-bench/blob/master/sysbench/cpu_prime.sh)).  This process was repeated one hundred times, and the total time taken for the test execution was recorded for each.
 
 The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
 
@@ -303,7 +303,26 @@ The following bash script was placed on the host server via the CoreOS cloud-con
 
 __Memory Performance__
 
-(`mbw 10001 mbw array size of 1000 MiB)
+[mbw](https://github.com/raas/mbw) was chosen as the test application for testing the "copy" memory bandwidth available to userspace programs in order to mimic real applications.  The tests used the [mbwbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/mbwbench) included in this repository.  The resulting container runs a [bash script for running mbw](http://jamesslocum.com/post/64209577678) developed by James Slocum that detects the number of CPU cores available to the container and runs a corresponding number of mbw threads.  The process was repeated one hundred times and the results recorded.
+
+The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
+
+    #!/bin/bash
+    #
+    # Version 1.0 (2014-07-10)
+    #
+    # This image was uploaded to our private repository 
+    # server for ease of testing.
+    # It can be built from the Docker files at 
+    # https://github.com/DockerDemos/vm-docker-bench/tree/master/mbwbench
+    #
+    # Tests "copy" memory bandwidth 
+    # Runs 100 Docker containers, serially 
+    # Host swap is disabled before the test and re-enabled after
+    docker pull $REPO/bench-mbwbench >> /dev/null
+    /sbin/swapoff -a
+    for i in {1..100} ; do docker run --rm -i -t $REPO/bench-mbwbench ; done
+    /sbin/swapon -a
 
 __Network Performance__
 
@@ -478,6 +497,8 @@ Boden Russell [\(http://bodenr.blogspot.com\)](http://bodenr.blogspot.com) for t
 Falko Timme [\(https://twitter.com/falko\)](https://twitter.com/falko) for his [HowtoForge article with basic guidance on benchmarking with Sysbench](http://www.howtoforge.com/how-to-benchmark-your-system-cpu-file-io-mysql-with-sysbench).
 
 Tutum [\(https://github.com/tutumcloud\)](https://github.com/tutumcloud) for the [tutum-docker-mysql image](https://github.com/tutumcloud/tutum-docker-mysql), which saved me a ton of time getting MySQL ready for testing inside a container.
+
+James Slocum [\(http://jamesslocum.com/\)](http://jamesslocum.com/) for the [script to run mbw on multiple-core systems](http://jamesslocum.com/post/64209577678), which made automating the testing a lot easier.
 
 ##Copyright Information##
 
