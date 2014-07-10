@@ -92,6 +92,9 @@ write_files:
     permissions: 0755
     content: |
       #!/bin/bash
+      #
+      # Version 1.0 (2014-07-10)
+      #
       # This image was uploaded to our private repository 
       # server for ease of testing.
       # It can be built from the Docker files at 
@@ -101,6 +104,24 @@ write_files:
       # tests in 100 Docker containers, serially.
       docker pull $REPO/bench-sysbench-mysql >> /dev/null
       for i in {1..100} ; do docker run --rm -i -t $REPO/bench-sysbench-mysql
+      done
+
+  - path: '/bench/bench_mysql_index.sh'
+    permissions: 0755
+    content: |
+      #!/bin/bash
+      #
+      # Version 1.0 (2014-07-10)
+      #
+      # This image was uploaded to our private repository
+      # server for ease of testing.
+      # It can be built from the Docker files at
+      # https://github.com/DockerDemos/vm-docker-bench/tree/master/iibench-mysql
+      #
+      # Tests MySQL Indexed Insertion performance
+      # Test runs in 100 Docker containers, serially.
+      docker pull $REPO/bench-iibench-mysql
+      for i in {1..100} ; do docker run --rm -i -t $REPO/bench-iibench-mysql
       done
 
   - path: '/bench/bench_io.sh'
