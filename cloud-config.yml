@@ -169,15 +169,19 @@ write_files:
     permissions: 0755
     content: |
       #!/bin/bash
+      #
+      # Version 1.0 (2014-07-11)
+      #
       # This image was uploaded to our private repository
       # server for ease of testing.
       # It can be built from the Docker files at
       # https://github.com/DockerDemos/vm-docker-bench/tree/master/blogbench
       #
-      # Tests file I/O operations simulating a 
+      # Tests file I/O operations simulating a
       # real-world server.
-      docker pull $REPO/bench-blogbench >> /dev/null
-      for i in {1..100} ; do docker run --rm -i -t $REPO/bench-blogbench \
+      # Runs 25 docker containers, serially
+      docker pull $REPO/blogbench
+      for i in {1..25} ; do docker run --rm -i -t $REPO/blogbench \
       -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv ; done
 
   - path: '/bench/bench-app_ab.sh'

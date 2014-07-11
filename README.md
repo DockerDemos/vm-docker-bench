@@ -314,11 +314,14 @@ __Network Performance__
 
 __Application type performance (Blogbench)__
 
-[Blogbench](http://www.pureftpd.org/project/blogbench) was used to simulate file I/O as it would exist on a webserver, with mostly-read, some-write traffic.  The tests used the [Blogbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/blogbench) included in this repository.  The resulting container was started and ran `blogbench -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv`.  This process was repeated one hundred times and the results recorded.
+[Blogbench](http://www.pureftpd.org/project/blogbench) was used to simulate file I/O as it would exist on a webserver, with mostly-read, some-write traffic.  The tests used the [Blogbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/blogbench) included in this repository.  The resulting container was started and ran `blogbench -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv`.  This process was repeated twentyfive times and the results recorded.
 
 The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
 
     #!/bin/bash
+    #
+    # Version 1.0 (2014-07-11) 
+    #
     # This image was uploaded to our private repository
     # server for ease of testing.
     # It can be built from the Docker files at
@@ -326,8 +329,9 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     #
     # Tests file I/O operations simulating a 
     # real-world server.
+    # Runs 25 docker containers, serially
     docker pull $REPO/blogbench
-    for i in {1..100} ; do docker run -i -t $REPO/blogbench \
+    for i in {1..25} ; do docker run --rm -i -t $REPO/blogbench \
     -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv ; done
 
 __Application type performance (Apache + PHP)__
