@@ -330,8 +330,8 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     # Tests file I/O operations simulating a 
     # real-world server.
     # Runs 25 docker containers, serially
-    docker pull $REPO/blogbench
-    for i in {1..25} ; do docker run --rm -i -t $REPO/blogbench \
+    docker pull $REPO/bench-blogbench
+    for i in {1..25} ; do docker run --rm -i -t $REPO/bench-blogbench \
     -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv ; done
 
 __Application type performance (Apache + PHP)__
