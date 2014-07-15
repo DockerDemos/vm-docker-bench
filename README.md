@@ -366,8 +366,8 @@ Then, from a remote host (in this case, my laptop), the following script was run
     # Starts the Apache Benchmark program with any flags specified
     # by the command passed to Docker
     #
-    docker pull $REPO/abbench
-    docker run -i -t $REPO/abbench -n 1000000 -c 4 http://$DOCKER_BENCHMARK_HOST/index.php
+    docker pull $REPO/bench-abbench
+    docker run -i -t $REPO/bench-abbench -n 1000000 -c 4 http://$DOCKER_BENCHMARK_HOST/index.php
 
 
 ##<a name='vmhdp'>Hypervisor + Docker Performance Benchmark</a>##
