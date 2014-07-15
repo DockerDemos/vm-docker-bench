@@ -184,7 +184,7 @@ write_files:
       for i in {1..25} ; do docker run --rm -i -t $REPO/bench-blogbench \
       -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv ; done
 
-  - path: '/bench/bench-app_ab.sh'
+  - path: '/bench/bench_app_ab.sh'
     permissions: 0755
     content: |
       #!/bin/bash
