@@ -1,0 +1,876 @@
+[2KPulling repository docker-dev.oit.duke.edu/bench-blogbench
+
+[0A[2K1bc6265e3f2f: Pulling image (latest) from docker-dev.oit.duke.edu/bench-blogbench [0B[1A[2K1bc6265e3f2f: Pulling image (latest) from docker-dev.oit.duke.edu/bench-blogbench, endpoint: https://docker-dev.oit.duke.edu/v1/ [1B[1A[2K1bc6265e3f2f: Pulling dependent layers [1B
+[0A[2K511136ea3c5a: Pulling metadata [0B[1A[2K511136ea3c5a: Pulling fs layer [1B[1A[2K511136ea3c5a: Downloading     10 B/84 B 3s[1B[1A[2K511136ea3c5a: Downloading     84 B/84 B[1B[1A[2K511136ea3c5a: Downloading     84 B/84 B[1B[1A[2K511136ea3c5a: Download complete [1B
+[0A[2K34e94e67e63a: Pulling metadata [0B[1A[2K34e94e67e63a: Pulling fs layer [1B[1A[2K34e94e67e63a: Downloading     10 B/180 B 7s[1B[1A[2K34e94e67e63a: Downloading    180 B/180 B[1B[1A[2K34e94e67e63a: Downloading    180 B/180 B[1B[1A[2K34e94e67e63a: Download complete [1B
+[0A[2K0c752394b855: Pulling metadata [0B[1A[2K0c752394b855: Pulling fs layer [1B[1A[2K0c752394b855: Downloading 435.7 kB/43.23 MB 54s[1B[1A[2K0c752394b855: Downloading 871.6 kB/43.23 MB 28s[1B[1A[2K0c752394b855: Downloading 1.308 MB/43.23 MB 20s[1B[1A[2K0c752394b855: Downloading 1.744 MB/43.23 MB 15s[1B[1A[2K0c752394b855: Downloading  2.18 MB/43.23 MB 16s[1B[1A[2K0c752394b855: Downloading 2.616 MB/43.23 MB 14s[1B[1A[2K0c752394b855: Downloading 3.052 MB/43.23 MB 12s[1B[1A[2K0c752394b855: Downloading 3.488 MB/43.23 MB 11s[1B[1A[2K0c752394b855: Downloading 3.924 MB/43.23 MB 10s[1B[1A[2K0c752394b855: Downloading  4.36 MB/43.23 MB 9s[1B[1A[2K0c752394b855: Downloading 4.796 MB/43.23 MB 9s[1B[1A[2K0c752394b855: Downloading 5.232 MB/43.23 MB 8s[1B[1A[2K0c752394b855: Downloading 5.668 MB/43.23 MB 8s[1B[1A[2K0c752394b855: Downloading 6.104 MB/43.23 MB 7s[1B[1A[2K0c752394b855: Downloading  6.54 MB/43.23 MB 7s[1B[1A[2K0c752394b855: Downloading 6.976 MB/43.23 MB 6s[1B[1A[2K0c752394b855: Downloading 7.412 MB/43.23 MB 6s[1B[1A[2K0c752394b855: Downloading 7.848 MB/43.23 MB 6s[1B[1A[2K0c752394b855: Downloading 8.284 MB/43.23 MB 6s[1B[1A[2K0c752394b855: Downloading  8.72 MB/43.23 MB 5s[1B[1A[2K0c752394b855: Downloading 9.156 MB/43.23 MB 5s[1B[1A[2K0c752394b855: Downloading 9.592 MB/43.23 MB 5s[1B[1A[2K0c752394b855: Downloading 10.03 MB/43.23 MB 5s[1B[1A[2K0c752394b855: Downloading 10.46 MB/43.23 MB 5s[1B[1A[2K0c752394b855: Downloading  10.9 MB/43.23 MB 4s[1B[1A[2K0c752394b855: Downloading 11.34 MB/43.23 MB 4s[1B[1A[2K0c752394b855: Downloading 11.77 MB/43.23 MB 4s[1B[1A[2K0c752394b855: Downloading 12.21 MB/43.23 MB 4s[1B[1A[2K0c752394b855: Downloading 12.64 MB/43.23 MB 4s[1B[1A[2K0c752394b855: Downloading 13.08 MB/43.23 MB 4s[1B[1A[2K0c752394b855: Downloading 13.52 MB/43.23 MB 4s[1B[1A[2K0c752394b855: Downloading 13.95 MB/43.23 MB 4s[1B[1A[2K0c752394b855: Downloading 14.39 MB/43.23 MB 4s[1B[1A[2K0c752394b855: Downloading 14.82 MB/43.23 MB 3s[1B[1A[2K0c752394b855: Downloading 15.26 MB/43.23 MB 3s[1B[1A[2K0c752394b855: Downloading  15.7 MB/43.23 MB 3s[1B[1A[2K0c752394b855: Downloading 16.13 MB/43.23 MB 3s[1B[1A[2K0c752394b855: Downloading 16.57 MB/43.23 MB 3s[1B[1A[2K0c752394b855: Downloading    17 MB/43.23 MB 3s[1B[1A[2K0c752394b855: Downloading 17.44 MB/43.23 MB 3s[1B[1A[2K0c752394b855: Downloading 17.88 MB/43.23 MB 3s[1B[1A[2K0c752394b855: Downloading 18.31 MB/43.23 MB 3s[1B[1A[2K0c752394b855: Downloading 18.75 MB/43.23 MB 3s[1B[1A[2K0c752394b855: Downloading 19.18 MB/43.23 MB 3s[1B[1A[2K0c752394b855: Downloading 19.62 MB/43.23 MB 2s[1B[1A[2K0c752394b855: Downloading 20.06 MB/43.23 MB 2s[1B[1A[2K0c752394b855: Downloading 20.49 MB/43.23 MB 2s[1B[1A[2K0c752394b855: Downloading 20.93 MB/43.23 MB 2s[1B[1A[2K0c752394b855: Downloading 21.36 MB/43.23 MB 2s[1B[1A[2K0c752394b855: Downloading  21.8 MB/43.23 MB 2s[1B[1A[2K0c752394b855: Downloading 22.24 MB/43.23 MB 2s[1B[1A[2K0c752394b855: Downloading 22.67 MB/43.23 MB 2s[1B[1A[2K0c752394b855: Downloading 23.11 MB/43.23 MB 2s[1B[1A[2K0c752394b855: Downloading 23.54 MB/43.23 MB 2s[1B[1A[2K0c752394b855: Downloading 23.98 MB/43.23 MB 2s[1B[1A[2K0c752394b855: Downloading 24.42 MB/43.23 MB 2s[1B[1A[2K0c752394b855: Downloading 24.85 MB/43.23 MB 2s[1B[1A[2K0c752394b855: Downloading 25.29 MB/43.23 MB 2s[1B[1A[2K0c752394b855: Downloading 25.72 MB/43.23 MB 2s[1B[1A[2K0c752394b855: Downloading 26.16 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading  26.6 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading 27.03 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading 27.47 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading  27.9 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading 28.34 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading 28.78 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading 29.21 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading 29.65 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading 30.08 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading 30.52 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading 30.96 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading 31.39 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading 31.83 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading 32.26 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading  32.7 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading 33.14 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading 33.57 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading 34.01 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading 34.44 MB/43.23 MB 1s[1B[1A[2K0c752394b855: Downloading 34.88 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 35.32 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 35.75 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 36.19 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 36.62 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 37.06 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading  37.5 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 37.93 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 38.37 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading  38.8 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 39.24 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 39.68 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 40.11 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 40.55 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 40.98 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 41.42 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 41.86 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 42.29 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 42.73 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 43.16 MB/43.23 MB 0[1B[1A[2K0c752394b855: Downloading 43.23 MB/43.23 MB[1B[1A[2K0c752394b855: Download complete [1B
+[0A[2K09ceea970015: Pulling metadata [0B[1A[2K09ceea970015: Pulling fs layer [1B[1A[2K09ceea970015: Downloading     10 B/179 B 24s[1B[1A[2K09ceea970015: Downloading    179 B/179 B[1B[1A[2K09ceea970015: Downloading    179 B/179 B[1B[1A[2K09ceea970015: Download complete [1B
+[0A[2Kf4a63c2a54ef: Pulling metadata [0B[1A[2Kf4a63c2a54ef: Pulling fs layer [1B[1A[2Kf4a63c2a54ef: Downloading 315.7 kB/31.21 MB 9s[1B[1A[2Kf4a63c2a54ef: Downloading 631.6 kB/31.21 MB 5s[1B[1A[2Kf4a63c2a54ef: Downloading 947.7 kB/31.21 MB 5s[1B[1A[2Kf4a63c2a54ef: Downloading 1.264 MB/31.21 MB 5s[1B[1A[2Kf4a63c2a54ef: Downloading  1.58 MB/31.21 MB 5s[1B[1A[2Kf4a63c2a54ef: Downloading 1.896 MB/31.21 MB 5s[1B[1A[2Kf4a63c2a54ef: Downloading 2.212 MB/31.21 MB 5s[1B[1A[2Kf4a63c2a54ef: Downloading 2.528 MB/31.21 MB 4s[1B[1A[2Kf4a63c2a54ef: Downloading 2.848 MB/31.21 MB 4s[1B[1A[2Kf4a63c2a54ef: Downloading 3.168 MB/31.21 MB 3s[1B[1A[2Kf4a63c2a54ef: Downloading 3.487 MB/31.21 MB 3s[1B[1A[2Kf4a63c2a54ef: Downloading   3.8 MB/31.21 MB 3s[1B[1A[2Kf4a63c2a54ef: Downloading 4.116 MB/31.21 MB 3s[1B[1A[2Kf4a63c2a54ef: Downloading 4.432 MB/31.21 MB 2s[1B[1A[2Kf4a63c2a54ef: Downloading 4.748 MB/31.21 MB 2s[1B[1A[2Kf4a63c2a54ef: Downloading 5.064 MB/31.21 MB 2s[1B[1A[2Kf4a63c2a54ef: Downloading  5.38 MB/31.21 MB 2s[1B[1A[2Kf4a63c2a54ef: Downloading 5.696 MB/31.21 MB 2s[1B[1A[2Kf4a63c2a54ef: Downloading 6.016 MB/31.21 MB 2s[1B[1A[2Kf4a63c2a54ef: Downloading 6.332 MB/31.21 MB 2s[1B[1A[2Kf4a63c2a54ef: Downloading 6.648 MB/31.21 MB 2s[1B[1A[2Kf4a63c2a54ef: Downloading 6.964 MB/31.21 MB 2s[1B[1A[2Kf4a63c2a54ef: Downloading  7.28 MB/31.21 MB 2s[1B[1A[2Kf4a63c2a54ef: Downloading 7.596 MB/31.21 MB 2s[1B[1A[2Kf4a63c2a54ef: Downloading 7.912 MB/31.21 MB 2s[1B[1A[2Kf4a63c2a54ef: Downloading 8.228 MB/31.21 MB 2s[1B[1A[2Kf4a63c2a54ef: Downloading 8.544 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading  8.86 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 9.176 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 9.492 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 9.808 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 10.12 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 10.44 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 10.76 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 11.07 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 11.39 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading  11.7 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 12.02 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 12.34 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 12.65 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 12.97 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 13.28 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading  13.6 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 13.92 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 14.23 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 14.55 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 14.86 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 15.18 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading  15.5 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 15.81 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 16.13 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 16.44 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 16.76 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 17.08 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 17.39 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 17.71 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 18.02 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 18.34 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 18.66 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 18.97 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading 19.29 MB/31.21 MB 1s[1B[1A[2Kf4a63c2a54ef: Downloading  19.6 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 19.92 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 20.24 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 20.55 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 20.87 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 21.18 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading  21.5 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 21.82 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 22.13 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 22.45 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 22.76 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 23.08 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading  23.4 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 23.71 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 24.03 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 24.34 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 24.66 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 24.98 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 25.29 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 25.61 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 25.92 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 26.24 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 26.56 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 26.87 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 27.19 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading  27.5 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 27.82 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 28.14 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 28.45 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 28.77 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 29.08 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading  29.4 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 29.72 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 30.03 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 30.35 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 30.66 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 30.98 MB/31.21 MB 0[1B[1A[2Kf4a63c2a54ef: Downloading 31.21 MB/31.21 MB[1B[1A[2Kf4a63c2a54ef: Download complete [1B
+[0A[2Kd98da8d708b4: Pulling metadata [0B[1A[2Kd98da8d708b4: Pulling fs layer [1B[1A[2Kd98da8d708b4: Downloading 4.096 kB/137.8 kB 35s[1B[1A[2Kd98da8d708b4: Downloading 7.619 kB/137.8 kB 18s[1B[1A[2Kd98da8d708b4: Downloading 15.62 kB/137.8 kB 8s[1B[1A[2Kd98da8d708b4: Downloading 19.71 kB/137.8 kB 6s[1B[1A[2Kd98da8d708b4: Downloading 23.62 kB/137.8 kB 5s[1B[1A[2Kd98da8d708b4: Downloading 30.45 kB/137.8 kB 3s[1B[1A[2Kd98da8d708b4: Downloading 35.72 kB/137.8 kB 3s[1B[1A[2Kd98da8d708b4: Downloading 39.62 kB/137.8 kB 2s[1B[1A[2Kd98da8d708b4: Downloading 43.72 kB/137.8 kB 2s[1B[1A[2Kd98da8d708b4: Downloading 47.62 kB/137.8 kB 2s[1B[1A[2Kd98da8d708b4: Downloading 51.72 kB/137.8 kB 1s[1B[1A[2Kd98da8d708b4: Downloading 55.62 kB/137.8 kB 1s[1B[1A[2Kd98da8d708b4: Downloading 63.19 kB/137.8 kB 1s[1B[1A[2Kd98da8d708b4: Downloading 67.72 kB/137.8 kB 1s[1B[1A[2Kd98da8d708b4: Downloading 71.62 kB/137.8 kB 1s[1B[1A[2Kd98da8d708b4: Downloading 79.62 kB/137.8 kB 0[1B[1A[2Kd98da8d708b4: Downloading 83.72 kB/137.8 kB 0[1B[1A[2Kd98da8d708b4: Downloading 87.62 kB/137.8 kB 0[1B[1A[2Kd98da8d708b4: Downloading 95.62 kB/137.8 kB 0[1B[1A[2Kd98da8d708b4: Downloading 99.72 kB/137.8 kB 0[1B[1A[2Kd98da8d708b4: Downloading 103.6 kB/137.8 kB 0[1B[1A[2Kd98da8d708b4: Downloading 111.6 kB/137.8 kB 0[1B[1A[2Kd98da8d708b4: Downloading 115.7 kB/137.8 kB 0[1B[1A[2Kd98da8d708b4: Downloading 119.6 kB/137.8 kB 0[1B[1A[2Kd98da8d708b4: Downloading 123.7 kB/137.8 kB 0[1B[1A[2Kd98da8d708b4: Downloading 127.6 kB/137.8 kB 0[1B[1A[2Kd98da8d708b4: Downloading 131.7 kB/137.8 kB 0[1B[1A[2Kd98da8d708b4: Downloading 135.6 kB/137.8 kB 0[1B[1A[2Kd98da8d708b4: Downloading 137.8 kB/137.8 kB[1B[1A[2Kd98da8d708b4: Downloading 137.8 kB/137.8 kB[1B[1A[2Kd98da8d708b4: Download complete [1B
+[0A[2Kc3fbc07ff484: Pulling metadata [0B[1A[2Kc3fbc07ff484: Pulling fs layer [1B[1A[2Kc3fbc07ff484: Downloading 4.096 kB/136.3 kB 23s[1B[1A[2Kc3fbc07ff484: Downloading 7.619 kB/136.3 kB 12s[1B[1A[2Kc3fbc07ff484: Downloading 11.71 kB/136.3 kB 7s[1B[1A[2Kc3fbc07ff484: Downloading 15.62 kB/136.3 kB 5s[1B[1A[2Kc3fbc07ff484: Downloading 19.71 kB/136.3 kB 4s[1B[1A[2Kc3fbc07ff484: Downloading 23.62 kB/136.3 kB 3s[1B[1A[2Kc3fbc07ff484: Downloading 27.71 kB/136.3 kB 2s[1B[1A[2Kc3fbc07ff484: Downloading 31.62 kB/136.3 kB 2s[1B[1A[2Kc3fbc07ff484: Downloading 35.72 kB/136.3 kB 2s[1B[1A[2Kc3fbc07ff484: Downloading 39.62 kB/136.3 kB 1s[1B[1A[2Kc3fbc07ff484: Downloading 43.72 kB/136.3 kB 1s[1B[1A[2Kc3fbc07ff484: Downloading 47.62 kB/136.3 kB 1s[1B[1A[2Kc3fbc07ff484: Downloading 51.72 kB/136.3 kB 1s[1B[1A[2Kc3fbc07ff484: Downloading 55.62 kB/136.3 kB 1s[1B[1A[2Kc3fbc07ff484: Downloading 59.72 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 63.62 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 67.72 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 71.62 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 75.72 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 79.62 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 83.72 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 87.62 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 91.72 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 95.62 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 99.72 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 103.6 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 107.7 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 111.6 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 115.7 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 119.6 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 123.7 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 127.6 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 131.7 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 135.6 kB/136.3 kB 0[1B[1A[2Kc3fbc07ff484: Downloading 136.3 kB/136.3 kB[1B[1A[2Kc3fbc07ff484: Download complete [1B
+[0A[2K032d34beabac: Pulling metadata [0B[1A[2K032d34beabac: Pulling fs layer [1B[1A[2K032d34beabac: Downloading 4.096 kB/31.94 kB 2s[1B[1A[2K032d34beabac: Downloading  7.62 kB/31.94 kB 1s[1B[1A[2K032d34beabac: Downloading 11.72 kB/31.94 kB 0[1B[1A[2K032d34beabac: Downloading 15.62 kB/31.94 kB 0[1B[1A[2K032d34beabac: Downloading 19.72 kB/31.94 kB 0[1B[1A[2K032d34beabac: Downloading 23.62 kB/31.94 kB 0[1B[1A[2K032d34beabac: Downloading 27.72 kB/31.94 kB 0[1B[1A[2K032d34beabac: Downloading 31.62 kB/31.94 kB 0[1B[1A[2K032d34beabac: Downloading 31.94 kB/31.94 kB[1B[1A[2K032d34beabac: Downloading 31.94 kB/31.94 kB[1B[1A[2K032d34beabac: Download complete [1B
+[0A[2K41be80769998: Pulling metadata [0B[1A[2K41be80769998: Pulling fs layer [1B[1A[2K41be80769998: Downloading 4.096 kB/40.67 kB 8s[1B[1A[2K41be80769998: Downloading  7.62 kB/40.67 kB 4s[1B[1A[2K41be80769998: Downloading 11.72 kB/40.67 kB 2s[1B[1A[2K41be80769998: Downloading 15.62 kB/40.67 kB 1s[1B[1A[2K41be80769998: Downloading 19.72 kB/40.67 kB 0[1B[1A[2K41be80769998: Downloading 23.62 kB/40.67 kB 0[1B[1A[2K41be80769998: Downloading 27.72 kB/40.67 kB 0[1B[1A[2K41be80769998: Downloading 31.62 kB/40.67 kB 0[1B[1A[2K41be80769998: Downloading 35.72 kB/40.67 kB 0[1B[1A[2K41be80769998: Downloading 39.62 kB/40.67 kB 0[1B[1A[2K41be80769998: Downloading 40.67 kB/40.67 kB[1B[1A[2K41be80769998: Downloading 40.67 kB/40.67 kB[1B[1A[2K41be80769998: Download complete [1B
+[0A[2K24aec756d787: Pulling metadata [0B[1A[2K24aec756d787: Pulling fs layer [1B[1A[2K24aec756d787: Downloading 4.096 kB/16.86 kB 1s[1B[1A[2K24aec756d787: Downloading  7.62 kB/16.86 kB 0[1B[1A[2K24aec756d787: Downloading 11.72 kB/16.86 kB 0[1B[1A[2K24aec756d787: Downloading 15.62 kB/16.86 kB 0[1B[1A[2K24aec756d787: Downloading 16.86 kB/16.86 kB[1B[1A[2K24aec756d787: Downloading 16.86 kB/16.86 kB[1B[1A[2K24aec756d787: Download complete [1B
+[0A[2Kfe19d34a8789: Pulling metadata [0B[1A[2Kfe19d34a8789: Pulling fs layer [1B[1A[2Kfe19d34a8789: Downloading     10 B/174 B 2s[1B[1A[2Kfe19d34a8789: Downloading    174 B/174 B[1B[1A[2Kfe19d34a8789: Downloading    174 B/174 B[1B[1A[2Kfe19d34a8789: Download complete [1B[12A[2K1bc6265e3f2f: Pulling metadata [12B[12A[2K1bc6265e3f2f: Pulling fs layer [12B[12A[2K1bc6265e3f2f: Downloading     10 B/174 B 11s[12B[12A[2K1bc6265e3f2f: Downloading    174 B/174 B[12B[12A[2K1bc6265e3f2f: Downloading    174 B/174 B[12B[12A[2K1bc6265e3f2f: Download complete [12B[12A[2K1bc6265e3f2f: Download complete [12B
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       165      1494603          9478       1074417          9111        884767         33319
+       278      1686398          8755       1177855          6483       1103788         30618
+       384      1554896          8046       1088365          6930       1025911         33774
+       441      1532935          5407       1082135          4220       1029090         22553
+       467      1402896          1990        992370          1594        942646          9127
+       504      1264433          2765        892690          2387        853821          9603
+       581      1591138          5981       1122328          4956       1923244         22315
+       608      1385569          1829        985070          1669        904400          6333
+       629      1628573          1206       1161754          1279       1082031          6584
+       683      1169594          4648        834500          3537        779331         19623
+       725      1233911          3880        877579          2819        845422         15341
+       743      1466284          1557       1046745          1309        988175          6485
+       773      1554660          2617       1110535          2284       1079159         11617
+       809      1274697          3099        908349          2275        882675         12056
+       822      1168289          1563        831719           925        811146          5975
+       838      1480376          1604       1052033          1147       1009522          6473
+       877      1494841          3800       1062936          2920       1015674         15952
+       898      1583306          1939       1128552          1443       1095260          7522
+       914      1455513          1178       1039461          1023       1018204          5685
+       959      1250229          3982        892466          3318        858619         16525
+
+Final score for writes:           959
+Final score for reads :        575861
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       134      1624840          8069       1075538          7001        899895         24244
+       171      1968090          2436       1308448          1906       1257745          9597
+       237      1907897          5517       1265272          4109       1212307         18428
+       336      1585218          7558       1068997          6088        993286         25493
+       415      1666853          7006       1131057          4956       1018416         25201
+       491      1584971          5877       1083723          4918       1006970         22721
+       559      1827223          5815       1280135          4806       1177389         23955
+       580      1622425          1869       1137219          1630       1099811          8998
+       590      1804204          1078       1273003           720       1198851          5215
+       656      1600350          5376       1126220          4372       1062268         21399
+       682      1039023          2774        737868          2176        711401         11958
+       692      1679333          1037       1194040          1043       1144825          5133
+       745      1793517          4087       1279781          3040       1241900         13213
+       783      1429567          2936       1010765          2329        974104         12258
+       805      1681651          1617       1190641          1443       1134027          7088
+       829      1011842          1972        714143          1724        694480         10123
+       873      1627164          3635       1152115          2645       1082165         14944
+       889      1596059          1374       1128360          1249       1080387          6394
+       909      1802156          1727       1273303          1029       1222530          6983
+       922      1407248          1055        995610           925        946148          4218
+
+Final score for writes:           922
+Final score for reads :        642372
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       124      1474934          7809       1017675          6963        925379         25787
+       137      1685393          1187       1170711           846       1075856          5590
+       142       441648           394        304272           404        291083          1774
+       236      1612713          6725       1136891          6481       1059014         26905
+       330      1704468          7202       1218098          6189       1134171         28127
+       417      1605987          7668       1158364          5844       1081124         28355
+       479      1782216          4287       1290039          3529       1191485         16588
+       503      1327681          2197        957566          1579        879343          7946
+       506       843460           230        605426           181        557260          1257
+       562      1314695          4862        946423          4004        874333         19842
+       618      1428868          4269       1025675          3358        928431         15248
+       639      1754317          1604       1267330          1345       1171479          7848
+       675      1731734          3338       1253507          2743       1175921         14736
+       708      1492529          2818       1086495          2221       1025053         10672
+       731      1539457          2127       1110778          1571       1040557          7591
+       744      1631912          1475       1177339           981       1112692          5177
+       790      1494873          4016       1083230          3179        993721         15536
+       810      1280319          1707        925458          1243        861862          7599
+       826      1652897          1237       1191946          1194       1122330          5648
+       881      1775906          4500       1292443          3506       1195883         19714
+
+Final score for writes:           881
+Final score for reads :        587794
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       121      1474000          7781        976535          6458        873488         24918
+       144      1823402          1702       1203575          1165       1211086          6798
+       243      1500967          6941       1012192          5903        960474         25560
+       349      1698735          8333       1168948          6905       1088339         30391
+       426      1579351          6405       1091491          5154       1032423         24977
+       495      1681060          5631       1169417          4514       1142815         23296
+       556      1537340          5085       1059839          4006       1037412         20442
+       581      1588660          2000       1101840          1504       1095308          9217
+       603       977339          1945        674434          1674        672377          7749
+       658      1599017          4731       1110431          3882       1099429         20813
+       686      1441889          2139       1002972          1697        992210          8675
+       704      1681333          1576       1170213          1209       1154614          6097
+       756      1782923          4111       1241003          3649       1212649         17195
+       782      1793470          2194       1247557          1679       1227255          9325
+       805      1598767          1741       1115158          1397       1079670          7683
+       820      1006417          1317        702153           726        692848          4570
+       870      1416500          4425        979576          3238        976032         18860
+       885      1158415          1353        800590          1183        798429          6365
+       899      1793295          1193       1249668          1053       1252267          4629
+       922      1332426          2100        927788          1351        915234          7923
+
+Final score for writes:           922
+Final score for reads :        604280
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       130      1063237          8109        688709          6806        595043         26807
+       153      1484393          2030        984639          1602        964759          9339
+       157      1801194           315       1200900           309       1183992          1100
+       241      1493363          6225       1037739          5458        967002         22395
+       346      1635665          8275       1137638          6706       1062636         32188
+       420      1510993          6203       1046084          4737        981331         24119
+       491      1691460          6183       1179535          4745       1127216         25859
+       520      1614949          2750       1119570          2073       1064311         10211
+       533      1547481          1132       1077402           845       1024669          4775
+       581       963274          4401        671336          3056        642032         15327
+       627      1028287          4197        711815          3121        671034         16075
+       652      1791940          1859       1243411          1613       1158139          7506
+       660      1752025           546       1227016           734       1142385          3116
+       715      1465700          4857       1021197          3756        985004         19703
+       735      1740375          1763       1222673          1494       1183812          8029
+       739      1256361           625        881714           469        853254          2720
+       804      1323207          4916        933398          4253        898365         20719
+       818      1506057          1560       1067320          1010       1036582          6375
+       830      1510685          1054       1065542           768       1017561          5160
+       845      1713279          1761       1207255          1241       1144876          7630
+
+Final score for writes:           845
+Final score for reads :        582221
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       129      1483551          8002        961428          6980        812000         24354
+       135      1933496           535       1281296           401       1148303          2583
+       140      1883349           320       1239936           335       1136096          1240
+       246      1831025          7817       1238349          6440       1103109         31206
+       331      1745905          6733       1205226          5360       1099616         27641
+       421      1687639          7505       1186565          5886       1092666         27188
+       476      1819472          4972       1286279          3736       1171926         19235
+       501      1325499          1769        935917          1728        857063          7011
+       510      1372068           944        976451           846        902797          4362
+       584      1366523          5483        980621          4732        897423         23194
+       608      1763499          1837       1255171          1241       1169121          7399
+       618      1828941           600       1294983           544       1221064          3252
+       658      1236394          4060        873602          3075        834417         15887
+       709      1135117          4223        808485          3211        752286         15781
+       726      1335601          1375        953213          1341        889404          6410
+       747      1727996          1780       1227569          1182       1159874          7532
+       788      1751036          3979       1240914          2809       1200843         15910
+       808      1198452          1668        845956          1164        816922          6633
+       827      1683198          1926       1193964          1211       1154813          6777
+       881      1786887          4810       1265653          3833       1214134         19842
+
+Final score for writes:           881
+Final score for reads :        625216
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       117      1221498          7110        857979          6639        685734         22960
+       157      1441520          3350       1013488          2389        878554         12697
+       226      1534960          5257       1053259          4316        936998         19221
+       297      1654099          5480       1146288          5064       1046087         21971
+       400      1658768          7816       1186785          6911       1099221         30332
+       455      1458446          4260       1073036          3956        970657         18172
+       521      1441190          5885       1058758          4601        982134         23595
+       567      1540806          3373       1131361          2860       1044000         14206
+       574      1703997           749       1259464           535       1160971          3226
+       621      1370580          3948       1015355          3409        946924         16616
+       671      1825475          4447       1349074          3356       1266062         18971
+       688      1620416          1598       1190406          1162       1135146          6645
+       711      1804207          1762       1319142          1344       1250475          6504
+       750      1316759          3922        963886          3124        909323         16204
+       765      1699805          1141       1252703           925       1172177          5056
+       782      1815948          1580       1326091          1067       1227497          7512
+       826      1703660          4076       1248929          3399       1166505         16360
+       844      1821935          1714       1348230          1113       1248446          6685
+       858      1546723          1369       1141144          1193       1056378          6960
+       892      1562509          2812       1158158          2158       1079740          9693
+
+Final score for writes:           892
+Final score for reads :        639890
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       126      1539669          7691        957003          6534        803362         24996
+       141       654862           939        417848           834        403569          4708
+       141         1851             0          1111             0          1060             0
+       264      1771457          8179       1127107          7202       1111265         30858
+       357      1263037          6544        847001          5513        845988         25196
+       440      1476642          6957       1002978          5087        975277         23933
+       510      1548969          5463       1048695          4891       1047139         22240
+       535      1561162          1621       1073076          1391       1069036          6223
+       535       190011             0        131623             0        130312             0
+       595      1036565          4518        705563          3461        692675         16657
+       644      1515761          4155       1037365          3316       1053478         17775
+       663      1497931          1787       1022459          1183       1036295          6867
+       677      1244215          1521        850220          1177        874415          6488
+       726      1662877          3823       1141869          3268       1155039         16866
+       746      1539567          1580       1070950          1575       1077212          7072
+       760      1625186          1386       1124749           841       1148307          5587
+       809      1193772          4228        820861          3256        843039         17589
+       834      1498658          2179       1040850          1594       1046774          7989
+       848      1684140          1351       1170681          1047       1171386          5043
+       875      1623335          2323       1133219          1848       1111774          8582
+
+Final score for writes:           875
+Final score for reads :        540181
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       123       981897          7289        689398          6799        598759         25976
+       132      1435006           628        988395           404        942800          2102
+       152      1732455          1628       1192952          1189       1144822          5138
+       263      1508349          8967       1051362          7515        945339         32357
+       344      1368160          6017        998272          5790        911004         26126
+       420      1434722          6162       1057586          4892        952193         23901
+       476      1226523          4971        888355          3278        805489         19342
+       518      1238894          3755        903114          3182        837013         17415
+       546      1275910          2502        921669          1940        854026         10479
+       594      1154695          4166        837734          3384        780231         15928
+       645       886410          4009        647911          3451        585328         12866
+       671      1537693          2314       1131233          1667       1030839          9489
+       683      1081999          1192        791219          1086        728777          6421
+       734      1481485          4567       1091627          3628       1021127         19899
+       749      1343093          1390        985304           954        902131          5329
+       762      1603215          1242       1175097           688       1101923          4932
+       811      1225060          4195        892911          3344        833218         17794
+       826      1171385          1547        855449          1161        814121          6506
+       846      1545912          1439       1130858          1412       1055450          6031
+       894      1585507          3646       1154726          3079       1091312         14129
+
+Final score for writes:           894
+Final score for reads :        530939
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       111      1300956          6944        911890          6595        788425         24132
+       132      1570675          1794       1135984          1390        973839          6227
+       132      1933722             0       1402151             0       1196556             0
+       223      1664164          6830       1180778          5932       1035509         26132
+       324      1623580          7377       1173571          6380       1097896         29185
+       405      1723198          6702       1234673          5433       1171589         25698
+       465      1558021          4634       1129777          3806       1057337         17987
+       495      1391648          2892       1013587          2381        936984         11696
+       504      1219929           715        888295           551        830198          3294
+       557      1215082          4186        884671          3382        828496         18840
+       592      1802999          2713       1310730          2394       1244711         11405
+       607      1681094          1093       1215626          1057       1166894          4898
+       629      1732676          1962       1260316          1313       1182893          8540
+       679      1506757          4503       1085722          3133       2226949         17931
+       695      1531246          1667       1101428          1398       1056685          6827
+       712      1531997          1450       1105654          1093       1062921          6584
+       767      1364490          4827        982360          3580        950653         18047
+       782      1508658          1381       1091602          1191       1046510          6265
+       807      1674186          2112       1209240          1412       1148331          7375
+       823      1772182          1458       1274176           887       1221680          5682
+
+Final score for writes:           823
+Final score for reads :        633643
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       130      1058120          7777        725988          6985        651216         24211
+       137       612282           484        415660           363        399959          2591
+       153       384734          1571        261012          1264        260277          5244
+       175      1360422          1584        947306          1620        916808          6690
+       261      1303725          6493        918308          5553        875702         25115
+       316      1284803          4115        914262          3135        863304         14793
+       367       779758          4452        543640          3020        521747         14363
+       418      1152534          4570        801625          3705        775458         19494
+       468      1453211          4008       1010032          2713        985767         16353
+       511      1587346          3737       1093630          2907       1080793         15895
+       580      1648405          5758       1126544          4683       1109098         20347
+       598      1182391          1626        818328          1514        805659          6772
+       614      1443371          1158       1008574          1007        974315          4831
+       660       976325          3988        684967          3068        665918         15795
+       689      1269383          2045        888881          1841        854318          8412
+       709      1495885          1683       1044388          1296       1031036          7296
+       760      1749180          3668       1222781          3222       1189806         14527
+       799      1411435          3377        995778          2783        961074         16186
+       819       986273          1534        694504          1238        686095          6174
+       837      1621197          1658       1136348          1238       1116081          8077
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       152      1495740         10082        945288          7907        856407         30568
+       253      1835054          8386       1227750          6166       1133946         29896
+       357      1771411          8442       1198784          6796       1079525         30951
+       420      1706884          4932       1185420          4400       1051342         20276
+       448      1127259          2176        801512          2190        717590          9749
+       472      1817931          1333       1299161          1604       1192563          6065
+       549      1774105          5838       1275898          4779       1170419         26333
+       575      1355067          1953        966758          1364        901161          7523
+       579       472250           316        337313           314        317922          1302
+       640      1710098          4877       1227763          4044       1146862         20502
+       683      1276218          3913        908582          2983        849842         15515
+       696      1744106          1160       1250578           967       1172867          5343
+       746       978884          3815        702013          3087        647495         14955
+       794      1373686          4061        990803          3308        928813         15407
+       815      1670253          1640       1214650          1541       1144227          7072
+       827      1774675           964       1288984           852       1203840          4563
+       872      1483429          4421       1080289          3564        992265         18467
+       891      1265463          1375        918592          1296        868374          6079
+       904      1850234          1029       1354849           864       1248505          4833
+       927      1444256          2093       1059466          1465        978109          8752
+
+Final score for writes:           927
+Final score for reads :        594077
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       114      1098574          7569        794050          6740        637295         25538
+       126       663581           921        476686           820        403065          4133
+       159       599733          2895        431543          2097        377456          9887
+       263      1595276          7677       1131015          6581        949887         29187
+       350      1628631          7164       1177464          6396       1039819         29322
+       421      1353712          4997        989261          4459        881589         19247
+       478      1609623          4929       1179633          4342       1065927         18968
+       533      1675456          4296       1237689          3395       1118737         17548
+       548      1387455          1273       1018006          1049        917046          5035
+       594      1163245          3758        854203          3165        771874         15892
+       639      1087346          3914        803003          3092        727267         15529
+       666      1540581          2181       1130155          1852       1019457          8592
+       686      1771153          1889       1307950          1310       1200868          7250
+       736      1440306          4824       1061625          3490        999063         19244
+       755      1584052          1196       1168174          1257       1076276          5857
+       776      1762177          1389       1297836          1367       1205261          7290
+       816      1480716          3742       1088865          2446       1023593         14842
+       845       892140          2629        646513          1888        600925          9694
+       869      1740400          1819       1260851          1601       1179834          7288
+       879      1796616          1114       1308106           857       1226997          5333
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       121      1054219          7834        742600          7156        613697         26070
+       136       806139          1510        568730           970        495446          6279
+       196       964418          4372        680266          3688        602885         15646
+       264      1295960          4846        936923          4502        829617         18590
+       337      1733588          5870       1279908          4590       1125876         25794
+       417      1710433          6457       1241136          5236       1140168         24709
+       476      1361183          4764        994088          3494        898640         16238
+       536      1735389          5184       1249324          3955       1106621         17698
+       551      1561862          1411       1126507          1034        994968          6152
+       597      1085132          3762        778944          2860        708453         16055
+       647      1439800          4043       1034308          2839        949455         16020
+       670      1531491          2097       1087115          1517       1030449          8387
+       701      1768007          2351       1265088          1737       1187862          8963
+       753      1664023          4804       1180524          3933       1131431         19845
+       766      1545627          1048       1106548           801       1057728          4381
+       778      1737521          1378       1244221           931       1190796          6419
+       836      1744007          5202       1242578          3904       1198197         18775
+       850      1111206          1270        800696          1091        756692          5597
+       869      1727477          1467       1236381           990       1175223          5848
+       888      1072673          1810        770249          1511        731025          7994
+
+Final score for writes:           888
+Final score for reads :        559208
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       119      1442364          7909       1066683          7392        761757         23689
+       128      1712482           646       1290782           648       1051263          3270
+       128      1803402             0       1358162             0       1108285             0
+       216      1731628          6832       1280811          5444       1051993         22647
+       326      1704258          8717       1260290          7542       1028783         34650
+       393      1649437          5428       1229544          4910       1034049         22903
+       472      1523057          5781       1132065          4942        996225         24454
+       506      1395108          2895       1045653          2108        922174         12021
+       513      1676925           649       1256887           625       1090901          3037
+       561      1662017          3905       1238080          2635       1094798         15935
+       610      1414983          3710       1041273          2824        930899         14981
+       632      1138703          1836        829738          1562        753092          7508
+       651      1727333          1599       1263277          1183       1137060          7137
+       710      1633536          5143       1189335          3625       1092241         19504
+       728      1441267          1511       1052447          1447        951677          7118
+       741      1734175          1189       1268081          1052       1159173          4985
+       763      1719546          1999       1258553          1415       1138622          7710
+       800      1399443          3427       1025567          2762        926689         15038
+       818      1343655          1723        977295          1248        890815          6314
+       835      1792575          1502       1306853          1091       1191733          5270
+
+Final score for writes:           835
+Final score for reads :        611990
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       139       873947          7630        591443          7144        549946         21449
+       148      1681584           915       1149427           766       1110897          4166
+       151      1726208           267       1183126           177       1157907           842
+       246      1641598          7449       1136093          5698       1099856         25817
+       334      1532902          7018       1072518          5953       1056551         28898
+       420      1550038          7579       1102608          5850       1054115         30001
+       475      1619275          5236       1146086          4227       1125567         20310
+       495      1614943          1755       1141500          1149       1107107          7659
+       500       661728           344        468044           271        459528          1223
+       552      1170267          4347        834808          3688        791130         16629
+       608      1695239          4869       1197028          3721       1150817         18415
+       625      1399807          1667        988109          1145        937400          6829
+       636       783034          1044        555443           851        533238          5183
+       682      1659176          4506       1175861          3397       1102655         16981
+       694      1644799          1416       1178904           883       1103608          5696
+       716      1639074          1711       1179153          1546       1102697          8137
+       762      1431408          4279       1034350          2922        988558         18524
+       787      1600800          2058       1149101          1270       1089310          6388
+       800      1712147          1148       1222156           854       1169702          5659
+       820      1363979          1923        973453          1478        904606          7618
+
+Final score for writes:           820
+Final score for reads :        588995
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       122      1099219          7665        763583          6828        653724         25076
+       130      1563497           543       1062294           480       1001330          2154
+       152      1836599          1935       1246019          1321       1160469          6320
+       271      1729945          7885       1146741          6584       1064361         31005
+       367      1603427          7114       1090955          6233       1002203         26306
+       445      1401896          5994        972892          4789        883492         21904
+       495      1712627          4577       1195888          3785       1084179         20573
+       548      1384320          4229        978423          3600        905590         17623
+       564      1553128          1266       1104043          1071       1025233          4907
+       609      1096623          3622        783862          3070        745016         15498
+       659      1265045          3899        897491          3291        861751         15968
+       681      1485130          1793       1055608          1389       1000508          7868
+       691      1390137           803        985624           732        938963          3053
+       749      1588864          4717       1138290          4123       1103152         20412
+       769      1362543          1643        973528          1629        935198          7084
+       792      1524951          1484       1094504          1358       1049008          6285
+       848      1723348          4394       1235601          3588       1181876         18645
+       867      1460895          1565       1048756          1212       1013314          6956
+       887      1735075          1432       1250548          1400       1180562          6214
+       898      1619418          1318       1170247           748       1102515          5219
+
+Final score for writes:           898
+Final score for reads :        600000
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       125      1546111          7641       1032893          6987        923481         24878
+       145      1312250          1604        864047           938        836642          6324
+       145       185377             0        120448             0        117332             0
+       224      1524203          6470       1036116          5509       1004777         23260
+       324      1712971          7362       1211624          6466       1147712         31580
+       396      1651249          5850       1182002          4958       1131225         23104
+       473      1688365          6253       1220349          4736       1138427         21240
+       499      1240684          2286        896696          1602        828783          9543
+       510      1565580           705       1124232           849       1040778          3758
+       564      1144807          3780        825971          3291        761260         16131
+       622      1410868          4600       1020228          4157        961264         18320
+       634      1534485           952       1117854           987       1059876          5639
+       675      1197828          4004        871542          2840        823598         15785
+       722      1144061          3765        839534          2876        806440         15214
+       738      1316066          1550        960015          1292        927877          6907
+       756      1755851          1661       1295305          1296       1241981          6810
+       809      1750169          4357       1290805          3865       1225391         19229
+       828      1593287          1850       1174979          1164       1110556          7305
+       839      1782786          1242       1305052           811       1236127          5042
+       858      1422021          1716       1041139          1218        976735          6967
+
+Final score for writes:           858
+Final score for reads :        575284
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       123       971997          7780        685203          6907        589206         25913
+       129       771847           735        535908           433        470009          3303
+       135       106765           440         73952           554         69342          2026
+       241      1706822          7509       1198672          6658       1094592         28783
+       333      1623384          6984       1148236          5890       1080686         27508
+       421      1611087          7198       1143470          6175       1111508         28612
+       478      1598913          4266       1145123          3735       1066006         16167
+       507      1780468          2352       1284991          1494       1188487          8145
+       515      1619165           922       1172651           695       1097151          4426
+       564      1341043          3883        977150          3373        910443         15631
+       616      1314877          4782        970467          3562        899457         18525
+       632      1555679          1750       1138231          1181       1085781          7045
+       681      1628059          3725       1175639          2950       1119151         15468
+       733      1635787          4739       1184384          4102       1132418         18600
+       748      1689340          1100       1226927           945       1172497          4920
+       763      1751997          1395       1275614           892       1241058          5919
+       797      1398159          3420       1018906          2783        976124         14459
+       820      1126543          1449        823737          1387        790713          6996
+       838      1225402          1402        899321          1124        871193          6529
+       867      1542839          2430       1131835          1928       1098238          9798
+
+Final score for writes:           867
+Final score for reads :        569194
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       113      1528708          6929       1049004          6507        875848         23205
+       141      1844821          2383       1303639          1892       1183438          9060
+       141      1943224             0       1378561             0       1251044             0
+       216      1960354          5438       1405110          4498       1257726         19388
+       320      1699743          7672       1204869          5851       1076244         28859
+       395      1566424          6026       1107912          5303       1022684         25012
+       449      1526005          4855       1074573          3382       1014230         18889
+       504      1455470          4382       1031054          3480        970065         17262
+       515      1102931           814        778423           786        736546          4162
+       554       907694          3662        640791          2840        629955         16104
+       601      1440317          3980       1019510          3056        984584         16355
+       620      1719393          1996       1213194          1599       1166466          7982
+       630      1330508           903        946153           779        933961          4022
+       678      1401497          4952        997598          3407        951015         19604
+       700      1609389          1896       1146497          1609       1105613          7810
+       708      1616378           684       1151855           581       1119218          3625
+       776      1775864          5473       1262875          4146       1203770         21907
+       795      1455683          1504       1036323          1271        990607          5886
+       814      1694423          1335       1207269          1142       1144522          6028
+       821      1784257           581       1271659           399       1192272          2243
+
+Final score for writes:           821
+Final score for reads :        616723
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       123      1121702          7165        803800          7363        704699         24724
+       131      1781433           637       1277484           545       1240083          2856
+       181      1855977          3777       1353886          3472       1272939         14019
+       199      1238458          1535        925966          1110        825190          5493
+       272      1401536          5088       1008874          4089        973782         22124
+       329      1364823          4310        978347          3731        947929         15445
+       346      1258273          1337        904087          1094        854270          5031
+       398       937778          4459        674617          3266        631868         16859
+       451      1542143          4493       1107377          3608       1051848         17124
+       493      1327935          3857        965630          3002        902530         15887
+       561      1498672          5445       1094927          4491       1031192         21574
+       576      1467427          1505       1067408          1191       1015089          6955
+       591      1566700          1143       1146260           962       1093641          4730
+       635      1007973          4003        739584          2786        703655         14988
+       670      1660294          3027       1209125          2358       1156081         12048
+       695      1613022          2022       1175657          1547       1106607          7735
+       725      1819865          2290       1320240          1747       1223899          9622
+       777      1590704          4373       1146738          3589       1103315         18468
+       798      1062298          1662        772191          1388        736655          7364
+       814      1581141          1457       1150198          1047       1077858          6046
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       157      1572902         10396       1102086          8872        854718         32355
+       276      1825798          8957       1252971          7178       1115251         32247
+       364      1559850          7123       1076694          5795       1016083         27225
+       438      1496061          5496       1060253          4883        981726         21316
+       463      1513686          2009       1074713          1461        983503          8881
+       463       277296             0        199449             0        186907             0
+       519      1303627          4646        920062          3735        880713         19927
+       571      1361504          4058        971502          3542        926988         17858
+       580      1213390           999        870683           736        836251          4545
+       628      1107084          4168        789696          3294        753827         17203
+       686      1504521          4509       1072229          3732       1017641         18581
+       702      1346329          1563        956626          1176        893944          5389
+       709      1472720           715       1046751           475        989804          2789
+       759      1348383          4887        951900          3461        911065         18862
+       771      1586648          1419       1126670           814       1051644          5832
+       794      1249263          2089        886018          1751        842049          9203
+       836      1248880          3812        883627          3022        854135         16248
+       855      1533315          1820       1096253          1226       1047600          7235
+       866      1467386          1505       1043762          1000        995421          5678
+       879      1657007          1174       1175001           646       1128248          4065
+
+Final score for writes:           879
+Final score for reads :        547336
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       119      1347742          7179        940735          6883        835770         23247
+       152      1382797          2424        990625          2243        883581         10127
+       181      1042315          2266        760470          1819        684382          7960
+       208      1491590          2566       1087961          1945        986425          8787
+       272      1297273          4965        941199          4180        860278         17781
+       342      1375999          5521        996350          4079        905157         21264
+       350       848283           678        608334           450        563124          2263
+       417      1434375          5321       1008393          3754        939217         19516
+       472      1751425          4321       1214383          3523       1155134         14891
+       545      1655410          6040       1164609          4923       1113878         22669
+       590      1374887          4246        977057          3066        925613         16845
+       615      1338310          2023        945013          1573        905701          8384
+       640      1782983          2417       1260673          1659       1207404          9459
+       697      1454375          4382       1027353          3944        974361         18640
+       739      1420000          3231       1004435          2435        946186         12053
+       754      1476334          1519       1047121          1150       1003384          6506
+       790      1623720          3347       1151630          3018       1102187         13067
+       816      1408250          2738       1009745          2044        962083         11021
+       832      1708062          1372       1222555           912       1162370          6094
+       859      1806062          2038       1297639          1319       1229650          6457
+
+Final score for writes:           859
+Final score for reads :        583682
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       118      1488004          7501        962906          6266        838644         22968
+       142      1590441          1869       1072295          1924       1000977          8756
+       147      1767350           484       1207311           298       1160197          1433
+       249      1749400          7619       1202839          6296       1101340         28356
+       338      1533902          7198       1110371          5978        965980         28166
+       428      1586664          6850       1157329          5574       1034027         30228
+       486      1387506          5018       1011616          4167        927634         20248
+       509      1554578          1898       1136143          1377       1039894          7436
+       514       671321           359        488326           243        451907          1669
+       569      1313391          4541        960023          4199        886069         18878
+       622      1413569          4258       1040582          3395        973579         14615
+       636      1547326          1518       1131519          1044       1039017          6283
+       671       686857          2593        502709          2042        461774         10390
+       700      1416476          2678       1036756          2185        992941         13853
+       720      1168590          1787        855888          1416        800154          6431
+       736      1494510          1333       1095137          1191       1034280          6336
+       787      1637821          4027       1209140          3779       1119625         16746
+       804      1179939          1755        869634          1203        807235          7499
+       823      1555487          1816       1143501          1269       1068955          6870
+       856      1471154          2529       1081719          2338       1017318         11890
+
+Final score for writes:           856
+Final score for reads :        559965
+
+
+Frequency = 10 secs
+Scratch dir = [/srv]
+Spawning 5 writers...
+Spawning 5 rewriters...
+Spawning 30 commenters...
+Spawning 40 readers...
+Benchmarking for 20 iterations.
+The test will run during 3 minutes.
+
+  Nb blogs   R articles    W articles    R pictures    W pictures    R comments    W comments
+       128      1389775          8626        934606          7074        776572         24216
+       132       869591           341        584657           207        518408          1456
+       164       456314          2261        302927          1717        281351          7892
+       257      1610625          7465       1066321          5327       1027538         27217
+       345      1749640          6976       1186707          5996       1099796         26668
+       431      1695331          7243       1154857          5454       1060292         26486
+       505      1648822          6050       1145731          5057       1040320         22992
+       529      1621928          1991       1143203          1730       1041663          7562
+       535      1072163           347        757412           263        697130          1315
+       581      1065388          3921        757881          3230        697313         15353
+       648      1478569          4898       1060410          4370        964018         18794
+       666      1754995          1495       1265347           920       1144983          5671
+       682       559798          1453       1666828          1107        369085          6876
+       737      1306108          4115        944663          3668        854739         16204
+       752      1519433          1451       1092375          1011        987978          5472
+       763      1652883          1039       1192307           893       1095870          5145
+       814      1326342          4874        955533          3410        874851         18510
+       834      1648341          1677       1184417          1007       1077841          5419
+       850      1694680          1618       1220308          1294       1121374          5865
+       872      1526400          1876       1093760          1597       1010687          7257
+
+Final score for writes:           872
+Final score for reads :        532376
+
