@@ -349,8 +349,8 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     # Starts N number of Docker containers running
     # Apache and a basic PHP "Hello World" file.
     #
-    docker pull $REPO/webbench
-    docker run -d -p 80:80 $REPO/webbench 
+    docker pull $REPO/bench-webbench
+    docker run -d -p 80:80 $REPO/bench-webbench 
 
 Then, from a remote host (in this case, my laptop), the following script was run to initiate the Apache Benchmark tests, grabbing the contents of the index.php "Hello World" file one million (1,000,000) times, with four requests at a time:
 
