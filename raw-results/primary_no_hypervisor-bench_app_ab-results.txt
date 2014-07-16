@@ -1,0 +1,810 @@
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking docker-bench-01.oit.duke.edu (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        Apache/2.2.15
+Server Hostname:        docker-bench-01.oit.duke.edu
+Server Port:            80
+
+Document Path:          /index.php
+Document Length:        12 bytes
+
+Concurrency Level:      100
+Time taken for tests:   120.534 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      204005304 bytes
+HTML transferred:       12000312 bytes
+Requests per second:    8296.39 [#/sec] (mean)
+Time per request:       12.053 [ms] (mean)
+Time per request:       0.121 [ms] (mean, across all concurrent requests)
+Transfer rate:          1652.84 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    6  43.3      4    1008
+Processing:     1    6  10.4      5     259
+Waiting:        0    5  10.1      4     256
+Total:          2   12  44.5      9    1210
+
+Percentage of the requests served within a certain time (ms)
+  50%      9
+  66%     11
+  75%     12
+  80%     13
+  90%     14
+  95%     15
+  98%     17
+  99%     20
+ 100%   1210 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking docker-bench-01.oit.duke.edu (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        Apache/2.2.15
+Server Hostname:        docker-bench-01.oit.duke.edu
+Server Port:            80
+
+Document Path:          /index.php
+Document Length:        12 bytes
+
+Concurrency Level:      100
+Time taken for tests:   127.655 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      204002856 bytes
+HTML transferred:       12000168 bytes
+Requests per second:    7833.63 [#/sec] (mean)
+Time per request:       12.765 [ms] (mean)
+Time per request:       0.128 [ms] (mean, across all concurrent requests)
+Transfer rate:          1560.63 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    6  46.5      4    2101
+Processing:     1    7  12.0      6     426
+Waiting:        0    6  10.7      4     424
+Total:          2   13  48.1     10    2107
+
+Percentage of the requests served within a certain time (ms)
+  50%     10
+  66%     11
+  75%     12
+  80%     13
+  90%     15
+  95%     16
+  98%     19
+  99%     27
+ 100%   2107 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking docker-bench-01.oit.duke.edu (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        Apache/2.2.15
+Server Hostname:        docker-bench-01.oit.duke.edu
+Server Port:            80
+
+Document Path:          /index.php
+Document Length:        12 bytes
+
+Concurrency Level:      100
+Time taken for tests:   123.793 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      204001632 bytes
+HTML transferred:       12000096 bytes
+Requests per second:    8077.97 [#/sec] (mean)
+Time per request:       12.379 [ms] (mean)
+Time per request:       0.124 [ms] (mean, across all concurrent requests)
+Transfer rate:          1609.30 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    6  41.6      4    3009
+Processing:     1    7  11.0      6     426
+Waiting:        1    5   9.9      5     425
+Total:          2   12  43.1     10    3015
+
+Percentage of the requests served within a certain time (ms)
+  50%     10
+  66%     11
+  75%     13
+  80%     13
+  90%     15
+  95%     15
+  98%     17
+  99%     19
+ 100%   3015 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking docker-bench-01.oit.duke.edu (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        Apache/2.2.15
+Server Hostname:        docker-bench-01.oit.duke.edu
+Server Port:            80
+
+Document Path:          /index.php
+Document Length:        12 bytes
+
+Concurrency Level:      100
+Time taken for tests:   122.941 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      204005304 bytes
+HTML transferred:       12000312 bytes
+Requests per second:    8134.00 [#/sec] (mean)
+Time per request:       12.294 [ms] (mean)
+Time per request:       0.123 [ms] (mean, across all concurrent requests)
+Transfer rate:          1620.49 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    6  44.8      4    3011
+Processing:     1    6  11.0      5     424
+Waiting:        0    5  10.3      4     421
+Total:          2   12  46.3      9    3019
+
+Percentage of the requests served within a certain time (ms)
+  50%      9
+  66%     11
+  75%     12
+  80%     13
+  90%     14
+  95%     15
+  98%     17
+  99%     20
+ 100%   3019 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking docker-bench-01.oit.duke.edu (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        Apache/2.2.15
+Server Hostname:        docker-bench-01.oit.duke.edu
+Server Port:            80
+
+Document Path:          /index.php
+Document Length:        12 bytes
+
+Concurrency Level:      100
+Time taken for tests:   128.393 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      204005304 bytes
+HTML transferred:       12000312 bytes
+Requests per second:    7788.57 [#/sec] (mean)
+Time per request:       12.839 [ms] (mean)
+Time per request:       0.128 [ms] (mean, across all concurrent requests)
+Transfer rate:          1551.67 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    6  44.2      4    3007
+Processing:     1    7  12.5      6     438
+Waiting:        0    5  10.6      4     437
+Total:          1   13  45.9     10    3015
+
+Percentage of the requests served within a certain time (ms)
+  50%     10
+  66%     12
+  75%     13
+  80%     14
+  90%     15
+  95%     16
+  98%     19
+  99%     26
+ 100%   3015 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking docker-bench-01.oit.duke.edu (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        Apache/2.2.15
+Server Hostname:        docker-bench-01.oit.duke.edu
+Server Port:            80
+
+Document Path:          /index.php
+Document Length:        12 bytes
+
+Concurrency Level:      100
+Time taken for tests:   129.482 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      204000612 bytes
+HTML transferred:       12000036 bytes
+Requests per second:    7723.06 [#/sec] (mean)
+Time per request:       12.948 [ms] (mean)
+Time per request:       0.129 [ms] (mean, across all concurrent requests)
+Transfer rate:          1538.58 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    6  45.9      4    7014
+Processing:     1    7  10.9      6     423
+Waiting:        0    6  10.5      5     423
+Total:          2   13  47.2     10    7024
+
+Percentage of the requests served within a certain time (ms)
+  50%     10
+  66%     12
+  75%     13
+  80%     14
+  90%     15
+  95%     16
+  98%     19
+  99%     21
+ 100%   7024 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking docker-bench-01.oit.duke.edu (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        Apache/2.2.15
+Server Hostname:        docker-bench-01.oit.duke.edu
+Server Port:            80
+
+Document Path:          /index.php
+Document Length:        12 bytes
+
+Concurrency Level:      100
+Time taken for tests:   123.490 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      204000204 bytes
+HTML transferred:       12000012 bytes
+Requests per second:    8097.80 [#/sec] (mean)
+Time per request:       12.349 [ms] (mean)
+Time per request:       0.123 [ms] (mean, across all concurrent requests)
+Transfer rate:          1613.23 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    6  43.0      4    3004
+Processing:     1    7   9.1      6     421
+Waiting:        1    5   8.7      4     222
+Total:          2   12  44.0     10    3009
+
+Percentage of the requests served within a certain time (ms)
+  50%     10
+  66%     11
+  75%     13
+  80%     14
+  90%     15
+  95%     15
+  98%     17
+  99%     19
+ 100%   3009 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking docker-bench-01.oit.duke.edu (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        Apache/2.2.15
+Server Hostname:        docker-bench-01.oit.duke.edu
+Server Port:            80
+
+Document Path:          /index.php
+Document Length:        12 bytes
+
+Concurrency Level:      100
+Time taken for tests:   122.793 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      204002244 bytes
+HTML transferred:       12000132 bytes
+Requests per second:    8143.82 [#/sec] (mean)
+Time per request:       12.279 [ms] (mean)
+Time per request:       0.123 [ms] (mean, across all concurrent requests)
+Transfer rate:          1622.42 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    6  46.1      4    3007
+Processing:     1    6  10.2      5     419
+Waiting:        1    5  10.0      4     411
+Total:          2   12  47.1      9    3015
+
+Percentage of the requests served within a certain time (ms)
+  50%      9
+  66%     11
+  75%     12
+  80%     13
+  90%     14
+  95%     15
+  98%     17
+  99%     20
+ 100%   3015 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking docker-bench-01.oit.duke.edu (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        Apache/2.2.15
+Server Hostname:        docker-bench-01.oit.duke.edu
+Server Port:            80
+
+Document Path:          /index.php
+Document Length:        12 bytes
+
+Concurrency Level:      100
+Time taken for tests:   123.330 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      204000612 bytes
+HTML transferred:       12000036 bytes
+Requests per second:    8108.33 [#/sec] (mean)
+Time per request:       12.333 [ms] (mean)
+Time per request:       0.123 [ms] (mean, across all concurrent requests)
+Transfer rate:          1615.34 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    6  47.8      3    3005
+Processing:     1    6  11.6      5     430
+Waiting:        0    5  11.0      4     428
+Total:          2   12  49.3      9    3014
+
+Percentage of the requests served within a certain time (ms)
+  50%      9
+  66%     10
+  75%     11
+  80%     13
+  90%     15
+  95%     16
+  98%     20
+  99%     30
+ 100%   3014 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking docker-bench-01.oit.duke.edu (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        Apache/2.2.15
+Server Hostname:        docker-bench-01.oit.duke.edu
+Server Port:            80
+
+Document Path:          /index.php
+Document Length:        12 bytes
+
+Concurrency Level:      100
+Time taken for tests:   124.205 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      204002040 bytes
+HTML transferred:       12000120 bytes
+Requests per second:    8051.20 [#/sec] (mean)
+Time per request:       12.421 [ms] (mean)
+Time per request:       0.124 [ms] (mean, across all concurrent requests)
+Transfer rate:          1603.97 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    6  45.6      4    3009
+Processing:     1    6  11.9      5     433
+Waiting:        0    5  10.3      4     433
+Total:          2   12  47.2      9    3016
+
+Percentage of the requests served within a certain time (ms)
+  50%      9
+  66%     11
+  75%     12
+  80%     13
+  90%     15
+  95%     15
+  98%     17
+  99%     19
+ 100%   3016 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking docker-bench-01.oit.duke.edu (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        Apache/2.2.15
+Server Hostname:        docker-bench-01.oit.duke.edu
+Server Port:            80
+
+Document Path:          /index.php
+Document Length:        12 bytes
+
+Concurrency Level:      100
+Time taken for tests:   127.088 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      204005508 bytes
+HTML transferred:       12000324 bytes
+Requests per second:    7868.59 [#/sec] (mean)
+Time per request:       12.709 [ms] (mean)
+Time per request:       0.127 [ms] (mean, across all concurrent requests)
+Transfer rate:          1567.61 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    6  45.6      4    3008
+Processing:     1    7  12.3      6     427
+Waiting:        0    6  11.0      4     425
+Total:          2   13  47.3     10    3013
+
+Percentage of the requests served within a certain time (ms)
+  50%     10
+  66%     11
+  75%     13
+  80%     14
+  90%     15
+  95%     16
+  98%     19
+  99%     24
+ 100%   3013 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking docker-bench-01.oit.duke.edu (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        Apache/2.2.15
+Server Hostname:        docker-bench-01.oit.duke.edu
+Server Port:            80
+
+Document Path:          /index.php
+Document Length:        12 bytes
+
+Concurrency Level:      100
+Time taken for tests:   126.423 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      204000612 bytes
+HTML transferred:       12000036 bytes
+Requests per second:    7909.95 [#/sec] (mean)
+Time per request:       12.642 [ms] (mean)
+Time per request:       0.126 [ms] (mean, across all concurrent requests)
+Transfer rate:          1575.82 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    6  39.3      4    1008
+Processing:     1    7  10.1      6     423
+Waiting:        1    6   9.3      5     422
+Total:          2   13  40.6     10    1413
+
+Percentage of the requests served within a certain time (ms)
+  50%     10
+  66%     12
+  75%     14
+  80%     14
+  90%     15
+  95%     16
+  98%     17
+  99%     19
+ 100%   1413 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking docker-bench-01.oit.duke.edu (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        Apache/2.2.15
+Server Hostname:        docker-bench-01.oit.duke.edu
+Server Port:            80
+
+Document Path:          /index.php
+Document Length:        12 bytes
+
+Concurrency Level:      100
+Time taken for tests:   121.912 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      204000000 bytes
+HTML transferred:       12000000 bytes
+Requests per second:    8202.65 [#/sec] (mean)
+Time per request:       12.191 [ms] (mean)
+Time per request:       0.122 [ms] (mean, across all concurrent requests)
+Transfer rate:          1634.12 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    6  44.6      4    7015
+Processing:     1    7   9.5      5     278
+Waiting:        1    5   9.3      4     275
+Total:          2   12  45.6      9    7017
+
+Percentage of the requests served within a certain time (ms)
+  50%      9
+  66%     11
+  75%     13
+  80%     14
+  90%     15
+  95%     15
+  98%     18
+  99%     24
+ 100%   7017 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking docker-bench-01.oit.duke.edu (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        Apache/2.2.15
+Server Hostname:        docker-bench-01.oit.duke.edu
+Server Port:            80
+
+Document Path:          /index.php
+Document Length:        12 bytes
+
+Concurrency Level:      100
+Time taken for tests:   118.504 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      204002448 bytes
+HTML transferred:       12000144 bytes
+Requests per second:    8438.53 [#/sec] (mean)
+Time per request:       11.850 [ms] (mean)
+Time per request:       0.119 [ms] (mean, across all concurrent requests)
+Transfer rate:          1681.13 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    5  39.0      4    1008
+Processing:     1    6   9.0      6     411
+Waiting:        1    5   8.7      4     410
+Total:          2   12  40.2      9    1211
+
+Percentage of the requests served within a certain time (ms)
+  50%      9
+  66%     11
+  75%     13
+  80%     14
+  90%     15
+  95%     15
+  98%     16
+  99%     19
+ 100%   1211 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking docker-bench-01.oit.duke.edu (be patient)
+Completed 100000 requests
+Completed 200000 requests
+Completed 300000 requests
+Completed 400000 requests
+Completed 500000 requests
+Completed 600000 requests
+Completed 700000 requests
+Completed 800000 requests
+Completed 900000 requests
+Completed 1000000 requests
+Finished 1000000 requests
+
+
+Server Software:        Apache/2.2.15
+Server Hostname:        docker-bench-01.oit.duke.edu
+Server Port:            80
+
+Document Path:          /index.php
+Document Length:        12 bytes
+
+Concurrency Level:      100
+Time taken for tests:   122.014 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      204000000 bytes
+HTML transferred:       12000000 bytes
+Requests per second:    8195.79 [#/sec] (mean)
+Time per request:       12.201 [ms] (mean)
+Time per request:       0.122 [ms] (mean, across all concurrent requests)
+Transfer rate:          1632.76 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    6  41.6      4    3009
+Processing:     1    6   9.2      6     239
+Waiting:        1    5   9.0      4     236
+Total:          2   12  42.7      9    3013
+
+Percentage of the requests served within a certain time (ms)
+  50%      9
+  66%     11
+  75%     13
+  80%     14
+  90%     15
+  95%     15
+  98%     16
+  99%     19
+ 100%   3013 (longest request)
