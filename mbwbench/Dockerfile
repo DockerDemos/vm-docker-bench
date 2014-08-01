@@ -1,7 +1,7 @@
 # Docker container with mbw installed
 # for running memory benchmark tests
 
-FROM centos
+FROM centos:centos6
 MAINTAINER Chris Collins <collins.christopher@gmail.com>
 
 RUN yum install -y git gcc bc
