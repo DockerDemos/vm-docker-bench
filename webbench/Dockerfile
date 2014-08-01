@@ -2,7 +2,7 @@
 # of multiple containers running a basic
 # service, in this case Apache
 
-FROM centos
+FROM centos:centos6
 MAINTAINER Chris Collins <collins.christopher@gmail.com>
 
 RUN yum install -y httpd mod_php
