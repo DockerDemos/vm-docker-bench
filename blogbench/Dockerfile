@@ -4,7 +4,7 @@
 #
 # http://download.pureftpd.org/pub/blogbench/blogbench-1.1.tar.gz
 
-FROM centos
+FROM centos:centos6
 MAINTAINER Chris Collins <collins.christopher@gmail.com>
 
 RUN yum install -y wget tar gcc
