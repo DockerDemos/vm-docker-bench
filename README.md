@@ -15,7 +15,6 @@ Hypervisor + Docker Performance Benchmark
         * File I/O Operation
         * (Modified) File I/O Operation
         * Memory Performance
-        * Network Performance
         * Application type performance (Blogbench)
         * Application type performance (Apache Benchmark)
 3. [Hypervisor + Docker Performance Benchmark](#vmhdp)
@@ -44,7 +43,6 @@ For each of the Host Benchmarks, multiple datapoints are collected using the [Re
  * CPU Load average
  * Memory Usage
  * File I/O
- * Network Performance (if applicable)
 
 The scripts were all placed on the host server via the CoreOS cloud-config.yml file.
 
@@ -308,10 +306,6 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     for i in {1..100} ; do docker run --rm -i -t $REPO/bench-mbwbench ; done
     /sbin/swapon -a
 
-__Network Performance__
-
-(netperf server on contol server, netperf in ipv4 on guest)
-
 __Application type performance (Blogbench)__
 
 [Blogbench](http://www.pureftpd.org/project/blogbench) was used to simulate file I/O as it would exist on a webserver, with mostly-read, some-write traffic.  The tests used the [Blogbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/blogbench) included in this repository.  The resulting container was started and ran `blogbench -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv`.  This process was repeated twentyfive times and the results recorded.
@@ -390,39 +384,19 @@ The control system mimics the performance of primary system, but with less I/O c
 
 __Compute node steady-state Container Packing__
 
-This test measures the same metrics as the above: CPU and I/O usage on the host, but through a full startup, 15 minute wait, and full shutdown of 15 containers.  Again, lower is better.
-
-![Graph of Primary System w/no Hypervisor, Steady-State Packing Test](/raw-results/primary_no_hypervisor-ssp-15.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (15) Test")
-
-This first graph is included for completeness, but the extended time between startup and shutdown makes it somewhat useless for humans to read.  Detail graphs of the startup and shutdown process for the containers are included below.
-
-![Graph of Control System, Steady-State Packing Test](/raw-results/control-ssp-15.png?raw=true "Graph of Control System, Steady State Packing (15) Test")
-
-As with the Steady-state container packing graph for the Primary system, above, this is included for completeness.
+This test measures the same metrics as the above: CPU and I/O usage on the host, but through a full startup and a 15 minute normalization period.  Again, lower is better.
 
 ![Graph of Primary System w/no Hypervisor, Steady-State Packing Test: Boot Detail](/raw-results/primary_no_hypervisor-ssp-15-boot_detail.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (15) Test: Boot Detail")
 
 This graph shows a detail view of the startup process for 15 containers on the primary system with no hypervisor.  The performance almost perfectly mimics that of the 100 container Serial Container Boot above.  This likely implies a max startup rate for each container on a host - starting more or less containers serially will not be likely to have any impact on performance.
 
+![Graph of Primary System with Hypervisor, Steady-State Packing Test: Boot Detail](/raw-results/primary-ssp-15-boot_detail.png?raw=true "Graph of Primary System with Hypervisor, Steady State Packing (15) Test: Boot Detail")
+
+This graphs is the detail view of the 15 container startup process on the primary system with a hypervisor.  Somewhat surprisingly, there is almost no difference in the CPU usage of the system with or without a hypervisor layer.  The difference is small enough as to make little difference in everyday use.
+
 ![Graph of Control System, Steady-State Packing Test: Boot Detail](/raw-results/control-ssp-15-boot_detail.png?raw=true "Graph of Control System, Steady State Packing (15) Test: Boot Detail")
 
-It's clear that the disk IO is again the limiting factor.  The control system has somewhat faster disks than the primary system without a hypervisor (it's backed by a 50 disk EMC array), so the IO peak itself isn't as high.
-
-![Graph of Primary System w/no Hypervisor, Steady-State Packing Test: Shutdown Detail](/raw-results/primary_no_hypervisor-ssp-15-shutdown_detail.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (15): Shutdown Detail Test")
-
-This graph shows a detail view of the shutdown process for 15 containers on the primary system with no hypervisor.  The shutdown process requires little to no disk I/O, and is considerably more efficient than the startup process. 
-
-![Graph of Control System, Steady-State Packing Test: Shutdown Detail](/raw-results/control-ssp-15-shutdown_detail.png?raw=true "Graph of Control System, Steady State Packing (15): Shutdown Detail Test")
-
-The shutdown graph is pretty much the same across all the tests.
-
-![Graph of Primary System w/no Hypervisor, Steady-State Packing Test](/raw-results/primary_no_hypervisor-ssp-100.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (100) Test")
-
-Again, included for completeness, this is the base graph of the primary system without a hypervisor starting up 100 webserver containers.
-
-![Graph of Control System, Steady-State Packing Test](/raw-results/control-ssp-100.png?raw=true "Graph of Control System, Steady State Packing (100) Test")
-
-The full load graph here is similar to the others above seen.
+It's clear that the disk IO is again the limiting factor.  The control system has somewhat faster disks than the primary system (it's backed by a 50 disk EMC array), so the IO peak itself isn't as high.
 
 ![Graph of Primary System w/no Hypervisor, Steady-State Packing Test: Boot Detail](/raw-results/primary_no_hypervisor-ssp-100-boot_detail.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (100) Test: Boot Detail")
 
@@ -431,14 +405,6 @@ Zoomed in on the detail of the startup process, we see what was expected - the d
 ![Graph of Control System, Steady-State Packing Test: Boot Detail](/raw-results/control-ssp-100-boot_detail.png?raw=true "Graph of Control System, Steady State Packing (100) Test: Boot Detail")
 
 The IO is again similar to the control system's 15 container test, but with a slightly higher peak.
-
-![Graph of Primary System w/no Hypervisor, Steady-State Packing Test: Shutdown Detail](/raw-results/primary_no_hypervisor-ssp-100-shutdown_detail.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (100): Shutdown Detail Test")
-
-The shutdown process is generally the same as with 15 containers, but has a slightly higher amount of time used by the kernel ("system").
-
-![Graph of Control System, Steady-State Packing Test: Shutdown Detail](/raw-results/control-ssp-100-shutdown_detail.png?raw=true "Graph of Control System, Steady State Packing (100): Shutdown Detail Test")
-
-And as above, the larger peak here is the time used by the kernel to remove the Docker containers.
 
 ###<a name='guest_results'>Guest Benchmark Results</a>###
 
