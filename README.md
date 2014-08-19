@@ -428,7 +428,7 @@ This graph shows the time required to run each of the max prime tests in the 100
 
 ![Graph of Primary System with Hypervisor, Sysbench Max Prime tests (100): Total Time for Test](/raw-results/primary-CPU_cpu-time.png?raw=true "Graph of Primary System with Hypervisor, Sysbench Max Prime tests (100): Total Time for Test")
 
-And this is totally unexpected.  The graph shows the total time taken to run the max prime tests on the primary system with a hypervisor, and the results are _actually faster_ than the primary without a hypervisor.
+And this is totally unexpected.  The graph shows the total time taken to run the max prime tests on the primary system with a hypervisor, and the results are _actually faster_ (and in fact varies less) than the primary without a hypervisor.
 
 ![Graph of Control System, Sysbench Max Prime tests (100): Total Time for Test](/raw-results/control-CPU_cpu-time.png?raw=true "Graph of Control System, Sysbench Max Prime tests (100): Total Time for Test")
 
