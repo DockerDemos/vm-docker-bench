@@ -376,11 +376,13 @@ This test measures the CPU and I/O usage on the host during the startup of 100 D
 
 This goes toward confirming other's findings (especially Boden Russell's) that Disk I/O is the largest limiting factor for Docker containers.  The I/O Wait caused by starting one container after another with little gap in between was a bit too much for the single hard disk, even a SAS 15,000 RPM one.  The majority of the I/O was generated with the startup of the containers, but you can see a bit of a spike at the very beginning just pulling the image for the containers from the private repository.
 
-TO DO: Primary system w/Hypervisor
+![Graph of Primary System with Hypervisor, Serial Container Boot Test](/raw-results/primary-serial-container-boot.png?raw=true "Graph of Primary System with Hypervisor, Serial Container Boot Test")
+
+Somewhat surprisingly, the addition of a hypervisor layer did little to change the overall CPU utilization during the initial download and Docker startup.  More surprising, however, is while I/O remains the bottleneck, adding the hypervisor ended up _lowering_ the I/O Wait a little, and had a smaller amount of variation overall.
 
 ![Graph of Control System, Serial Container Boot Test](/raw-results/control-serial-container-boot.png?raw=true "Graph of Control System, Serial Container Boot Test")
 
-The control system mimics the performance of primary system, but with less I/O congestion thanks to the 50 disk EMC Array backing the hypervisor's virtual disks.  Any difference in User and System performance is largely neglegible.
+The control system mimics the performance of primary system, but with less I/O congestion thanks to the 50 disk EMC Array backing the control hypervisor's virtual disks.  Any difference in User and System performance is largely neglegible.
 
 __Compute node steady-state Container Packing__
 
