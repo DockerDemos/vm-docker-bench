@@ -370,7 +370,7 @@ Then, from a remote host (in this case, my laptop), the following script was run
 
 __Serial Container Boot__
 
-This test measures the CPU and I/O usage on the host during the startup of 100 Docker containers.  The graphs below show the User, System and IOWait, in USER_Hz.  The polling period was once per second.  For all three values, lower is better.
+This test measures the CPU and I/O usage on the host during the startup of 100 Docker containers.  The graphs below show the user, system and IOWait, in USER_Hz.  The polling period was once per second.  For all three values, lower is better.
 
 ![Graph of Primary System w/no Hypervisor, Serial Container Boot Test](/raw-results/primary_no_hypervisor-serial-container-boot.png?raw=true "Graph of Primary System w/no Hypervisor, Serial Container Boot Test")
 
@@ -378,15 +378,17 @@ The results above support others' (especially Boden Russell's) findings that Dis
 
 ![Graph of Primary System with Hypervisor, Serial Container Boot Test](/raw-results/primary-serial-container-boot.png?raw=true "Graph of Primary System with Hypervisor, Serial Container Boot Test")
 
-Somewhat surprisingly, the addition of a hypervisor layer did little to change the overall CPU utilization during the initial download and Docker startup.  More surprising, however, is while I/O remains the bottleneck, adding the hypervisor ended up _lowering_ the I/O Wait a little, and resulted in a smaller amount of variation overall.
+Somewhat surprisingly, the addition of a hypervisor layer did little to change the overall CPU utilization during the initial download and Docker startup.  More surprising, however, is while I/O remains the bottleneck, adding the hypervisor ended up _lowering_ the I/O Wait a little and resulted in a smaller amount of variation overall.
 
 ![Graph of Control System, Serial Container Boot Test](/raw-results/control-serial-container-boot.png?raw=true "Graph of Control System, Serial Container Boot Test")
 
-The control system mimics the performance of primary system, but with less I/O congestion due to the 50 disk EMC Array backing the control hypervisor's virtual disks.  Any difference in User and System performance is largely neglegible.
+The control system mimics the performance of primary system, but with less I/O congestion due to the 50 disk EMC Array backing the control hypervisor's virtual disks.  Any difference in user and system performance is largely neglegible.
 
 __Compute node steady-state Container Packing__
 
-This test measures the same metrics as the above: CPU and I/O usage on the host, through a full startup and a 15 minute normalization period.  Again, lower numbers are better.  In all three cases, the 15 minute normalization ended up holding no significant data, so the graphs below are cropped views of the boot process itself.  This in effect make results in data similar to 100 container Serial Container Boot test, and as a result, the performance is almost the same.
+This test measures the same metrics as the above, CPU and I/O usage on the host, through a full startup and 15 minute normalization period.  Again, lower numbers are better.  
+
+In all three cases, the 15 minute normalization ended up holding no significant data, so the graphs below are cropped views of the boot process itself.  This in effect make results in data similar to 100 container Serial Container Boot test, and as a result the images are almost the same.
 
 ![Graph of Primary System w/no Hypervisor, Steady-State Packing Test: Boot Detail](/raw-results/primary_no_hypervisor-ssp-15-boot_detail.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (15) Test: Boot Detail")
 
@@ -402,15 +404,17 @@ The control system has somewhat faster disks than the primary system (it's backe
 
 ![Graph of Primary System w/no Hypervisor, Steady-State Packing Test: Boot Detail](/raw-results/primary_no_hypervisor-ssp-100-boot_detail.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (100) Test: Boot Detail")
 
-In the 100 container steady state packing test (with hypervisor), the I/O again spikes to around the same level as previous tests when container creation begins and unsurprisingly stays peaked for a much longer time with the increased number of containers.  The consistency of peak I/O Wait across both 15 and 100 container boots implies a maximum startup rate for each container on a host - starting more or less containers serially will not be likely to have additional impact on performance.  
+In the 100 container steady state packing test (with hypervisor), the I/O again spikes to around the same level as previous tests when container creation begins and unsurprisingly stays peaked for a much longer time due to the increased number of containers.  
+
+The consistency of peak I/O Wait across both 15 and 100 container boots implies a maximum startup rate for each container on the host - starting a greater or lesser number of containers serially will not be likely to have additional impact on performance.
 
 ![Graph of Primary System with Hypervisor, Steady-State Packing Test: Boot Detail](/raw-results/primary-ssp-100-boot_detail.png?raw=true "Graph of Primary System with Hypervisor, Steady State Packing (100) Test: Boot Detail")
 
-With the hypervisor, the performance difference is again the same as previous tests comparing hypervisor and physical servers, and once again, the system reaches a "terminal velocity" of I/O - generally between 275 and 375 USER_Hz, though it trails off more at the end.
+With the hypervisor, the performance difference is again similar to previous tests comparing hypervisor and physical servers, and once again the system reaches a "terminal velocity" of I/O; generally between 275 and 375 USER_Hz, though it trails off more at the end.
 
 ![Graph of Control System, Steady-State Packing Test: Boot Detail](/raw-results/control-ssp-100-boot_detail.png?raw=true "Graph of Control System, Steady State Packing (100) Test: Boot Detail")
 
-The Control system's results match it's previous results as well.
+The control system's results match it's previous results as well.
 
 ###<a name='guest_results'>Guest Benchmark Results</a>###
 
