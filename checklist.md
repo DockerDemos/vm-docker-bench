@@ -2,6 +2,7 @@
 
 ### Testing ###
 | Testname        | Primary | Primary_no_hypervisor | Control |
+| --------        | ------- | --------------------- | ------- |
 | Serial Boot 100 |    X    |          X            |    X    |
 | SSP 100         |    X    |          X            |    X    |
 | SSP 15          |    X    |          X            |    X    |
@@ -16,6 +17,7 @@
 
 ### Documentation ###
 | Testname        | Primary | Primary_no_hypervisor | Control |
+| --------        | ------- | --------------------- | ------- |
 | Serial Boot 100 |    X    |          X            |    X    |
 | SSP 100         |    X    |          X            |    X    |
 | SSP 15          |    X    |          X            |    X    |
