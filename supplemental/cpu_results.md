@@ -1,4 +1,4 @@
-### CPU PERFORMANCE - CPU and RAM USage Graphts ###
+### CPU PERFORMANCE - CPU and RAM Usage Graphts ###
 
 ![Graph of Primary System w/no Hypervisor, Sysbench Max Prime tests (100): 200 Second CPU Usage sample](/images/primary_no_hypervisor-CPU_cpu.png?raw=true "Graph of Primary System w/no Hypervisor, Sysbench Max Prime tests (100): 200 Second CPU Usage sample")
 
@@ -13,13 +13,3 @@ The control system sample of the 100 max prime tests is very similar to the prim
 ![Graph of Control System, Sysbench Max Prime tests (100): Memory Usage](/images/control-CPU_mem.png?raw=true "Graph of Control System, Sysbench Max Prime tests (100): Memory Usage")
 
 This graph displays the memory used by the control system over the entirety of the 100 run max prime test (as opposed to the sample, above.)  There is a bit of an interesting result here with the memory usage graph for the 100 max prime test.  The amount of cached and used RAM grew, slowly, over the course of the run.
-
-### MODIFIED FILE I/O PERFORMANCE - CPU and RAM USage Graphts ###
-![Graph of Primary System w/no Hypervisor, (Modified) Sysbench File I/O tests (25), CPU Usage](/images/primary_no_hypervisor-bench_io_mod-cpu.png?raw=true "Graph of Primary System w/no Hypervisor, (Modified) Sysbench File I/O tests, CPU Usage")
-
-![Graph of Control System, (Modified) Sysbench File I/O tests (25), CPU Usage](/images/control-bench_io_mod-cpu.png?raw=true "Graph of Control System, (Modified) Sysbench File I/O tests, CPU Usage")
-
-![Graph of Primary System w/no Hypervisor, (Modified) Sysbench File I/O tests (25), Memory Usage](/images/primary_no_hypervisor-bench_io_mod-mem.png?raw=true "Graph of Primary System w/no Hypervisor, (Modified) Sysbench File I/O tests, Memory Usage")
-
-![Graph of Control System, (Modified) Sysbench File I/O tests (25), Memory Usage](/images/control-bench_io_mod-mem.png?raw=true "Graph of Control System, (Modified) Sysbench File I/O tests, Memory Usage")
-
