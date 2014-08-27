@@ -432,7 +432,7 @@ The control system graph for the time taken for the max prime tests is similar t
 
 __File I/O Operation__
 
-As noted above, this test is most likely not accurate in this environment due to the inability to prevent caching in memory.  The tests were performed, but are included in the [unmodified_file_io_results.md](https://github.com/DockerDemos/vm-docker-bench/blob/master/supplemental/unmodified_file_io_results.md) file.
+As noted above, this test is most likely not accurate in this environment due to the inability to prevent caching in memory.  The tests were performed, but are included in the [unmodified_file_io_results.md](/supplemental/unmodified_file_io_results.md) file.
 
 __(Modified) File I/O Operation__
 
