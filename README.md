@@ -146,7 +146,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
 
 __CPU Performance__
 
-[Sysbench](http://sysbench.sourceforge.net/) was chosen to perform a number of benchmark tests, including this CPU computation benchmark.  The tests used the [Sysbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench) included in this repository.  The resulting container was started, and ran `sysbench --test=cpu --cpu-max-prime=20000 run` (via the [cpu_prime.sh script](https://github.com/DockerDemos/vm-docker-bench/blob/master/sysbench/cpu_prime.sh)).  This process was repeated one hundred times, and the total time taken for the test execution was recorded for each.
+[Sysbench](http://sysbench.sourceforge.net/) was chosen to perform a number of benchmark tests, including this CPU computation benchmark.  The tests used the [Sysbench Docker image](/sysbench) included in this repository.  The resulting container was started, and ran `sysbench --test=cpu --cpu-max-prime=20000 run` (via the [cpu_prime.sh script](/sysbench/cpu_prime.sh)).  This process was repeated one hundred times, and the total time taken for the test execution was recorded for each.
 
 The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
 
@@ -226,7 +226,7 @@ __File I/O Operation__
 
  _Note: This test may not be an accurate representation of actual results.  The available disk space on the primary host without a hypervisor was not large enough to create a file big enough to prevent caching in memory.  See the "Modified File I/O Operation" test below for a better, but probably still not 100% accurate, attempt at this test._
 
-File I/O benchmarking was done using the same [Sysbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench) used for the CPU tests above.  The container was started, and ran (via the [io.sh script](https://github.com/DockerDemos/vm-docker-bench/blob/master/sysbench/io.sh)):
+File I/O benchmarking was done using the same [Sysbench Docker image](/sysbench) used for the CPU tests above.  The container was started, and ran (via the [io.sh script](/sysbench/io.sh)):
 
     sysbench --test=fileio --file-total-size=10G prepare
     sysbench --test=fileio --file-total-size=10G --file-test-mode=rndrw \
@@ -281,7 +281,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
 
 __Memory Performance__
 
-[mbw](https://github.com/raas/mbw) was chosen as the test application for testing the "copy" memory bandwidth available to userspace programs in order to mimic real applications.  The tests used the [mbwbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/mbwbench) included in this repository.  The resulting container runs a [bash script for running mbw](http://jamesslocum.com/post/64209577678) developed by James Slocum that detects the number of CPU cores available to the container and runs a corresponding number of mbw threads.  The process was repeated one hundred times and the results recorded.
+[mbw](https://github.com/raas/mbw) was chosen as the test application for testing the "copy" memory bandwidth available to userspace programs in order to mimic real applications.  The tests used the [mbwbench Docker image](/mbwbench) included in this repository.  The resulting container runs a [bash script for running mbw](http://jamesslocum.com/post/64209577678) developed by James Slocum that detects the number of CPU cores available to the container and runs a corresponding number of mbw threads.  The process was repeated one hundred times and the results recorded.
 
 The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
 
@@ -304,7 +304,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
 
 __Application type performance (Blogbench)__
 
-[Blogbench](http://www.pureftpd.org/project/blogbench) was used to simulate file I/O as it would exist on a webserver, with mostly-read, some-write traffic.  The tests used the [Blogbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/blogbench) included in this repository.  The resulting container was started and ran `blogbench -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv`.  This process was repeated twenty five times and the results recorded.
+[Blogbench](http://www.pureftpd.org/project/blogbench) was used to simulate file I/O as it would exist on a webserver, with mostly-read, some-write traffic.  The tests used the [Blogbench Docker image](/blogbench) included in this repository.  The resulting container was started and ran `blogbench -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv`.  This process was repeated twenty five times and the results recorded.
 
 The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
 
@@ -326,7 +326,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
 
 __Application type performance (Apache + PHP)__
 
-Very basic application performance testing was done using the same [Apache + PHP Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/webbench) used for the serial container boot host benchmark tests above.  In addition, a [Docker image with Apache Bench](https://github.com/DockerDemos/vm-docker-bench/tree/master/abbench) was created to be run from another location (Laptop, second server, etc) to test the performance of the Apache + PHP container.
+Very basic application performance testing was done using the same [Apache + PHP Docker image](/webbench) used for the serial container boot host benchmark tests above.  In addition, a [Docker image with Apache Bench](/abbench) was created to be run from another location (Laptop, second server, etc) to test the performance of the Apache + PHP container.
 
 The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
 
