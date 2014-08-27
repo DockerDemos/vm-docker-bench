@@ -20,7 +20,7 @@ Hypervisor + Docker Performance Benchmark
 3. [Hypervisor + Docker Performance Benchmark](#vmhdp)
     1. [Host Benchmark Results](#host_results)
     2. [Guest Benchmark Results](#guest_results)
-4. [Acknowledgements](#ack)
+4. [Acknowledgments](#ack)
 5. [Copyright Information](#copyright)
 
 
@@ -38,7 +38,7 @@ In order to cover as many bases as possible, the tests were run as follows:
 
 _Host Benchmark Data_:
 
-For each of the Host Benchmarks, multiple datapoints are collected using the [Resource Monitoring Scripts](https://github.com/DockerDemos/vm-docker-bench/tree/master/honitor-scripts) included in this repository.  These scripts were started prior to each test and collected data throughout.  Each monitors a specific aspect of the host's resources at set intervals and outputs to a remote log file via and SSH tunnel.
+For each of the Host Benchmarks, multiple data points are collected using the [Resource Monitoring Scripts](https://github.com/DockerDemos/vm-docker-bench/tree/master/honitor-scripts) included in this repository.  These scripts were started prior to each test and collected data throughout.  Each monitors a specific aspect of the host's resources at set intervals and outputs to a remote log file via and SSH tunnel.
 
  * CPU Load average
  * Memory Usage
@@ -74,7 +74,7 @@ Test data for guest benchmarks being performed from remote hosts (for example, t
 
 Version:  Beta 324.5.0
 
-[CoreOS](https://coreos.com) was chosen as the host OS for each of these tests.  The OS was PXE booted and configured with the CoreOS Cloud Config YAML file included in this repo.  The operating system was installed into RAM, and /var/lib/docker mounted to the first local hard disk.
+[CoreOS](https://coreos.com) was chosen as the host OS for each of these tests.  The OS was PXE booted and configured with the CoreOS Cloud Config YAML file included in this repository.  The operating system was installed into RAM, and /var/lib/docker mounted to the first local hard disk.
 
 **Docker**
 
@@ -142,15 +142,11 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     done
 
 
-__Container Commit (snapshot)__
-
-TODO
-
 ###<a name='guest_bench'>Guest Benchmarks</a>###
 
 __CPU Performance__
 
-[Sysbench](http://sysbench.sourceforge.net/) was chosen to perform a number of benchmark tests, including this cpu computation benchmark.  The tests used the [Sysbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench) included in this repository.  The resulting container was started, and ran `sysbench --test=cpu --cpu-max-prime=20000 run` (via the [cpu_prime.sh script](https://github.com/DockerDemos/vm-docker-bench/blob/master/sysbench/cpu_prime.sh)).  This process was repeated one hundred times, and the total time taken for the test execution was recorded for each.
+[Sysbench](http://sysbench.sourceforge.net/) was chosen to perform a number of benchmark tests, including this CPU computation benchmark.  The tests used the [Sysbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench) included in this repository.  The resulting container was started, and ran `sysbench --test=cpu --cpu-max-prime=20000 run` (via the [cpu_prime.sh script](https://github.com/DockerDemos/vm-docker-bench/blob/master/sysbench/cpu_prime.sh)).  This process was repeated one hundred times, and the total time taken for the test execution was recorded for each.
 
 The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
 
@@ -308,7 +304,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
 
 __Application type performance (Blogbench)__
 
-[Blogbench](http://www.pureftpd.org/project/blogbench) was used to simulate file I/O as it would exist on a webserver, with mostly-read, some-write traffic.  The tests used the [Blogbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/blogbench) included in this repository.  The resulting container was started and ran `blogbench -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv`.  This process was repeated twentyfive times and the results recorded.
+[Blogbench](http://www.pureftpd.org/project/blogbench) was used to simulate file I/O as it would exist on a webserver, with mostly-read, some-write traffic.  The tests used the [Blogbench Docker image](https://github.com/DockerDemos/vm-docker-bench/tree/master/blogbench) included in this repository.  The resulting container was started and ran `blogbench -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv`.  This process was repeated twenty five times and the results recorded.
 
 The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
 
@@ -382,11 +378,11 @@ Somewhat surprisingly, the addition of a hypervisor layer did little to change t
 
 ![Graph of Control System, Serial Container Boot Test](/images/control-serial-container-boot.png?raw=true "Graph of Control System, Serial Container Boot Test")
 
-The control system mimics the performance of primary system, but with less I/O congestion due to the 50 disk EMC Array backing the control hypervisor's virtual disks.  Any difference in user and system performance is largely neglegible.
+The control system mimics the performance of primary system, but with less I/O congestion due to the 50 disk EMC Array backing the control hypervisor's virtual disks.  Any difference in user and system performance is largely negligible.
 
 __Compute node steady-state Container Packing__
 
-This test measures the same metrics as the above, CPU and I/O usage on the host, through a full startup and 15 minute normalization period.  Again, lower numbers are better.  
+This test measures the same metrics as the above, CPU and I/O usage on the host, through a full startup and 15 minute normalization period.  Again, lower numbers are better.
 
 In all three cases, the 15 minute normalization ended up holding no significant data, so the graphs below are cropped views of the boot process itself.  This in effect make results in data similar to 100 container Serial Container Boot test, and as a result the images are almost the same.
 
@@ -404,7 +400,7 @@ The control system has somewhat faster disks than the primary system (it's backe
 
 ![Graph of Primary System w/no Hypervisor, Steady-State Packing Test: Boot Detail](/images/primary_no_hypervisor-ssp-100-boot_detail.png?raw=true "Graph of Primary System w/no Hypervisor, Steady State Packing (100) Test: Boot Detail")
 
-In the 100 container steady state packing test (with hypervisor), the I/O again spikes to around the same level as previous tests when container creation begins and unsurprisingly stays peaked for a much longer time due to the increased number of containers.  
+In the 100 container steady state packing test (with hypervisor), the I/O again spikes to around the same level as previous tests when container creation begins and unsurprisingly stays peaked for a much longer time due to the increased number of containers.
 
 The consistency of peak I/O Wait across both 15 and 100 container boots implies a maximum startup rate for each container on the host - starting a greater or lesser number of containers serially will not be likely to have additional impact on performance.
 
@@ -438,11 +434,15 @@ __(Modified) File I/O Operation__
 
 ![Graph of (Modified) Sysbench File I/O tests (25), Transfer Speed Comparison](/images/bench_io_mod-results.png?raw=true "Graph of (Modified) Sysbench File I/O tests (25), Transfer Speed Comparison")
 
-##<a name='ack'>Acknowledgements</a>##
+File I/O measured over 25 consecutive tests with 25 consecutive Docker containers shows little surprising results between the primary system with or without a hypervisor.  Over the entirety of the testing, there is little difference between the two, with each averaging a transfer speed of about 1.7 Mb/second or so to their local disks.
+
+The control system, however, is a VM backed by an enterprise storage array.  The transfer speeds start to climb significantly shortly after the third test as the array identifies the blocks used by the VM as "hot" and transfers them from conventional storage onto solid-state disks.  While this has no bearing on the hypervisor vs. no hypervisor testing, it's an excellent argument for using an enterprise storage array for Docker containers that have a significant amount of file I/O, whether or not the host is physical or virtual.
+
+##<a name='ack'>Acknowledgments</a>##
 
 Thanks to: 
 
-Boden Russell [\(http://bodenr.blogspot.com\)](http://bodenr.blogspot.com) for the initial benchmarking test and methodology used in his [KVM and Docker LXC Benchmarking with OpenStack](http://bodenr.blogspot.com/2014/05/kvm-and-docker-lxc-benchmarking-with.html) article, much of which I've tweaked or repurposed here.
+Boden Russell [\(http://bodenr.blogspot.com\)](http://bodenr.blogspot.com) for the initial benchmarking test and methodology used in his [KVM and Docker LXC Benchmarking with OpenStack](http://bodenr.blogspot.com/2014/05/kvm-and-docker-lxc-benchmarking-with.html) article, much of which I've tweaked or re-purposed here.
 
 Falko Timme [\(https://twitter.com/falko\)](https://twitter.com/falko) for his [HowtoForge article with basic guidance on benchmarking with Sysbench](http://www.howtoforge.com/how-to-benchmark-your-system-cpu-file-io-mysql-with-sysbench).
 
