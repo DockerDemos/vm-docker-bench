@@ -83,7 +83,7 @@ Version: 0.11.1, build fb99f99
 ###<a name='host_bench'>Host Benchmarks</a>###
 __Serial Container Boot__
 
-The [Docker image with Apache and PHP](https://github.com/DockerDemos/vm-docker-bench/tree/master/) included in this repository was created to test performance during serial boot of fifteen and one hundred containers.  These two tests were performed two ways:
+The [Docker image with Apache and PHP](/webbench) included in this repository was created to test performance during serial boot of fifteen and one hundred containers.  These two tests were performed two ways:
 
  * CoreOS starting 15 or 100 containers
  * Hypervisor with CoreOS starting 15 or 100 containers
