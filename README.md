@@ -38,7 +38,7 @@ In order to cover as many bases as possible, the tests were run as follows:
 
 _Host Benchmark Data_:
 
-For each of the Host Benchmarks, multiple data points are collected using the [Resource Monitoring Scripts](https://github.com/DockerDemos/vm-docker-bench/tree/master/honitor-scripts) included in this repository.  These scripts were started prior to each test and collected data throughout.  Each monitors a specific aspect of the host's resources at set intervals and outputs to a remote log file via and SSH tunnel.
+For each of the Host Benchmarks, multiple data points are collected using the [Resource Monitoring Scripts](/supplemental/monitor-scripts) included in this repository.  These scripts were started prior to each test and collected data throughout.  Each monitors a specific aspect of the host's resources at set intervals and outputs to a remote log file via and SSH tunnel.
 
  * CPU Load average
  * Memory Usage
