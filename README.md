@@ -430,11 +430,15 @@ And this is totally unexpected.  The graph shows the total time taken to run the
 
 The control system graph for the time taken for the max prime tests is similar to the primary, but the system is about 10 seconds faster per test. Of note is the time scale (in seconds) on the vertical axis.  Despite the appearance of the graph, the time taken for each test is incredibly consistent - there's only about 1/10 of a second in variance.
 
+__File I/O Operation__
+
+As noted above, this test is most likely not accurate in this environment due to the inability to prevent caching in memory.  The tests were performed, but are included in the [unmodified_file_io_results.md](https://github.com/DockerDemos/vm-docker-bench/blob/master/supplemental/unmodified_file_io_results.md) file.
+
 __(Modified) File I/O Operation__
 
 ![Graph of (Modified) Sysbench File I/O tests (25), Transfer Speed Comparison](/images/bench_io_mod-results.png?raw=true "Graph of (Modified) Sysbench File I/O tests (25), Transfer Speed Comparison")
 
-File I/O measured over 25 consecutive tests with 25 consecutive Docker containers shows little surprising results between the primary system with or without a hypervisor.  Over the entirety of the testing, there is little difference between the two, with each averaging a transfer speed of about 1.7 Mb/second or so to their local disks.
+File I/O measured over twenty five consecutive tests in twenty five Docker containers shows little surprising results between the primary system with or without a hypervisor.  Over the entirety of the testing, there is little difference between the two, with each averaging a transfer speed of about 1.7 Mb/second or so to their local disks.
 
 The control system, however, is a VM backed by an enterprise storage array.  The transfer speeds start to climb significantly shortly after the third test as the array identifies the blocks used by the VM as "hot" and transfers them from conventional storage onto solid-state disks.  While this has no bearing on the hypervisor vs. no hypervisor testing, it's an excellent argument for using an enterprise storage array for Docker containers that have a significant amount of file I/O, whether or not the host is physical or virtual.
 
