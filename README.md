@@ -430,15 +430,25 @@ And this is totally unexpected.  The graph shows the total time taken to run the
 
 The control system graph for the time taken for the max prime tests is similar to the primary, but the system is about 10 seconds faster per test. Of note is the time scale (in seconds) on the vertical axis.  Despite the appearance of the graph, the time taken for each test is incredibly consistent - there's only about 1/10 of a second in variance.
 
-__Mysql Transaction Performance__
+__MySQL Transaction Performance__
 
-
+The MySQL Transaction Performance test measured the total number of transactions per second accomplished by the Sysbench MySQL test within a Docker container running the MySQL server.
 
 ![Graph of Sysbench MySQL tests (100), Transactions per Second Comparison](/images/MySQL_comparison.png?raw=true "Graph of Sysbench MySQL tests (100), Transactions per Second Comparison")
 
+*(This may be anomolous data, retest the primary with no hypervisor)*
+
+__MySQL Index and Query Performance__
+
+The Iibench MySQL performance test mesured the lenght of time required to insert 1,000,000 rows into a MySQL database across 25 successive runs in a Docker container running MySQL.  Additionally, it measured the number of queries per second that could be accomplished during the testing.
+
 ![Graph of Iibench MySQL tests (25), Row Insertions per Second Comparison](/images/MySQL_index_insertion_comparison.png?raw=true "Graph of Iibench MySQL tests (25), Row Insertions per Second Comparison")
 
+The results of the Index Insertion test confirm the conventional wisdom surrouding hypervisor performance hits, with the primary system performing more row insertions per second than the same system with a hypervisor installed.  As it has in most tests to this point, the control system outperformed both.
+
 ![Graph of Iibench MySQL tests (25), Queries per Second Comparison](/images/MySQL_index_query_comparison.png?raw=true "Graph of Iibench MySQL tests (25), Queries per Second Comparison")
+
+The bare-metal primary server again out-performed itself while using the hypervisor, this time with the number of queries that could be performed during the duration of the testing.  And, again, the control system scored higher marks than the rest.
 
 __File I/O Operation__
 
