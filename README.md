@@ -6,7 +6,7 @@ Hypervisor + Docker Performance Benchmark
     1. [System Specs](#specs)
     2. [Host Benchmarks](#host_bench)
         * Serial container Boot
-	* Computer Node Steady-State Container Packing 
+        * Computer Node Steady-State Container Packing 
         * Container reboot
     3. [Guest Benchmarks](#guest_bench)
         * CPU Performance
