@@ -1,0 +1,851 @@
+[2KPulling repository docker-dev.oit.duke.edu/bench-iibench-mysql
+
+[0A[2Kec41f50d1a6b: Pulling image (latest) from docker-dev.oit.duke.edu/bench-iibench-mysql [0B[1A[2Kec41f50d1a6b: Pulling image (latest) from docker-dev.oit.duke.edu/bench-iibench-mysql, endpoint: https://docker-dev.oit.duke.edu/v1/ [1B[1A[2Kec41f50d1a6b: Pulling dependent layers [1B
+[0A[2K511136ea3c5a: Pulling metadata [0B[1A[2K511136ea3c5a: Pulling fs layer [1B[1A[2K511136ea3c5a: Downloading     10 B/84 B 0[1B[1A[2K511136ea3c5a: Downloading     84 B/84 B[1B[1A[2K511136ea3c5a: Downloading     84 B/84 B[1B[1A[2K511136ea3c5a: Download complete [1B
+[0A[2Ke465fff03bce: Pulling metadata [0B[1A[2Ke465fff03bce: Pulling fs layer [1B[1A[2Ke465fff03bce: Downloading 527.6 kB/67.48 MB 22s[1B[1A[2Ke465fff03bce: Downloading 1.056 MB/67.48 MB 13s[1B[1A[2Ke465fff03bce: Downloading 1.584 MB/67.48 MB 11s[1B[1A[2Ke465fff03bce: Downloading 2.112 MB/67.48 MB 9s[1B[1A[2Ke465fff03bce: Downloading  2.64 MB/67.48 MB 8s[1B[1A[2Ke465fff03bce: Downloading 3.168 MB/67.48 MB 9s[1B[1A[2Ke465fff03bce: Downloading 3.696 MB/67.48 MB 8s[1B[1A[2Ke465fff03bce: Downloading 4.224 MB/67.48 MB 8s[1B[1A[2Ke465fff03bce: Downloading 4.752 MB/67.48 MB 8s[1B[1A[2Ke465fff03bce: Downloading  5.28 MB/67.48 MB 8s[1B[1A[2Ke465fff03bce: Downloading 5.808 MB/67.48 MB 7s[1B[1A[2Ke465fff03bce: Downloading 6.336 MB/67.48 MB 7s[1B[1A[2Ke465fff03bce: Downloading 6.864 MB/67.48 MB 7s[1B[1A[2Ke465fff03bce: Downloading 7.392 MB/67.48 MB 6s[1B[1A[2Ke465fff03bce: Downloading  7.92 MB/67.48 MB 6s[1B[1A[2Ke465fff03bce: Downloading 8.448 MB/67.48 MB 6s[1B[1A[2Ke465fff03bce: Downloading 8.976 MB/67.48 MB 6s[1B[1A[2Ke465fff03bce: Downloading 9.504 MB/67.48 MB 6s[1B[1A[2Ke465fff03bce: Downloading 10.03 MB/67.48 MB 5s[1B[1A[2Ke465fff03bce: Downloading 10.56 MB/67.48 MB 5s[1B[1A[2Ke465fff03bce: Downloading 11.09 MB/67.48 MB 5s[1B[1A[2Ke465fff03bce: Downloading 11.62 MB/67.48 MB 5s[1B[1A[2Ke465fff03bce: Downloading 12.14 MB/67.48 MB 5s[1B[1A[2Ke465fff03bce: Downloading 12.67 MB/67.48 MB 5s[1B[1A[2Ke465fff03bce: Downloading  13.2 MB/67.48 MB 5s[1B[1A[2Ke465fff03bce: Downloading 13.73 MB/67.48 MB 5s[1B[1A[2Ke465fff03bce: Downloading 14.26 MB/67.48 MB 5s[1B[1A[2Ke465fff03bce: Downloading 14.78 MB/67.48 MB 5s[1B[1A[2Ke465fff03bce: Downloading 15.31 MB/67.48 MB 4s[1B[1A[2Ke465fff03bce: Downloading 15.84 MB/67.48 MB 4s[1B[1A[2Ke465fff03bce: Downloading 16.37 MB/67.48 MB 4s[1B[1A[2Ke465fff03bce: Downloading  16.9 MB/67.48 MB 4s[1B[1A[2Ke465fff03bce: Downloading 17.42 MB/67.48 MB 4s[1B[1A[2Ke465fff03bce: Downloading 17.95 MB/67.48 MB 4s[1B[1A[2Ke465fff03bce: Downloading 18.48 MB/67.48 MB 4s[1B[1A[2Ke465fff03bce: Downloading 19.01 MB/67.48 MB 4s[1B[1A[2Ke465fff03bce: Downloading 19.54 MB/67.48 MB 4s[1B[1A[2Ke465fff03bce: Downloading 20.06 MB/67.48 MB 4s[1B[1A[2Ke465fff03bce: Downloading 20.59 MB/67.48 MB 4s[1B[1A[2Ke465fff03bce: Downloading 21.12 MB/67.48 MB 4s[1B[1A[2Ke465fff03bce: Downloading 21.65 MB/67.48 MB 4s[1B[1A[2Ke465fff03bce: Downloading 22.18 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading  22.7 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 23.23 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 23.76 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 24.29 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 24.82 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 25.34 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 25.87 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading  26.4 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 26.93 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 27.46 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 27.98 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 28.51 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 29.04 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 29.57 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading  30.1 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 30.62 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 31.15 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 31.68 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 32.21 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 32.74 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 33.26 MB/67.48 MB 3s[1B[1A[2Ke465fff03bce: Downloading 33.79 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading 34.32 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading 34.85 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading 35.38 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading  35.9 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading 36.43 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading 36.96 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading 37.49 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading 38.02 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading 38.54 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading 39.07 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading  39.6 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading 40.13 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading 40.66 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading 41.18 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading 41.71 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading 42.24 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading 42.76 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading  43.3 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading 43.82 MB/67.48 MB 2s[1B[1A[2Ke465fff03bce: Downloading 44.35 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 44.88 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 45.41 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 45.94 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 46.46 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 46.99 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 47.52 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 48.05 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 48.58 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading  49.1 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 49.63 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 50.16 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 50.69 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 51.22 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 51.74 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 52.27 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading  52.8 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 53.33 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 53.86 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 54.38 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 54.91 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 55.44 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading 55.97 MB/67.48 MB 1s[1B[1A[2Ke465fff03bce: Downloading  56.5 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 57.02 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 57.55 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 58.08 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 58.61 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 59.14 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 59.66 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 60.19 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 60.72 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 61.25 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 61.78 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading  62.3 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 62.83 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 63.36 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 63.89 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 64.42 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 64.94 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 65.47 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading    66 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 66.53 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 67.06 MB/67.48 MB 0[1B[1A[2Ke465fff03bce: Downloading 67.48 MB/67.48 MB[1B[1A[2Ke465fff03bce: Download complete [1B
+[0A[2K23f361102fae: Pulling metadata [0B[1A[2K23f361102fae: Pulling fs layer [1B[1A[2K23f361102fae: Downloading 4.096 kB/71.28 kB 19s[1B[1A[2K23f361102fae: Downloading  7.62 kB/71.28 kB 9s[1B[1A[2K23f361102fae: Downloading 11.72 kB/71.28 kB 6s[1B[1A[2K23f361102fae: Downloading 15.62 kB/71.28 kB 4s[1B[1A[2K23f361102fae: Downloading 19.72 kB/71.28 kB 3s[1B[1A[2K23f361102fae: Downloading 23.62 kB/71.28 kB 2s[1B[1A[2K23f361102fae: Downloading 27.72 kB/71.28 kB 1s[1B[1A[2K23f361102fae: Downloading 31.62 kB/71.28 kB 1s[1B[1A[2K23f361102fae: Downloading 35.72 kB/71.28 kB 1s[1B[1A[2K23f361102fae: Downloading 39.62 kB/71.28 kB 0[1B[1A[2K23f361102fae: Downloading 43.72 kB/71.28 kB 0[1B[1A[2K23f361102fae: Downloading 47.62 kB/71.28 kB 0[1B[1A[2K23f361102fae: Downloading 51.72 kB/71.28 kB 0[1B[1A[2K23f361102fae: Downloading 55.62 kB/71.28 kB 0[1B[1A[2K23f361102fae: Downloading 59.72 kB/71.28 kB 0[1B[1A[2K23f361102fae: Downloading 63.62 kB/71.28 kB 0[1B[1A[2K23f361102fae: Downloading 67.72 kB/71.28 kB 0[1B[1A[2K23f361102fae: Downloading 71.28 kB/71.28 kB[1B[1A[2K23f361102fae: Downloading 71.28 kB/71.28 kB[1B[1A[2K23f361102fae: Download complete [1B
+[0A[2K9db365ecbcbb: Pulling metadata [0B[1A[2K9db365ecbcbb: Pulling fs layer [1B[1A[2K9db365ecbcbb: Downloading     10 B/885 B 1m11s[1B[1A[2K9db365ecbcbb: Downloading    885 B/885 B[1B[1A[2K9db365ecbcbb: Downloading    885 B/885 B[1B[1A[2K9db365ecbcbb: Download complete [1B
+[0A[2Kad892dd21d60: Pulling metadata [0B[1A[2Kad892dd21d60: Pulling fs layer [1B[1A[2Kad892dd21d60: Downloading 219.7 kB/21.83 MB 45s[1B[1A[2Kad892dd21d60: Downloading 439.6 kB/21.83 MB 23s[1B[1A[2Kad892dd21d60: Downloading 659.7 kB/21.83 MB 15s[1B[1A[2Kad892dd21d60: Downloading 879.6 kB/21.83 MB 12s[1B[1A[2Kad892dd21d60: Downloading   1.1 MB/21.83 MB 9s[1B[1A[2Kad892dd21d60: Downloading  1.32 MB/21.83 MB 8s[1B[1A[2Kad892dd21d60: Downloading  1.54 MB/21.83 MB 7s[1B[1A[2Kad892dd21d60: Downloading  1.76 MB/21.83 MB 6s[1B[1A[2Kad892dd21d60: Downloading  1.98 MB/21.83 MB 5s[1B[1A[2Kad892dd21d60: Downloading   2.2 MB/21.83 MB 5s[1B[1A[2Kad892dd21d60: Downloading  2.42 MB/21.83 MB 5s[1B[1A[2Kad892dd21d60: Downloading  2.64 MB/21.83 MB 4s[1B[1A[2Kad892dd21d60: Downloading  2.86 MB/21.83 MB 4s[1B[1A[2Kad892dd21d60: Downloading  3.08 MB/21.83 MB 4s[1B[1A[2Kad892dd21d60: Downloading   3.3 MB/21.83 MB 3s[1B[1A[2Kad892dd21d60: Downloading  3.52 MB/21.83 MB 3s[1B[1A[2Kad892dd21d60: Downloading  3.74 MB/21.83 MB 3s[1B[1A[2Kad892dd21d60: Downloading  3.96 MB/21.83 MB 3s[1B[1A[2Kad892dd21d60: Downloading  4.18 MB/21.83 MB 3s[1B[1A[2Kad892dd21d60: Downloading   4.4 MB/21.83 MB 3s[1B[1A[2Kad892dd21d60: Downloading  4.62 MB/21.83 MB 3s[1B[1A[2Kad892dd21d60: Downloading  4.84 MB/21.83 MB 2s[1B[1A[2Kad892dd21d60: Downloading  5.06 MB/21.83 MB 2s[1B[1A[2Kad892dd21d60: Downloading  5.28 MB/21.83 MB 2s[1B[1A[2Kad892dd21d60: Downloading   5.5 MB/21.83 MB 2s[1B[1A[2Kad892dd21d60: Downloading  5.72 MB/21.83 MB 2s[1B[1A[2Kad892dd21d60: Downloading  5.94 MB/21.83 MB 2s[1B[1A[2Kad892dd21d60: Downloading  6.16 MB/21.83 MB 2s[1B[1A[2Kad892dd21d60: Downloading  6.38 MB/21.83 MB 2s[1B[1A[2Kad892dd21d60: Downloading   6.6 MB/21.83 MB 2s[1B[1A[2Kad892dd21d60: Downloading  6.82 MB/21.83 MB 2s[1B[1A[2Kad892dd21d60: Downloading  7.04 MB/21.83 MB 2s[1B[1A[2Kad892dd21d60: Downloading  7.26 MB/21.83 MB 2s[1B[1A[2Kad892dd21d60: Downloading  7.48 MB/21.83 MB 2s[1B[1A[2Kad892dd21d60: Downloading   7.7 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading  7.92 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading  8.14 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading  8.36 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading  8.58 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading   8.8 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading  9.02 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading  9.24 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading  9.46 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading  9.68 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading   9.9 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading 10.12 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading 10.34 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading 10.56 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading 10.78 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading    11 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading 11.22 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading 11.44 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading 11.66 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading 11.88 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading  12.1 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading 12.32 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading 12.54 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading 12.76 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading 12.98 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading  13.2 MB/21.83 MB 1s[1B[1A[2Kad892dd21d60: Downloading 13.42 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 13.64 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 13.86 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 14.08 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading  14.3 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 14.52 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 14.74 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 14.96 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 15.18 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading  15.4 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 15.62 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 15.84 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 16.06 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 16.28 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading  16.5 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 16.72 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 16.94 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 17.16 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 17.38 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading  17.6 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 17.82 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 18.04 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 18.26 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 18.48 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading  18.7 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 18.92 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 19.14 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 19.36 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 19.58 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading  19.8 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 20.02 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 20.24 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 20.46 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 20.68 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading  20.9 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 21.12 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 21.34 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 21.56 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 21.78 MB/21.83 MB 0[1B[1A[2Kad892dd21d60: Downloading 21.83 MB/21.83 MB[1B[1A[2Kad892dd21d60: Download complete [1B
+[0A[2Ka0e00d72fb17: Pulling metadata [0B[1A[2Ka0e00d72fb17: Pulling fs layer [1B[1A[2Ka0e00d72fb17: Downloading     10 B/175 B 23s[1B[1A[2Ka0e00d72fb17: Downloading    175 B/175 B[1B[1A[2Ka0e00d72fb17: Downloading    175 B/175 B[1B[1A[2Ka0e00d72fb17: Download complete [1B
+[0A[2K70ee667542c2: Pulling metadata [0B[1A[2K70ee667542c2: Pulling fs layer [1B[1A[2K70ee667542c2: Downloading 7.619 kB/539.3 kB 3s[1B[1A[2K70ee667542c2: Downloading 15.62 kB/539.3 kB 1s[1B[1A[2K70ee667542c2: Downloading 23.62 kB/539.3 kB 1s[1B[1A[2K70ee667542c2: Downloading 31.62 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 39.62 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 47.62 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 55.62 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 63.62 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 71.62 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 79.62 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 87.62 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 95.62 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 103.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 111.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 119.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 127.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 135.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 143.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 151.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 159.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 167.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 175.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 183.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 191.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 199.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 207.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 215.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 223.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 231.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 239.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 247.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 255.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 263.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 271.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 279.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 287.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 295.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 303.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 311.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 319.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 327.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 335.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 343.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 351.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 359.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 367.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 375.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 383.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 391.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 399.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 407.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 415.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 423.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 431.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 439.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 447.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 455.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 463.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 471.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 479.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 487.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 495.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 503.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 511.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 519.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 527.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 535.6 kB/539.3 kB 0[1B[1A[2K70ee667542c2: Downloading 539.3 kB/539.3 kB[1B[1A[2K70ee667542c2: Download complete [1B
+[0A[2Kd07f486ce7bc: Pulling metadata [0B[1A[2Kd07f486ce7bc: Pulling fs layer [1B[1A[2Kd07f486ce7bc: Downloading 287.6 kB/28.56 MB 1m15s[1B[1A[2Kd07f486ce7bc: Downloading 575.6 kB/28.56 MB 38s[1B[1A[2Kd07f486ce7bc: Downloading 863.6 kB/28.56 MB 25s[1B[1A[2Kd07f486ce7bc: Downloading 1.152 MB/28.56 MB 19s[1B[1A[2Kd07f486ce7bc: Downloading  1.44 MB/28.56 MB 16s[1B[1A[2Kd07f486ce7bc: Downloading 1.728 MB/28.56 MB 13s[1B[1A[2Kd07f486ce7bc: Downloading 2.016 MB/28.56 MB 11s[1B[1A[2Kd07f486ce7bc: Downloading 2.304 MB/28.56 MB 10s[1B[1A[2Kd07f486ce7bc: Downloading 2.592 MB/28.56 MB 9s[1B[1A[2Kd07f486ce7bc: Downloading  2.88 MB/28.56 MB 8s[1B[1A[2Kd07f486ce7bc: Downloading 3.168 MB/28.56 MB 7s[1B[1A[2Kd07f486ce7bc: Downloading 3.456 MB/28.56 MB 7s[1B[1A[2Kd07f486ce7bc: Downloading 3.744 MB/28.56 MB 6s[1B[1A[2Kd07f486ce7bc: Downloading 4.032 MB/28.56 MB 6s[1B[1A[2Kd07f486ce7bc: Downloading  4.32 MB/28.56 MB 5s[1B[1A[2Kd07f486ce7bc: Downloading 4.608 MB/28.56 MB 5s[1B[1A[2Kd07f486ce7bc: Downloading 4.896 MB/28.56 MB 5s[1B[1A[2Kd07f486ce7bc: Downloading 5.184 MB/28.56 MB 5s[1B[1A[2Kd07f486ce7bc: Downloading 5.472 MB/28.56 MB 4s[1B[1A[2Kd07f486ce7bc: Downloading  5.76 MB/28.56 MB 4s[1B[1A[2Kd07f486ce7bc: Downloading 6.048 MB/28.56 MB 4s[1B[1A[2Kd07f486ce7bc: Downloading 6.336 MB/28.56 MB 4s[1B[1A[2Kd07f486ce7bc: Downloading 6.624 MB/28.56 MB 4s[1B[1A[2Kd07f486ce7bc: Downloading 6.912 MB/28.56 MB 3s[1B[1A[2Kd07f486ce7bc: Downloading   7.2 MB/28.56 MB 3s[1B[1A[2Kd07f486ce7bc: Downloading 7.488 MB/28.56 MB 3s[1B[1A[2Kd07f486ce7bc: Downloading 7.776 MB/28.56 MB 3s[1B[1A[2Kd07f486ce7bc: Downloading 8.064 MB/28.56 MB 3s[1B[1A[2Kd07f486ce7bc: Downloading 8.352 MB/28.56 MB 3s[1B[1A[2Kd07f486ce7bc: Downloading  8.64 MB/28.56 MB 3s[1B[1A[2Kd07f486ce7bc: Downloading 8.928 MB/28.56 MB 3s[1B[1A[2Kd07f486ce7bc: Downloading 9.216 MB/28.56 MB 2s[1B[1A[2Kd07f486ce7bc: Downloading 9.504 MB/28.56 MB 2s[1B[1A[2Kd07f486ce7bc: Downloading 9.792 MB/28.56 MB 2s[1B[1A[2Kd07f486ce7bc: Downloading 10.08 MB/28.56 MB 2s[1B[1A[2Kd07f486ce7bc: Downloading 10.37 MB/28.56 MB 2s[1B[1A[2Kd07f486ce7bc: Downloading 10.66 MB/28.56 MB 2s[1B[1A[2Kd07f486ce7bc: Downloading 10.94 MB/28.56 MB 2s[1B[1A[2Kd07f486ce7bc: Downloading 11.23 MB/28.56 MB 2s[1B[1A[2Kd07f486ce7bc: Downloading 11.52 MB/28.56 MB 2s[1B[1A[2Kd07f486ce7bc: Downloading 11.81 MB/28.56 MB 2s[1B[1A[2Kd07f486ce7bc: Downloading  12.1 MB/28.56 MB 2s[1B[1A[2Kd07f486ce7bc: Downloading 12.38 MB/28.56 MB 2s[1B[1A[2Kd07f486ce7bc: Downloading 12.67 MB/28.56 MB 2s[1B[1A[2Kd07f486ce7bc: Downloading 12.96 MB/28.56 MB 2s[1B[1A[2Kd07f486ce7bc: Downloading 13.25 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 13.54 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 13.82 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 14.11 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading  14.4 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 14.69 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 14.98 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 15.26 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 15.55 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 15.84 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 16.13 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 16.42 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading  16.7 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 16.99 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 17.28 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 17.57 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 17.86 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 18.14 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 18.43 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 18.72 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 19.01 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading  19.3 MB/28.56 MB 1s[1B[1A[2Kd07f486ce7bc: Downloading 19.58 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 19.87 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 20.16 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 20.45 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 20.74 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 21.02 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 21.31 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading  21.6 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 21.89 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 22.18 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 22.46 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 22.75 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 23.04 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 23.33 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 23.62 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading  23.9 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 24.19 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 24.48 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 24.77 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 25.06 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 25.34 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 25.63 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 25.92 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 26.21 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading  26.5 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 26.78 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 27.07 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 27.36 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 27.65 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 27.94 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 28.22 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 28.51 MB/28.56 MB 0[1B[1A[2Kd07f486ce7bc: Downloading 28.56 MB/28.56 MB[1B[1A[2Kd07f486ce7bc: Download complete [1B
+[0A[2Ke108e03c67e3: Pulling metadata [0B[1A[2Ke108e03c67e3: Pulling fs layer [1B[1A[2Ke108e03c67e3: Downloading     10 B/467 B 1m8s[1B[1A[2Ke108e03c67e3: Downloading    467 B/467 B[1B[1A[2Ke108e03c67e3: Downloading    467 B/467 B[1B[1A[2Ke108e03c67e3: Download complete [1B
+[0A[2K6e9567f8da63: Pulling metadata [0B[1A[2K6e9567f8da63: Pulling fs layer [1B[1A[2K6e9567f8da63: Downloading     10 B/345 B 5s[1B[1A[2K6e9567f8da63: Downloading    345 B/345 B[1B[1A[2K6e9567f8da63: Downloading    345 B/345 B[1B[1A[2K6e9567f8da63: Download complete [1B
+[0A[2Kc707904d1cf1: Pulling metadata [0B[1A[2Kc707904d1cf1: Pulling fs layer [1B[1A[2Kc707904d1cf1: Downloading     10 B/462 B 35s[1B[1A[2Kc707904d1cf1: Downloading    462 B/462 B[1B[1A[2Kc707904d1cf1: Downloading    462 B/462 B[1B[1A[2Kc707904d1cf1: Download complete [1B
+[0A[2Kc8486b83a2bc: Pulling metadata [0B[1A[2Kc8486b83a2bc: Pulling fs layer [1B[1A[2Kc8486b83a2bc: Downloading     10 B/807 B 31s[1B[1A[2Kc8486b83a2bc: Downloading    807 B/807 B[1B[1A[2Kc8486b83a2bc: Downloading    807 B/807 B[1B[1A[2Kc8486b83a2bc: Download complete [1B
+[0A[2Kd3382028dcd2: Pulling metadata [0B[1A[2Kd3382028dcd2: Pulling fs layer [1B[1A[2Kd3382028dcd2: Downloading     10 B/478 B 47s[1B[1A[2Kd3382028dcd2: Downloading    478 B/478 B[1B[1A[2Kd3382028dcd2: Downloading    478 B/478 B[1B[1A[2Kd3382028dcd2: Download complete [1B
+[0A[2Kb6f21ba6335e: Pulling metadata [0B[1A[2Kb6f21ba6335e: Pulling fs layer [1B[1A[2Kb6f21ba6335e: Downloading     10 B/464 B 32s[1B[1A[2Kb6f21ba6335e: Downloading    464 B/464 B[1B[1A[2Kb6f21ba6335e: Downloading    464 B/464 B[1B[1A[2Kb6f21ba6335e: Download complete [1B
+[0A[2K846e110264de: Pulling metadata [0B[1A[2K846e110264de: Pulling fs layer [1B[1A[2K846e110264de: Downloading 1.023 kB/1.023 kB[1B[1A[2K846e110264de: Downloading 1.023 kB/1.023 kB[1B[1A[2K846e110264de: Download complete [1B
+[0A[2K9c0fb8767262: Pulling metadata [0B[1A[2K9c0fb8767262: Pulling fs layer [1B[1A[2K9c0fb8767262: Downloading     10 B/178 B 16s[1B[1A[2K9c0fb8767262: Downloading    178 B/178 B[1B[1A[2K9c0fb8767262: Downloading    178 B/178 B[1B[1A[2K9c0fb8767262: Download complete [1B
+[0A[2Kd50d441d3888: Pulling metadata [0B[1A[2Kd50d441d3888: Pulling fs layer [1B[1A[2Kd50d441d3888: Downloading     10 B/178 B 10s[1B[1A[2Kd50d441d3888: Downloading    178 B/178 B[1B[1A[2Kd50d441d3888: Downloading    178 B/178 B[1B[1A[2Kd50d441d3888: Download complete [1B
+[0A[2K0791fb57987e: Pulling metadata [0B[1A[2K0791fb57987e: Pulling fs layer [1B[1A[2K0791fb57987e: Downloading     10 B/177 B 5s[1B[1A[2K0791fb57987e: Downloading    177 B/177 B[1B[1A[2K0791fb57987e: Downloading    177 B/177 B[1B[1A[2K0791fb57987e: Download complete [1B
+[0A[2K3a32fd5b15e4: Pulling metadata [0B[1A[2K3a32fd5b15e4: Pulling fs layer [1B[1A[2K3a32fd5b15e4: Downloading     10 B/174 B 16s[1B[1A[2K3a32fd5b15e4: Downloading    174 B/174 B[1B[1A[2K3a32fd5b15e4: Downloading    174 B/174 B[1B[1A[2K3a32fd5b15e4: Download complete [1B
+[0A[2Kd808015d7499: Pulling metadata [0B[1A[2Kd808015d7499: Pulling fs layer [1B[1A[2Kd808015d7499: Downloading     10 B/181 B 10s[1B[1A[2Kd808015d7499: Downloading    181 B/181 B[1B[1A[2Kd808015d7499: Downloading    181 B/181 B[1B[1A[2Kd808015d7499: Download complete [1B
+[0A[2Ka9883a70d5ae: Pulling metadata [0B[1A[2Ka9883a70d5ae: Pulling fs layer [1B[1A[2Ka9883a70d5ae: Downloading     10 B/534 B 13s[1B[1A[2Ka9883a70d5ae: Downloading    534 B/534 B[1B[1A[2Ka9883a70d5ae: Downloading    534 B/534 B[1B[1A[2Ka9883a70d5ae: Download complete [1B
+[0A[2K1e18d4bf93e4: Pulling metadata [0B[1A[2K1e18d4bf93e4: Pulling fs layer [1B[1A[2K1e18d4bf93e4: Downloading     10 B/816 B 1m11s[1B[1A[2K1e18d4bf93e4: Downloading    816 B/816 B[1B[1A[2K1e18d4bf93e4: Downloading    816 B/816 B[1B[1A[2K1e18d4bf93e4: Download complete [1B
+[0A[2K823a40b51389: Pulling metadata [0B[1A[2K823a40b51389: Pulling fs layer [1B[1A[2K823a40b51389: Downloading 107.7 kB/10.51 MB 55s[1B[1A[2K823a40b51389: Downloading 215.6 kB/10.51 MB 28s[1B[1A[2K823a40b51389: Downloading 323.7 kB/10.51 MB 18s[1B[1A[2K823a40b51389: Downloading 431.6 kB/10.51 MB 14s[1B[1A[2K823a40b51389: Downloading 539.7 kB/10.51 MB 11s[1B[1A[2K823a40b51389: Downloading 647.6 kB/10.51 MB 9s[1B[1A[2K823a40b51389: Downloading 755.7 kB/10.51 MB 8s[1B[1A[2K823a40b51389: Downloading 863.6 kB/10.51 MB 7s[1B[1A[2K823a40b51389: Downloading 971.7 kB/10.51 MB 6s[1B[1A[2K823a40b51389: Downloading  1.08 MB/10.51 MB 5s[1B[1A[2K823a40b51389: Downloading 1.188 MB/10.51 MB 5s[1B[1A[2K823a40b51389: Downloading 1.296 MB/10.51 MB 4s[1B[1A[2K823a40b51389: Downloading 1.404 MB/10.51 MB 4s[1B[1A[2K823a40b51389: Downloading 1.512 MB/10.51 MB 4s[1B[1A[2K823a40b51389: Downloading  1.62 MB/10.51 MB 3s[1B[1A[2K823a40b51389: Downloading 1.728 MB/10.51 MB 3s[1B[1A[2K823a40b51389: Downloading 1.836 MB/10.51 MB 3s[1B[1A[2K823a40b51389: Downloading 1.944 MB/10.51 MB 3s[1B[1A[2K823a40b51389: Downloading 2.052 MB/10.51 MB 3s[1B[1A[2K823a40b51389: Downloading  2.16 MB/10.51 MB 2s[1B[1A[2K823a40b51389: Downloading 2.268 MB/10.51 MB 2s[1B[1A[2K823a40b51389: Downloading 2.376 MB/10.51 MB 2s[1B[1A[2K823a40b51389: Downloading 2.484 MB/10.51 MB 2s[1B[1A[2K823a40b51389: Downloading 2.592 MB/10.51 MB 2s[1B[1A[2K823a40b51389: Downloading   2.7 MB/10.51 MB 2s[1B[1A[2K823a40b51389: Downloading 2.808 MB/10.51 MB 2s[1B[1A[2K823a40b51389: Downloading 2.916 MB/10.51 MB 2s[1B[1A[2K823a40b51389: Downloading 3.024 MB/10.51 MB 2s[1B[1A[2K823a40b51389: Downloading 3.132 MB/10.51 MB 2s[1B[1A[2K823a40b51389: Downloading  3.24 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 3.348 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 3.456 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 3.564 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 3.672 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading  3.78 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 3.888 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 3.996 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 4.104 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 4.212 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading  4.32 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 4.428 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 4.536 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 4.644 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 4.752 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading  4.86 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 4.968 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 5.076 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 5.184 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 5.292 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading   5.4 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 5.508 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 5.616 MB/10.51 MB 1s[1B[1A[2K823a40b51389: Downloading 5.724 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 5.832 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading  5.94 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 6.048 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 6.156 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 6.264 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 6.372 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading  6.48 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 6.588 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 6.696 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 6.804 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 6.912 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading  7.02 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 7.128 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 7.236 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 7.344 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 7.452 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading  7.56 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 7.668 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 7.776 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 7.885 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 7.992 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading   8.1 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 8.208 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 8.316 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 8.424 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 8.532 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading  8.64 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 8.748 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 8.856 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 8.964 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 9.072 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading  9.18 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 9.288 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 9.396 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 9.504 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 9.612 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading  9.72 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 9.828 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 9.936 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 10.04 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 10.15 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 10.26 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 10.37 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 10.48 MB/10.51 MB 0[1B[1A[2K823a40b51389: Downloading 10.51 MB/10.51 MB[1B[1A[2K823a40b51389: Download complete [1B
+[0A[2K56912f247b46: Pulling metadata [0B[1A[2K56912f247b46: Pulling fs layer [1B[1A[2K56912f247b46: Downloading 4.096 kB/5.535 kB 0[1B[1A[2K56912f247b46: Downloading 5.535 kB/5.535 kB[1B[1A[2K56912f247b46: Downloading 5.535 kB/5.535 kB[1B[1A[2K56912f247b46: Download complete [1B[25A[2Kec41f50d1a6b: Pulling metadata [25B[25A[2Kec41f50d1a6b: Pulling fs layer [25B[25A[2Kec41f50d1a6b: Downloading     10 B/178 B 6s[25B[25A[2Kec41f50d1a6b: Downloading    178 B/178 B[25B[25A[2Kec41f50d1a6b: Downloading    178 B/178 B[25B[25A[2Kec41f50d1a6b: Download complete [25B[25A[2Kec41f50d1a6b: Download complete [25B=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 18:28:26 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 18:28:26 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 18:28:26 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.5 5.5 18124.5 100000 18124.5 4776 865.6 865.6
+200000 7.0 12.6 15922.3 200000 14197.2 10132 806.6 760.4
+300000 8.9 21.5 13963.3 300000 11206.0 17420 810.8 816.7
+400000 9.8 31.2 12805.6 400000 10254.7 25724 823.5 851.6
+500000 12.0 43.2 11571.9 500000 8352.9 35896 830.8 849.7
+600000 12.9 56.1 10686.9 600000 7730.7 46988 836.9 857.5
+700000 18.2 74.3 9420.9 700000 5506.8 62672 843.5 863.7
+800000 32.0 106.3 7528.0 800000 3128.2 81072 762.9 575.6
+900000 57.1 163.3 5510.0 900000 1752.2 96488 590.7 270.1
+1000000 55.6 218.9 4567.8 1000000 1799.1 108212 494.3 210.9
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 18:32:23 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 18:32:23 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 18:32:23 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.7 5.7 17457.4 100000 17457.4 5060 883.3 883.3
+200000 7.1 12.9 15557.1 200000 14030.0 10496 816.4 762.7
+300000 9.2 22.0 13624.3 300000 10912.8 18048 819.6 824.1
+400000 10.4 32.4 12355.2 400000 9656.6 26524 819.3 818.5
+500000 11.4 43.8 11422.1 500000 8772.2 35972 821.8 828.8
+600000 12.8 56.6 10598.8 600000 7790.9 47000 830.2 859.2
+700000 15.1 71.8 9755.8 700000 6604.1 59992 836.1 858.0
+800000 24.8 96.5 8288.0 800000 4036.7 74828 775.2 598.9
+900000 41.1 137.6 6541.9 900000 2436.0 88128 640.6 324.0
+1000000 56.3 193.9 5158.0 1000000 1776.3 99772 514.6 206.8
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 18:35:54 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 18:35:54 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 18:35:54 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.5 5.5 18113.7 100000 18113.7 4820 873.1 873.1
+200000 7.7 13.2 15169.9 200000 13049.2 11044 837.7 812.2
+300000 9.0 22.2 13503.9 300000 11071.9 18108 815.1 782.1
+400000 10.8 33.1 12100.9 400000 9225.5 26940 815.0 814.8
+500000 11.7 44.8 11172.9 500000 8550.2 36588 817.6 824.9
+600000 13.3 58.0 10344.4 600000 7546.3 47780 823.8 844.6
+700000 15.0 73.0 9585.6 700000 6656.2 60436 827.6 842.4
+800000 23.6 96.6 8279.8 800000 4238.1 74096 766.9 578.9
+900000 40.6 137.3 6556.7 900000 2460.5 87196 635.2 322.3
+1000000 57.8 195.1 5125.5 1000000 1729.0 98676 505.8 198.5
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 18:39:26 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 18:39:26 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 18:39:26 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.5 5.5 18298.9 100000 18298.9 4640 849.1 849.1
+200000 7.7 13.2 15197.1 200000 12994.5 10464 795.1 756.8
+300000 9.2 22.3 13423.5 300000 10883.2 17708 792.3 788.4
+400000 10.6 33.0 12136.0 400000 9424.3 26216 795.4 801.8
+500000 11.6 44.6 11217.9 500000 8612.0 36084 809.6 849.8
+600000 13.1 57.7 10398.8 600000 7617.6 47492 823.1 869.0
+700000 14.7 72.4 9669.2 700000 6804.8 59732 825.1 832.9
+800000 24.3 96.7 8274.8 800000 4117.9 74128 766.7 592.8
+900000 41.0 137.6 6538.8 900000 2441.3 87640 636.7 329.9
+1000000 56.4 194.0 5153.7 1000000 1773.2 98996 510.2 201.4
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 18:42:56 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 18:42:56 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 18:42:56 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 6.0 6.0 16622.2 100000 16622.2 5188 862.4 862.4
+200000 7.5 13.5 14801.8 200000 13340.8 11032 816.5 779.6
+300000 8.6 22.1 13589.7 300000 11677.2 17860 809.0 797.3
+400000 10.4 32.5 12300.4 400000 9575.2 26296 808.6 807.8
+500000 11.5 44.0 11356.7 500000 8689.9 36032 818.4 846.0
+600000 12.1 56.1 10694.0 600000 8278.4 46140 822.4 836.8
+700000 14.9 71.0 9853.3 700000 6695.4 58944 829.7 857.3
+800000 23.7 94.8 8441.6 800000 4214.6 73728 778.0 623.1
+900000 41.1 135.8 6625.6 900000 2435.1 87476 644.0 334.8
+1000000 55.0 190.8 5239.9 1000000 1818.0 98696 517.2 204.0
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 18:46:24 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 18:46:24 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 18:46:24 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.6 5.6 17725.6 100000 17725.6 4880 865.0 865.0
+200000 7.2 12.8 15579.6 200000 13897.1 10384 808.9 764.9
+300000 9.1 21.9 13680.5 300000 10999.0 17364 791.8 767.7
+400000 10.3 32.2 12426.4 400000 9746.1 25616 795.8 804.2
+500000 11.4 43.6 11462.5 500000 8748.2 35024 802.9 823.0
+600000 13.4 57.0 10517.5 600000 7447.5 46372 812.9 845.1
+700000 15.1 72.2 9698.6 700000 6610.5 59392 822.9 860.7
+800000 23.3 95.5 8375.7 800000 4284.6 73252 766.9 593.9
+900000 39.0 134.6 6688.6 900000 2561.3 86416 642.2 337.2
+1000000 57.0 191.6 5219.4 1000000 1753.3 98068 511.9 204.3
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 18:49:53 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 18:49:53 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 18:49:53 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.7 5.7 17402.9 100000 17402.9 4828 840.2 840.2
+200000 8.0 13.7 14600.6 200000 12575.7 11088 809.5 787.2
+300000 8.9 22.6 13271.1 300000 11226.5 18100 800.7 787.2
+400000 10.3 33.0 12138.2 400000 9663.3 26640 808.4 825.2
+500000 11.5 44.5 11235.7 500000 8660.1 36344 816.7 840.4
+600000 13.2 57.7 10406.5 600000 7601.5 47500 823.8 848.0
+700000 13.9 71.6 9776.5 700000 7171.7 59400 829.6 853.4
+800000 23.8 95.4 8381.6 800000 4193.4 73532 770.4 592.6
+900000 39.4 134.9 6672.3 900000 2535.6 86660 642.5 332.9
+1000000 58.3 193.2 5175.8 1000000 1714.6 98548 510.1 203.8
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 18:53:24 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 18:53:24 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 18:53:24 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.8 5.8 17146.4 100000 17146.4 5028 862.1 862.1
+200000 7.2 13.0 15365.6 200000 13919.9 10236 786.4 724.9
+300000 9.4 22.4 13369.3 300000 10611.8 17828 794.5 805.6
+400000 10.5 33.0 12131.1 400000 9493.5 26332 798.6 807.3
+500000 11.7 44.7 11188.4 500000 8535.3 36144 808.8 837.5
+600000 12.5 57.2 10489.8 600000 7994.1 46732 817.0 846.4
+700000 15.0 72.2 9693.4 700000 6659.8 59956 830.3 880.7
+800000 23.7 95.9 8342.6 800000 4223.1 74472 776.6 613.0
+900000 39.2 135.1 6661.4 900000 2550.1 87948 650.9 343.6
+1000000 58.7 193.8 5160.5 1000000 1704.4 99960 515.8 204.7
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 18:56:54 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 18:56:54 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 18:56:54 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.7 5.7 17544.4 100000 17544.4 4756 834.4 834.4
+200000 7.4 13.1 15319.2 200000 13595.0 10256 785.6 747.7
+300000 9.4 22.4 13383.8 300000 10684.1 17484 780.0 772.2
+400000 10.3 32.7 12244.8 400000 9754.5 25328 775.3 765.1
+500000 12.4 45.1 11094.6 500000 8064.5 35212 781.3 797.1
+600000 13.9 59.0 10177.4 600000 7200.9 46264 784.7 795.8
+700000 14.8 73.7 9497.2 700000 6778.9 58708 796.5 843.6
+800000 25.9 99.6 8033.0 800000 3863.5 73264 735.7 562.4
+900000 40.2 139.8 6439.3 900000 2488.9 87036 622.7 342.8
+1000000 58.1 197.9 5052.9 1000000 1720.0 98896 499.7 204.0
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 19:00:30 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 19:00:30 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 19:00:30 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.6 5.6 17947.0 100000 17947.0 4780 857.9 857.9
+200000 7.5 13.0 15351.9 200000 13412.4 10424 800.1 757.0
+300000 8.7 21.8 13784.6 300000 11447.3 17536 805.8 814.1
+400000 11.0 32.7 12225.3 400000 9127.6 26588 812.6 826.2
+500000 12.4 45.1 11086.8 500000 8077.8 37100 822.6 849.1
+600000 12.5 57.6 10418.4 600000 8005.4 47836 830.6 859.5
+700000 14.6 72.2 9701.5 700000 6866.5 60604 839.9 876.7
+800000 22.4 94.6 8456.9 800000 4455.7 74604 788.7 623.8
+900000 39.7 134.3 6702.0 900000 2519.5 87792 653.8 332.3
+1000000 57.9 192.2 5202.8 1000000 1726.7 99980 520.2 210.4
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 19:03:59 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 19:03:59 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 19:03:59 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.6 5.6 17732.6 100000 17732.6 4912 871.0 871.0
+200000 7.3 12.9 15481.0 200000 13736.7 10548 816.5 774.2
+300000 8.9 21.8 13732.0 300000 11201.1 17664 808.5 797.1
+400000 10.8 32.6 12269.0 400000 9297.4 26628 816.7 833.4
+500000 11.9 44.5 11227.4 500000 8381.1 36544 820.6 831.1
+600000 12.9 57.5 10439.6 600000 7728.3 47536 827.1 849.5
+700000 15.0 72.5 9660.9 700000 6674.0 60324 832.5 853.5
+800000 24.3 96.8 8267.9 800000 4114.7 75268 777.9 614.9
+900000 42.7 139.5 6453.3 900000 2341.8 89896 644.6 342.6
+1000000 59.6 199.1 5022.9 1000000 1677.1 102112 512.9 204.9
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 19:07:35 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 19:07:35 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 19:07:35 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 6.0 6.0 16551.8 100000 16551.8 5112 846.1 846.1
+200000 7.3 13.3 15045.1 200000 13789.8 10648 801.0 763.4
+300000 9.2 22.5 13309.0 300000 10813.5 17704 785.4 763.0
+400000 10.9 33.4 11974.4 400000 9205.0 26328 788.2 793.8
+500000 12.0 45.4 11005.4 500000 8314.1 36100 794.6 812.5
+600000 13.8 59.2 10137.2 600000 7269.8 47564 803.6 833.4
+700000 14.9 74.1 9451.9 700000 6724.3 60048 810.8 839.5
+800000 24.3 98.4 8133.2 800000 4114.7 74092 753.3 577.9
+900000 41.0 139.4 6456.0 900000 2436.5 88792 636.9 358.2
+1000000 59.8 199.2 5020.4 1000000 1672.7 101016 507.1 204.5
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 19:11:11 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 19:11:11 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 19:11:11 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.6 5.6 17955.3 100000 17955.3 4616 828.8 828.8
+200000 7.2 12.8 15662.8 200000 13889.4 9944 778.8 740.0
+300000 9.1 21.9 13713.1 300000 10979.7 16768 766.5 749.3
+400000 10.0 31.9 12534.3 400000 9964.5 24768 776.1 797.2
+500000 11.6 43.6 11478.3 500000 8585.3 34108 783.0 801.9
+600000 13.6 57.2 10492.5 600000 7340.3 45436 794.6 831.5
+700000 14.7 71.9 9739.6 700000 6808.5 57580 801.2 826.8
+800000 24.0 95.9 8342.5 800000 4162.6 71628 746.9 584.8
+900000 41.4 137.3 6554.2 900000 2414.1 84448 615.0 309.5
+1000000 58.0 195.3 5119.3 1000000 1723.5 95928 491.1 197.9
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 19:14:43 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 19:14:43 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 19:14:43 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.5 5.5 18169.2 100000 18169.2 4708 855.4 855.4
+200000 7.8 13.3 15078.9 200000 12887.0 10508 792.2 747.4
+300000 9.1 22.4 13404.8 300000 10969.2 17492 781.6 766.1
+400000 10.2 32.6 12276.7 400000 9802.0 25496 782.5 784.6
+500000 12.1 44.7 11191.0 500000 8266.7 34996 783.3 785.3
+600000 12.9 57.6 10425.7 600000 7769.1 45840 796.5 842.5
+700000 15.0 72.5 9654.4 700000 6686.5 58480 806.6 845.2
+800000 25.3 97.8 8181.5 800000 3956.4 72728 743.8 563.7
+900000 44.2 142.0 6339.5 900000 2263.1 86668 610.5 315.5
+1000000 57.3 199.3 5017.1 1000000 1743.7 98052 491.9 198.5
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 19:18:20 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 19:18:20 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 19:18:20 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.3 5.3 18736.5 100000 18736.5 4400 824.4 824.4
+200000 7.6 12.9 15507.6 200000 13228.0 9912 768.6 729.1
+300000 8.9 21.8 13778.7 300000 11266.5 16748 769.2 770.2
+400000 10.8 32.6 12287.9 400000 9276.8 25300 777.2 793.4
+500000 11.8 44.4 11263.3 500000 8446.1 35052 789.6 823.7
+600000 12.8 57.2 10490.3 600000 7810.3 45584 797.0 822.6
+700000 15.5 72.7 9635.1 700000 6470.3 58108 799.8 810.3
+800000 22.2 94.8 8436.8 800000 4510.4 70512 743.6 559.5
+900000 43.5 138.3 6505.9 900000 2298.1 84656 612.0 325.0
+1000000 59.8 198.2 5046.7 1000000 1671.8 96376 486.4 195.9
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 19:21:55 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 19:21:55 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 19:21:55 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.8 5.8 17135.2 100000 17135.2 5204 891.7 891.7
+200000 6.8 12.7 15788.2 200000 14637.5 10672 842.5 800.4
+300000 9.5 22.2 13513.8 300000 10491.2 18432 830.3 814.1
+400000 10.2 32.4 12330.8 400000 9766.0 26720 823.7 809.4
+500000 12.3 44.8 11165.0 500000 8101.3 37408 835.3 865.9
+600000 13.0 57.8 10389.6 600000 7711.6 48808 845.2 879.1
+700000 14.7 72.5 9658.7 700000 6791.8 61456 848.0 859.0
+800000 24.7 97.1 8234.8 800000 4052.7 75496 777.1 569.0
+900000 41.9 139.1 6470.6 900000 2384.2 89388 642.7 331.2
+1000000 59.9 199.0 5025.1 1000000 1669.2 101128 508.2 196.0
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 19:25:32 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 19:25:32 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 19:25:32 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.5 5.5 18342.7 100000 18342.7 4824 884.9 884.9
+200000 7.2 12.6 15838.0 200000 13935.2 10452 827.7 784.3
+300000 9.5 22.1 13557.9 300000 10527.0 18360 829.7 832.5
+400000 10.7 32.8 12180.7 400000 9335.7 27212 828.7 826.4
+500000 11.6 44.4 11262.8 500000 8654.3 37044 834.4 850.9
+600000 13.5 57.9 10370.2 600000 7427.1 48832 844.0 875.5
+700000 14.4 72.3 9686.5 700000 6940.9 61412 849.8 873.2
+800000 23.7 95.9 8339.2 800000 4225.2 75140 783.3 580.0
+900000 41.1 137.1 6565.9 900000 2430.8 88620 646.5 327.7
+1000000 59.0 196.1 5099.9 1000000 1694.6 100816 514.2 206.7
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 19:29:04 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 19:29:04 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 19:29:05 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.7 5.7 17618.4 100000 17618.4 4996 880.2 880.2
+200000 7.2 12.9 15480.3 200000 13805.0 10656 824.8 781.4
+300000 8.9 21.8 13759.3 300000 11256.5 17472 801.3 767.2
+400000 10.5 32.3 12370.5 400000 9495.2 25976 803.3 807.5
+500000 11.9 44.2 11311.5 500000 8426.3 35996 814.3 844.3
+600000 13.3 57.5 10431.5 600000 7510.1 47092 818.7 833.3
+700000 16.3 73.8 9483.9 700000 6138.3 60740 822.9 837.8
+800000 24.7 98.5 8118.1 800000 4042.7 74940 760.5 574.1
+900000 38.3 136.9 6575.7 900000 2609.4 88384 645.8 350.8
+1000000 57.1 193.9 5156.2 1000000 1752.1 100216 516.7 207.3
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 19:32:36 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 19:32:36 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 19:32:36 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.4 5.4 18598.2 100000 18598.2 4880 907.6 907.6
+200000 7.0 12.4 16124.6 200000 14231.7 10336 833.3 776.5
+300000 9.1 21.5 13923.0 300000 10936.6 17660 819.6 801.0
+400000 11.2 32.8 12210.5 400000 8919.2 27012 824.6 834.1
+500000 11.8 44.6 11222.2 500000 8477.7 36864 827.4 835.2
+600000 12.9 57.4 10450.4 600000 7776.2 47904 834.4 858.5
+700000 15.6 73.0 9586.2 700000 6407.3 61056 836.1 842.7
+800000 25.7 98.7 8107.0 800000 3897.3 76088 771.1 585.8
+900000 40.2 138.9 6481.4 900000 2488.9 89560 645.0 335.3
+1000000 60.4 199.3 5018.3 1000000 1655.4 102032 512.0 206.5
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 19:36:12 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 19:36:12 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 19:36:12 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.5 5.5 18342.3 100000 18342.3 4744 870.2 870.2
+200000 7.3 12.8 15645.0 200000 13639.3 10788 843.9 824.4
+300000 8.7 21.5 13959.1 300000 11484.1 18172 845.5 848.0
+400000 10.8 32.3 12377.6 400000 9237.8 27168 840.7 831.0
+500000 11.8 44.1 11330.0 500000 8464.4 37352 846.4 862.0
+600000 13.3 57.4 10451.1 600000 7530.4 48860 851.1 866.6
+700000 15.2 72.6 9645.4 700000 6594.8 61980 854.0 865.2
+800000 24.9 97.5 8204.4 800000 4010.4 76416 783.7 578.9
+900000 40.2 137.7 6534.6 900000 2486.4 90188 654.8 342.4
+1000000 59.3 197.0 5074.9 1000000 1685.7 102052 517.9 200.0
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 19:39:46 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 19:39:46 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 19:39:46 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.5 5.5 18044.6 100000 18044.6 5032 908.0 908.0
+200000 7.2 12.8 15672.0 200000 13850.8 10496 822.5 756.8
+300000 9.3 22.1 13603.4 300000 10762.3 17848 809.3 791.2
+400000 10.7 32.8 12212.6 400000 9346.1 26400 806.0 799.3
+500000 11.9 44.6 11209.6 500000 8437.5 35884 804.5 800.2
+600000 13.0 57.6 10417.4 600000 7697.5 46836 813.2 843.0
+700000 15.3 72.9 9605.4 700000 6544.7 59464 816.0 826.5
+800000 24.7 97.5 8201.5 800000 4053.8 73656 755.1 575.3
+900000 40.9 138.4 6501.9 900000 2446.3 86640 625.9 317.6
+1000000 59.5 197.9 5052.0 1000000 1680.2 98516 497.7 199.5
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 19:43:20 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 19:43:20 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 19:43:20 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.7 5.7 17444.9 100000 17444.9 4732 825.5 825.5
+200000 7.5 13.3 15092.1 200000 13298.4 10156 766.4 721.3
+300000 9.6 22.9 13103.7 300000 10370.9 17648 770.8 777.0
+400000 10.9 33.8 11843.3 400000 9191.1 25808 764.1 750.0
+500000 12.2 46.0 10864.2 500000 8164.3 35240 765.7 770.1
+600000 13.7 59.7 10045.8 600000 7297.4 46360 776.2 811.5
+700000 14.9 74.6 9384.6 700000 6727.9 58216 780.5 797.7
+800000 24.3 98.9 8090.2 800000 4116.0 72360 731.8 582.2
+900000 43.0 141.9 6342.9 900000 2325.2 85600 603.3 307.9
+1000000 57.3 199.2 5019.3 1000000 1744.0 96852 486.1 196.2
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 19:46:56 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 19:46:56 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 19:46:56 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.6 5.6 17920.2 100000 17920.2 4988 893.9 893.9
+200000 7.2 12.8 15638.8 200000 13872.8 10424 815.1 754.1
+300000 9.1 21.9 13701.3 300000 10980.6 17680 807.5 796.8
+400000 10.0 31.9 12541.0 400000 10000.3 25804 809.0 812.4
+500000 12.4 44.3 11293.1 500000 8077.8 35944 811.8 819.1
+600000 13.6 57.9 10365.8 600000 7348.9 47376 818.5 840.1
+700000 14.8 72.7 9633.6 700000 6766.1 60280 829.6 873.1
+800000 25.1 97.8 8182.5 800000 3982.9 74872 765.8 581.2
+900000 42.2 140.0 6428.8 900000 2368.2 88516 632.3 323.1
+1000000 60.0 200.0 4998.9 1000000 1665.3 100780 503.8 204.2
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 19:50:33 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 19:50:33 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 19:50:33 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.6 5.6 17769.4 100000 17769.4 4872 865.7 865.7
+200000 7.5 13.1 15277.2 200000 13398.0 10740 820.4 786.2
+300000 9.1 22.2 13526.1 300000 11003.7 18048 813.7 804.1
+400000 10.4 32.6 12272.4 400000 9602.2 26392 809.7 801.2
+500000 12.2 44.8 11170.1 500000 8217.6 36340 811.8 817.5
+600000 13.3 58.1 10327.3 600000 7498.6 47240 813.1 817.3
+700000 14.8 72.9 9606.7 700000 6771.8 59640 818.5 839.7
+800000 23.0 95.9 8342.6 800000 4342.6 74152 773.3 630.2
+900000 40.3 136.2 6606.0 900000 2478.5 87620 643.1 333.8
+1000000 60.0 196.3 5094.9 1000000 1665.7 100108 510.0 208.0
+Done
+=> An empty or uninitialized MySQL volume is detected in /var/lib/mysql
+=> Installing MySQL ...
+=> Done!
+=> Waiting for confirmation of MySQL service startup
+=> Creating MySQL admin user with random password
+=> Done!
+========================================================================
+You can now connect to this MySQL Server using:
+
+    mysql -uadmin -prootmysqlpassword -h<host> -P<port>
+
+Please remember to change the above password as soon as possible!
+MySQL user 'root' has no password but only allows local connections
+========================================================================
+140818 19:54:07 mysqld_safe Can't log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.
+140818 19:54:07 mysqld_safe Logging to '/var/log/mysql/error.log'.
+140818 19:54:07 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+rows seconds total_seconds cum_ips table_size last_ips queries cum_qps last_qps
+#rows #seconds #total_seconds cum_ips table_size last_ips #queries cum_qps last_qps
+iibench.py:175: Warning: Unknown table 'purchases_index'
+  cursor.execute('drop table if exists %s' % FLAGS.table_name)
+create table purchases_index ( transactionid int not null auto_increment, dateandtime datetime, cashregisterid int not null, customerid int not null, productid int not null, price float not null, data varchar(4000), primary key (transactionid)  , key marketsegment (price, customerid), key registersegment (cashregisterid, price, customerid), key pdc (price, dateandtime, customerid)  ) engine=innodb 
+100000 5.4 5.4 18472.5 100000 18472.5 4712 870.4 870.4
+200000 7.5 12.9 15526.6 200000 13391.1 10652 826.9 795.4
+300000 8.8 21.6 13857.6 300000 11405.5 17720 818.5 806.1
+400000 10.5 32.1 12453.2 400000 9549.8 26408 822.2 829.7
+500000 12.1 44.2 11312.1 500000 8278.0 37108 839.5 885.7
+600000 12.7 56.9 10545.6 600000 7876.8 48248 848.0 877.5
+700000 15.1 72.0 9727.7 700000 6638.7 61720 857.7 894.4
+800000 23.0 95.0 8420.8 800000 4339.7 76632 806.6 647.1
+900000 38.9 133.9 6720.8 900000 2570.0 90476 675.6 355.8
+1000000 63.8 197.7 5058.3 1000000 1567.8 103492 523.5 204.1
+Done
