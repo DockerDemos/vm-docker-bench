@@ -6,12 +6,12 @@ Hypervisor + Docker Performance Benchmark
     1. [System Specs](#specs)
     2. [Host Benchmarks](#host_bench)
         * Serial container Boot
+	* Computer Node Steady-State Container Packing 
         * Container reboot
-        * Container commit (snapshot)
     3. [Guest Benchmarks](#guest_bench)
         * CPU Performance
-        * MySQL Performance
-        * MySQL
+        * MySQL Transaction Performance
+        * MySQL Index and Query Performance
         * File I/O Operation
         * (Modified) File I/O Operation
         * Memory Performance
@@ -65,9 +65,9 @@ Test data for guest benchmarks being performed from remote hosts (for example, t
 | HDD        | Toshiba 300GB SAS 15KRPM      | EMC VNX5700 Array, 2TB 7200RPM (50 disks)  |
 
 |            | Primary System w/Hypervisor      | Control System w/Hypervisor       |
-| ----       | ---------------------------      | ----------------------------        |
-| CPU        | Intel E5-2665 @ 2.4GHz (2 Cores) | Intel E5-2697 v2 @ 2.70GHz (2 Cores)|
-| Memory     | 8GB 1600                         | 8GB 1866                            |
+| ----       | ---------------------------      | ----------------------------      |
+| CPU        | Intel E5-2665 @ 2.4GHz           | Intel E5-2697 v2 @ 2.70GHz        |
+| Memory     | 80GB 1600                        | 8GB 1866                            |
 | HDD        | Virtual                          | Virtual                             |
 
 **OS: CoreOS** 
@@ -122,7 +122,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
 
     #!/bin/bash
     #
-    # Version 1.0 (2014-06-30)
+    # Version 1.2 (2014-08-28)
     #
     # This image was uploaded to our private repository
     # server for ease of testing.
@@ -133,14 +133,14 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     # Apache and a basic PHP "Hello World" file.
     #
     COUNT="15"
-    docker pull $REPO/webbench
+    docker pull $REPO/bench-webbench
     for n in {1..5} ; do
-      for i in $(seq 1 $COUNT) ; do docker run --rm -i -t $REPO/webbench ; done
+      for i in $(seq 1 $COUNT) ; do docker run -d $REPO/bench-webbench ; done
       sleep 5m
-      docker ps | awk '{print $1}' |xargs docker stop
+      docker ps -a | awk '/webbench/ {print $1}' |xargs docker stop
+      docker ps -a | awk '/webbench/ {print $1}' |xargs docker rm
       sleep 5m
     done
-
 
 ###<a name='guest_bench'>Guest Benchmarks</a>###
 
@@ -168,7 +168,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     | awk '{print $3}'| sed 's/s//g' ; done
 
 
-__MySQL Performance__
+__MySQL Transaction Performance__
 
 Sysbench was also used to test MySQL performance (reads, writes, transactions, etc).  A Docker container based on the [tutum/mysql image](https://github.com/tutumcloud/tutum-docker-mysql) with MySQL + Sysbench installed was created and is available in this repository [\(https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench-mysql\)](https://github.com/DockerDemos/vm-docker-bench/tree/master/sysbench-mysql).
 
@@ -196,7 +196,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
     for i in {1..100} ; do docker run --rm -i -t $REPO/bench-sysbench-mysql 
     done
 
-__MySQL__
+__MySQL Index Insertion and Query Performance__
 
 Iibench [\(https://bazaar.launchpad.net/~mdcallag/mysql-patch/mytools/download/head:/iibench.py-20090327210349-wgv0sum50kpukctz-1/iibench.py\)](https://bazaar.launchpad.net/~mdcallag/mysql-patch/mytools/download/head:/iibench.py-20090327210349-wgv0sum50kpukctz-1/iibench.py) was used to run indexed insertion benchmark tests for MySQL.  A Docker image based on the [tutum/mysql image](https://github.com/tutumcloud/tutum-docker-mysql) with MySQL + Iibench was created and is available in this repository [\(https://github.com/DockerDemos/vm-docker-bench/tree/master/iibench-mysql\)](https://github.com/DockerDemos/vm-docker-bench/tree/master/iibench-mysql).
 
@@ -429,6 +429,16 @@ And this is totally unexpected.  The graph shows the total time taken to run the
 ![Graph of Control System, Sysbench Max Prime tests (100): Total Time for Test](/images/control-CPU_cpu-time.png?raw=true "Graph of Control System, Sysbench Max Prime tests (100): Total Time for Test")
 
 The control system graph for the time taken for the max prime tests is similar to the primary, but the system is about 10 seconds faster per test. Of note is the time scale (in seconds) on the vertical axis.  Despite the appearance of the graph, the time taken for each test is incredibly consistent - there's only about 1/10 of a second in variance.
+
+__Mysql Transaction Performance__
+
+
+
+![Graph of Sysbench MySQL tests (100), Transactions per Second Comparison](/images/MySQL_comparison.png?raw=true "Graph of Sysbench MySQL tests (100), Transactions per Second Comparison")
+
+![Graph of Iibench MySQL tests (25), Row Insertions per Second Comparison](/images/MySQL_index_insertion_comparison.png?raw=true "Graph of Iibench MySQL tests (25), Row Insertions per Second Comparison")
+
+![Graph of Iibench MySQL tests (25), Queries per Second Comparison](/images/MySQL_index_query_comparison.png?raw=true "Graph of Iibench MySQL tests (25), Queries per Second Comparison")
 
 __File I/O Operation__
 
