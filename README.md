@@ -304,7 +304,7 @@ The following bash script was placed on the host server via the CoreOS cloud-con
 
 __Application type performance (Blogbench)__
 
-[Blogbench](http://www.pureftpd.org/project/blogbench) was used to simulate file I/O as it would exist on a webserver, with mostly-read, some-write traffic.  The tests used the [Blogbench Docker image](/blogbench) included in this repository.  The resulting container was started and ran `blogbench -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv`.  This process was repeated twenty five times and the results recorded.
+[Blogbench](http://www.pureftpd.org/project/blogbench) was used to simulate file I/O as it would exist on a webserver, with mostly-read, some-write traffic.  The tests used the [Blogbench Docker image](/blogbench) included in this repository.  The resulting container was started and ran `blogbench -c 30 -i 20 -r 40 -W 5 -w 5 --directory=/srv`.  This process was repeated twenty times and the results recorded.
 
 The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
 
@@ -482,7 +482,7 @@ The DUMB operation "\(b[i]=a[i] style\)" test results are similar to those above
 
 __Application Type Performance (Blogbench)__
 
-The Blogbench tests attempted to roughly simulate a real-world website, running 25 tests of 20 iterations \(5 "writers", 5 "rewriters", 30 "commenters" and 40 "readers"\).  The results are interesting, with the hypervisor improving simulated read performance, but the physical system outperforming each of the others during simulated write performance.
+The Blogbench tests attempted to roughly simulate a real-world website, running 20 tests of 20 iterations \(5 "writers", 5 "rewriters", 30 "commenters" and 40 "readers"\).  The results are interesting, with the hypervisor improving simulated read performance, but the physical system outperforming each of the others during simulated write performance.
 
 ![Graph of Blogbench Benchmark Tests (20), Read Score Comparison](/images/blogbench-reads_comparison.png?raw=true "Graph of Blogbench Benchmark Tests (20), Read Score Comparison")
 
