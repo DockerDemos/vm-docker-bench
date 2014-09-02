@@ -464,13 +464,13 @@ The control system, however, is a VM backed by an enterprise storage array.  The
 
 __Memory Performance__
 
-![Graph of MBW Memory Benchmark Tests (100), MEMCPY Operations Comparison](/images/mbw-MEMCPY.png?raw=true "Graph of MBW Memory Benchmark Tests (100), MEMCPY Operations Comparison")
+![Graph of MBW Memory Benchmark Tests (100), MEMCPY Operations Comparison](/images/mbw-MEMCPY_comparison.png?raw=true "Graph of MBW Memory Benchmark Tests (100), MEMCPY Operations Comparison")
 
 The MEMCPY opeartaion test from _mbw_ measures the speed achieved while copying a set number of bytes from one area of memory to another.  In this test, the primary system performs slightly better without a hypervisor layer.  The control system performs considerably slower than either of the primary system tests, despite having a higher RAM clock speed (1866 MHz vs 1600 MHz).  The first explanation that jumps to mind is the considerably less available RAM on the control system. However, this assumes that the system being tested can intelligently spread the memory writes over the total physical RAM chips available.  This assumption only works if the control system hypervisor applies a strict one-to-one assignment of RAM and does not use the entirety of the host system's available RAM for writing.
 
 ![Graph of MBW Memory Benchmark Tests (100), MCBLOCK Operations Comparison](/images/mbw-MCBLOCK_comparison.png?raw=true "Graph of MBW Memory Benchmark Tests (100), MCBLOCK Operations Comparison")
 
-![Graph of MBW Memory Benchmark Tests (100), DUMB Operations Comparison](/images/mbw-DUMB.png?raw=true "Graph of MBW Memory Benchmark Tests (100), DUMB Operations Comparison")
+![Graph of MBW Memory Benchmark Tests (100), DUMB Operations Comparison](/images/mbw-DUMB_comparison.png?raw=true "Graph of MBW Memory Benchmark Tests (100), DUMB Operations Comparison")
 
 The DUMB operation "\(b[i]=a[i] style\)" test 
 
