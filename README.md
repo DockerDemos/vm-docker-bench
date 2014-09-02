@@ -67,8 +67,8 @@ Test data for guest benchmarks being performed from remote hosts (for example, t
 |            | Primary System w/Hypervisor      | Control System w/Hypervisor       |
 | ----       | ---------------------------      | ----------------------------      |
 | CPU        | Intel E5-2665 @ 2.4GHz           | Intel E5-2697 v2 @ 2.70GHz        |
-| Memory     | 80GB 1600                        | 8GB 1866                            |
-| HDD        | Virtual                          | Virtual                             |
+| Memory     | 80GB 1600                        | 8GB 1866                          |
+| HDD        | Virtual                          | Virtual                           |
 
 **OS: CoreOS** 
 
@@ -461,6 +461,17 @@ __(Modified) File I/O Operation__
 File I/O measured over twenty five consecutive tests in twenty five Docker containers shows little surprising results between the primary system with or without a hypervisor.  Over the entirety of the testing, there is little difference between the two, with each averaging a transfer speed of about 1.7 Mb/second or so to their local disks.
 
 The control system, however, is a VM backed by an enterprise storage array.  The transfer speeds start to climb significantly shortly after the third test as the array identifies the blocks used by the VM as "hot" and transfers them from conventional storage onto solid-state disks.  While this has no bearing on the hypervisor vs. no hypervisor testing, it's an excellent argument for using an enterprise storage array for Docker containers that have a significant amount of file I/O, whether or not the host is physical or virtual.
+
+__Memory Performance__
+
+![Graph of MBW Memory Benchmark Tests (100), MEMCPY Operations Comparison](/images/mbw-MCBLOCK_comparison.png?raw=true "Graph of MBW Memory Benchmark Tests (100), MEMCPY Operations Comparison")
+
+
+![Graph of MBW Memory Benchmark Tests (100), DUMB Operations Comparison](/images/mbw-MCBLOCK_comparison.png?raw=true "Graph of MBW Memory Benchmark Tests (100), DUMB Operations Comparison")
+
+
+![Graph of MBW Memory Benchmark Tests (100), MCBLOCK Operations Comparison](/images/mbw-MCBLOCK_comparison.png?raw=true "Graph of MBW Memory Benchmark Tests (100), MCBLOCK Operations Comparison")
+
 
 ##<a name='ack'>Acknowledgments</a>##
 
