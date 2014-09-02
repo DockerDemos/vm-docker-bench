@@ -478,9 +478,23 @@ The MCBLOCK test is the same as the MEMCPY, but copies the 32 MB array in 4096-b
 
 ![Graph of MBW Memory Benchmark Tests (100), DUMB Operations Comparison](/images/mbw-DUMB_comparison.png?raw=true "Graph of MBW Memory Benchmark Tests (100), DUMB Operations Comparison")
 
-The DUMB operation "\(b[i]=a[i] style\)" test results are similar to those above, but all three systems performance is lower overall.
+The DUMB operation "\(b[i]=a[i] style\)" test results are similar to those above, but all three systems' performance is lower overall.
 
 __Application Type Performance (Blogbench)__
+
+The Blogbench tests attempted to roughly simulate a real-world website, running 25 tests of 20 iterations \(5 "writers", 5 "rewriters", 30 "commenters" and 40 "readers"\).  The results are interesting, with the hypervisor improving simulated read performance, but the physical system outperforming each of the others during simulated write performance.
+
+![Graph of Blogbench Benchmark Tests (20), Read Score Comparison](/images/blogbench-reads_comparison.png?raw=true "Graph of Blogbench Benchmark Tests (20), Read Score Comparison")
+
+The primary system with hypervisor scores a significatntly higher "Read Score" across 20 iterations of the Blogbench test.  The control system was considerably lower than either of the primary system tests.
+
+![Graph of Blogbench Benchmark Tests (20), Write Score Comparison](/images/blogbench-writes_comparison.png?raw=true "Graph of Blogbench Benchmark Tests (20), Write Score Comparison")
+
+During the Blogbench testing, the primary system without a hypervisor outscored the other two systems in the achieved "Write Score".  Unlike the test above, the two systems with a hypervisor were pretty clone in their scores, with the physical system scoring much higher.
+
+Overall, it is not clear what these results mean.  They appear to suggest that random writes are faster without a hypervisor.  Perhaps the randomized writes prevent the hypervisor from performing any smart caching.  This may explain why the control system performed more poorly, despite the considerable performance boost it received from the storage array during the File I/O tests, above.
+
+The read results make much less sense.  The hypervisor performes random reads faster on the primary system that the bare primary system itself, but the control system, which should have been remarkably faster than either of them, is considerably slower.  Even with randomized reads removing the benefit of the control system's backing storage array, one would expect the score to be nearer the score of the hypervisor on the primary system, at least.
 
 
 
