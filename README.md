@@ -7,7 +7,6 @@ Hypervisor + Docker Performance Benchmark
     2. [Host Benchmarks](#host_bench)
         * Serial container Boot
         * Computer Node Steady-State Container Packing 
-        * Container reboot
     3. [Guest Benchmarks](#guest_bench)
         * CPU Performance
         * MySQL Transaction Performance
@@ -20,8 +19,9 @@ Hypervisor + Docker Performance Benchmark
 3. [Hypervisor + Docker Performance Benchmark](#vmhdp)
     1. [Host Benchmark Results](#host_results)
     2. [Guest Benchmark Results](#guest_results)
-4. [Acknowledgments](#ack)
-5. [Copyright Information](#copyright)
+4. [Final Throughts](#final)
+5. [Acknowledgments](#ack)
+6. [Copyright Information](#copyright)
 
 
 ##<a name='forward'>Forward</a>##
@@ -113,34 +113,6 @@ Using the Docker image with Apache and PHP from above, this test measures resour
   * Hypervisor with CoreOS starting 15 or 100 containers
 
 The bash script from the above Serial Container Boot test was reused for this test. 
-
-__Container Reboot__
-
-Using the Docker image with Apache and PHP from above, this test measures resource usage over time as five containers are started, reach their stable "active" state fifteen minute wait), shutdown and deleted.  This process was repeated five times, and the results recorded.
-
-The following bash script was placed on the host server via the CoreOS cloud-config.yml file, and used to run the tests:
-
-    #!/bin/bash
-    #
-    # Version 1.2 (2014-08-28)
-    #
-    # This image was uploaded to our private repository
-    # server for ease of testing.
-    # It can be built from the Docker files at
-    # https://github.com/DockerDemos/vm-docker-bench/tree/master/webbench
-    #
-    # Starts 15 of Docker containers running
-    # Apache and a basic PHP "Hello World" file.
-    #
-    COUNT="15"
-    docker pull $REPO/bench-webbench
-    for n in {1..5} ; do
-      for i in $(seq 1 $COUNT) ; do docker run -d $REPO/bench-webbench ; done
-      sleep 5m
-      docker ps -a | awk '/webbench/ {print $1}' |xargs docker stop
-      docker ps -a | awk '/webbench/ {print $1}' |xargs docker rm
-      sleep 5m
-    done
 
 ###<a name='guest_bench'>Guest Benchmarks</a>###
 
@@ -500,6 +472,22 @@ The read results make much less sense.  The hypervisor performes random reads fa
 
 
 __Application Type Performance (Apache Benchmark)__
+
+
+##<a name='final'>Final Thoughts</a>##
+
+When all is said and done, the question that demands an answer is: "Which is the better host for a CoreOS system running Docker containers - Hypervisor or Bare Metal?".  Overall, the answer to that question is __Bare Metal__.  The primary server without a hypervisor performed better in the majority of the tests conducted here.
+
+However, this generalization does not take into account some pecularities.  Certainly, in terms of raw CPU performance, the addition of the hypervisor layor inexplicably benefited performance overall.  If this holds out across other tests conducted by other independent testers, then the use of a hypervisor is a clear win for calculation-intensive applications.
+
+Simulations of real-world webserver traffic using Blogbench also showed a benefit using the hypervisor, assuming the traffic was much heaver in reads than writes.  A highly read-only website may which to consider running their site in Docker containers on top of a hypervisor-backed host.
+
+Outside of the main question, there are a few bits of interesting information raised by the tests:
+
+* Disk I/O is usually the largest limiting factor in performance of Docker-related tasks (especially starting new containers)
+* Difference in Hypervisor vs. Bare Metal performance of Docker-related tasks appears to be neglegible
+* Storage arrays that detect "hot" blocks and automatically allocate them to SSDs have a huge impact on high File I/O
+* They hypervisor may receive a significant performance boost in memory writes just by having more physical RAM to use for allocation
 
 
 ##<a name='ack'>Acknowledgments</a>##
