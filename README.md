@@ -408,7 +408,9 @@ The MySQL Transaction Performance test measured the total number of transactions
 
 ![Graph of Sysbench MySQL tests (100), Transactions per Second Comparison](/images/MySQL_comparison.png?raw=true "Graph of Sysbench MySQL tests (100), Transactions per Second Comparison")
 
-*(This may be anomolous data, retest the primary with no hypervisor)*
+The Primary system without a hypervisor was considerably faster at MySQL transactions per second in this test, almost 150% that of the performance with a hypervisor.
+
+Somewhat strangely, the control system, which has been generally out-performing the other two, scored very poorly on this test, enough so that I retested all three to see if I'd made a mistake.  However, across all the restests, the data remains the same.  More testing from other people is needed to confirm the validity of this test.
 
 __MySQL Index and Query Performance__
 
@@ -468,11 +470,13 @@ Overall, it is not clear what these results mean.  They appear to suggest that r
 
 The read results make much less sense.  The hypervisor performes random reads faster on the primary system that the bare primary system itself, but the control system, which should have been remarkably faster than either of them, is considerably slower.  Even with randomized reads removing the benefit of the control system's backing storage array, one would expect the score to be nearer the score of the hypervisor on the primary system, at least.
 
-
-
-
 __Application Type Performance (Apache Benchmark)__
 
+The Apache Bench benchmark test measures the overall performnace and transfer speed of the Apache server running in a Docker container and serving a static HTML file.  A second Docker container on a separate system runs the actual benchmark requests, and records the results.
+
+![Graph of Apache Bench Benchmark Tests (20), Requests Per Second Comparison](/images/ab_comparison.png?raw=true "Graph of Apache Bench Benchmark Tests (20), Requests Per Second Comparison")
+
+The primary system without the hypervisor layer scored significantly better than with the hypervisor installed.  This would seem to contadict the earlier Blogbench Read-only results. The control system perfromed better than the primary with hypervisor, but that can likely be explained by the better disk I/O due to the storage array backing the control system.
 
 ##<a name='final'>Final Thoughts</a>##
 
